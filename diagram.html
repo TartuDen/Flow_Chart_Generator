@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mermaid Flowchart with Rows</title>
+  <!-- Include Mermaid via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+  <h1>Flowchart (One Operation Per Row)</h1>
+
+  <!-- Approach A: Paste the code from "mermaidOutput.mmd" into the div below -->
+  <div class="mermaid">
+    flowchart TB
+
+    %% Operation #1
+    subgraph op1["Op #1: loading"]
+      direction LR
+      op1input(["Isopropyl acetate"])
+      op1proc(["Reactor\nLoad iso-propyl acetate\nAmount: 24.54\nSet temp.: start cooling\nTemp. of rm: 15-25oC\nStirring: tbd\nAddition rate: in one portion"])
+      op1input --> op1proc
+    end
+  
+    %% Operation #2
+    subgraph op2["Op #2: loading"]
+      direction LR
+      op2input(["Phthalide (SM.1)"])
+      op2proc(["Reactor\nSuspend SM.1 (Phthalide) in iso-propyl acetate\nAmount, kg: 6\nSet temp.: NA\nTemp. of rm: 15-25oC\nStirring: 150-200rpm\nAddition rate: in one portion"])
+      op2input --> op2proc
+    end
+  
+    %% Connect OP1 process to OP2 process (vertical arrow)
+    op1proc -.-> op2proc
+  
+    %% Operation #3
+    subgraph op3["Op #3: loading"]
+      direction LR
+      op3input(["ImCHO-DMSA"])
+      op3proc(["Reactor\nSuspend SM.2 (ImCHO-DMSA) in iso-propyl acetate\nAmount, kg: 9.06\nSet temp.: NA\nTemp. of rm: 15-25oC\nStirring: 150-200\nAddition rate: in one portion"])
+      op3input --> op3proc
+    end
+  
+    op2proc -.-> op3proc
+  
+    %% Operation #4
+    subgraph op4["Op #4: loading"]
+      direction LR
+      op4input(["NaOMe (30% in MeOH)"])
+      op4proc(["Reactor\nAdd NaOMe solution (30% in MeOH) to the suspension and start heating\nAmount: 26.76\nSet temp.: 10-15oC\nTemp. of rm: 15-35oC\nStirring: 150-200\nAddition rate: temp controlled"])
+      op4input --> op4proc
+    end
+  
+    op3proc -.-> op4proc
+    
+    %% 
+  
+   
+    
+  </div>
+
+  <!-- Approach B: Programmatically fetch mermaidOutput.mmd and inject it: -->
+  <!--
+  <div class="mermaid" id="mermaidContainer"></div>
+  <script>
+    fetch('mermaidOutput.mmd')
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('mermaidContainer').innerHTML = text;
+        mermaid.init(); // re-render
+      });
+  </script>
+  -->
+
+</body>
+</html>
