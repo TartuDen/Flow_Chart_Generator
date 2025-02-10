@@ -54,8 +54,8 @@ The script will:
 
 * Parse the Excel file using the provided filePath and tab.
 * Output the parsed operations as JSON in the console.
-* Generate an mxGraph XML diagram and save it to a file named <tab>.xml (for example, TP.1 ATI.xml).
-* 
+* Generate an mxGraph XML diagram and save it to a file named <tab>.xml (for example, TP.1 project.xml).
+  
 ## Using a Batch File on Windows
 If you prefer a clickable solution for Windows users, you can create a batch file (e.g., runParser.bat) with the following contents:
 
