@@ -98,6 +98,7 @@ console.log('Parsed Operations:\n', JSON.stringify(operations, null, 2));
 const xmlOutput = generateFlowChartXML(operations);
 
 // Save the XML to a file.
-const outputFile = 'diagram.xml';
+// const outputFile = 'diagram.xml';
+const outputFile = `${tab}.xml`;
 fs.writeFileSync(outputFile, xmlOutput, 'utf-8');
 console.log(`XML diagram saved to ${outputFile}`);
