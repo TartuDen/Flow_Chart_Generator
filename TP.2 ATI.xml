@@ -1,0 +1,330 @@
+<mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="3" value="IP.1&lt;div&gt;Amount: 14.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="4" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Loading IP.1 into 150L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="10" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="3" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="6" value="Acetone&lt;div&gt;Amount: 109.59 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="220" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="7" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Loading acetone into 150L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring, critical for the process!!!: 200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="190" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="6" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="4" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="10" value="Potassium carbonate&lt;div&gt;Amount: 51.84 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="400" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="11" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Adding potassium carbonate into 150L reactor in portions keeping stirring at max to maintain carbonate in susp. Load in portions 1-2kg&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: portionwise,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="370" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="12" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="10" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="13" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="7" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="14" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;stir, homogenize&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 30.00,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="550" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="11" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="16" value="Iodoethane&lt;div&gt;Amount: 19.52 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="760" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="17" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Adding iodoethane into 150L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="730" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="16" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="14" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="20" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Heating the reaction mixture in 150L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 65.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: reflux (55oC).,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; cooling/heating grad.: straight, keeping in mind 50oC delta between the jacket temp. and rm temp,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: should be very effeciently,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="910" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="21" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="17" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="22" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;reaction in 150L reactor is stirred for 48h&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 65.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: reflux (55oC).,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 48.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: YES,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1090" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="20" target="22" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="24" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;check the RM in 48h&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. Result: conv. 99%;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Failure Action: continue boiling, no need to add anything,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1270" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="25" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="22" target="24" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="26" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Cooling down the reaction mixture&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; cooling/heating grad.: straight, keeping in mind 50oC delta between the jacket temp. and rm temp,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: yes,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1450" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="24" target="26" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="28" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Filtering the reaction mixture using vacuum.
+ 046-7 filter with vacuum. The filter should be closed due to iodoethan.
+
+Load filtrate into 100L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: dry FK,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; vacuum: cont.,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1630" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="29" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="1660" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="30" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="28" target="29" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="31" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="26" target="28" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="32" value="Acetone&lt;div&gt;Amount: 24.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1840" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="33" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Wash K2CO3 with Acetone&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: should be very effeciently,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1810" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="34" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="1840" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="35" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="32" target="33" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="36" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="33" target="34" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="37" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="28" target="33" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="38" value="Water&lt;div&gt;Amount: 50.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2020" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="39" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Add water into reactor to dissolve salt, stir it, wait for completer dilution of salt, stop and let layers to separate.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: OFF in the beginning, once it is unblocked, start stirring.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1990" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="40" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="38" target="39" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="41" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="33" target="39" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="42" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Separate Acetone layer from aqueous. Filter acetone layer and add to main product.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2170" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="43" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="39" target="42" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="44" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Concentrating the filtrate in 100L reactor. Add acetone layer from 150L  reactor into 100L reactor as well.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 65.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 30.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set range: 300.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: as much as we can, as reactor allows us,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: YES, stop heat. And stir,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2350" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="45" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="2380" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="46" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="44" target="45" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="47" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="42" target="44" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="48" value="Anhydrous EtOH&lt;div&gt;Amount: 10.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2560" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="49" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Loading req. amount of EtOH for co-evap. Into 100L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2530" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="50" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="48" target="49" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="51" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="44" target="49" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="52" value="&lt;b&gt;reactor&lt;/b&gt;&lt;div&gt;Co-evap EtOH&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 65.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 30.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set range: NLT100Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: as much as we can, as reactor allows us,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2710" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="53" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="2740" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="54" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="52" target="53" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="55" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="49" target="52" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="56" value="Anhydrous EtOH&lt;div&gt;Amount: 36.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2920" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="57" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Triturating crude with ethanol in 100L reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: -10.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 10.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2890" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="56" target="57" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="59" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="52" target="57" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="60" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;stir with etoh to complete solid formation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 10.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 10.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 30.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: yes,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3070" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="61" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="57" target="60" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="62" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Filtering the reaction mixture with 046-2 and 150L reactor as bottle&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: dry FK,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; vacuum: cont.,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3250" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="63" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3280" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="64" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="62" target="63" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="65" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="60" target="62" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="66" value="Water&lt;div&gt;Amount: 30.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3460" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="67" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Wash FK with Water. 1st  wsh&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: manual thorough on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3430" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="68" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3460" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="66" target="67" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="70" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="67" target="68" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="62" target="67" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="72" value="Water&lt;div&gt;Amount: 30.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3640" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="73" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Wash FK with Water. 2nd wash&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: manual thorough on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3610" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="74" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3640" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="72" target="73" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="76" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="73" target="74" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="77" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="67" target="73" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="78" value="Water&lt;div&gt;Amount: 30.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3820" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="79" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Wash FK with Water. 3rd wash&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: manual thorough on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3790" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="80" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3820" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="81" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="78" target="79" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="82" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="79" target="80" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="83" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="73" target="79" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="84" value="Anhydrous EtOH&lt;div&gt;Amount: 10.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="4000" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="85" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Wash FK with EtOH, 1st wash&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: manual thorough on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3970" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="86" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4000" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="87" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="84" target="85" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="88" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="85" target="86" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="89" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="79" target="85" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="90" value="Anhydrous EtOH&lt;div&gt;Amount: 10.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="4180" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="91" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Wash FK with EtOH, 2nd wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: manual thorough on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4150" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="92" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4180" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="93" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="90" target="91" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="94" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="91" target="92" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="95" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="85" target="91" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="96" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Dry product on filter, use scoop to smash/remove drying cracks that might appear.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 20.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; vacuum: set to 30Torr,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4330" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="97" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="91" target="96" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="98" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Drying the product&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 40.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Vacuum: &amp;lt;30Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; layer thickness: &amp;lt;=4cm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; mixing/delumping: Yes,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: do weight check,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. Yield: 0.50,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. Mass: 4.35,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4510" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="99" value="to be added manually" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4540" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="100" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="98" target="99" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="101" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="96" target="98" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="102" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;after drying prod. Is sampled and packed.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pack. Mat.: double PE bag.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Analyt sample: 2.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Ret sample: 4.00,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4690" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="103" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="98" target="102" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="104" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Analyzing, correspond to QDQS&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; YES: Continue next tp,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; NO: repeat EtOH anh washing in reactor and filtraion.,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4870" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="105" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="102" target="104" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="106" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Reactors and filters are cleaned&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; solvent: 5.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; time required: 3.00,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5050" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="107" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="104" target="106" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="108" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; organic waste: can contain ethyliodide. Toxic waste label.,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5230" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="109" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="106" target="108" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+      </root>
+    </mxGraphModel>

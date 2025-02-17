@@ -4,7 +4,7 @@ import { generateFlowChartXML } from './xmlGenerator.js';
 
 // Update these constants to match your Excel file and sheet.
 const filePath = '//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/excel_test.xlsm';
-const tab = 'TP.1 ATI';
+const tab = 'TP.2 ATI';
 
 /**
  * Reads an Excel file and parses the operations.
