@@ -1,6 +1,6 @@
 const processInstructions = {
     // Loading Operations
-    "Solid": {
+    "loading-Solid": {
       description: `Load required amount of [name] into Reactor 002-XX:
   1. Remove the secondary package and carefully open the primary package.
   2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
@@ -11,7 +11,7 @@ const processInstructions = {
   
   Specified loading: ….. kg (range: …. - … kg)`
     },
-    "liquid <5L": {
+    "loading-liquid <5L": {
       description: `Load required amount of [name] into Reactor 002-XX:
   1. Remove the secondary package and carefully open the primary package.
   2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
@@ -22,7 +22,7 @@ const processInstructions = {
   
   Specified loading: ….. kg (range: …. - … kg)`
     },
-    "liquid >5L": {
+    "loading-liquid >5L": {
       description: `Load required amount of [name] into Reactor:
   1. Weigh the required amount of [name] using balance 007-XX.
   2. Connect peristaltic pump 001-XX and hose [project/TP code]. Set pump to [XX-XX]%.
@@ -33,7 +33,7 @@ const processInstructions = {
   
   Specified loading: ….. kg (range: …. - … kg)`
     },
-    "dropwise addition": {
+    "loading-dropwise addition": {
       description: `Load required amount of [name] into the dropping funnel of Reactor 002-XX:
   1. Remove the secondary package and carefully open the primary package.
   2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
@@ -176,5 +176,5 @@ const processInstructions = {
     }
   };
   
-  console.log(processInstructions);
+  export {processInstructions};
   

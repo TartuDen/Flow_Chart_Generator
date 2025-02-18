@@ -1,9 +1,10 @@
 import xlsx from 'xlsx';
 import fs from 'fs';
 import { generateFlowChartXML } from './xmlGenerator.js';
+import { generateBmrDocx } from './bmrGenerator.js';
 
 // Update these constants to match your Excel file and sheet.
-const filePath = '//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/excel_test.xlsm';
+const filePath = 'excel_test.xlsm';
 const tab = 'TP.2 ATI';
 
 /**
@@ -94,11 +95,12 @@ function parseExcelOperations(filePath, sheetName) {
 const operations = parseExcelOperations(filePath, tab);
 console.log('Parsed Operations:\n', JSON.stringify(operations, null, 2));
 
-// Generate the mxGraph XML.
+// 1. Generate the mxGraph XML.
 const xmlOutput = generateFlowChartXML(operations);
+const xmlFile = `${tab}.xml`;
+fs.writeFileSync(xmlFile, xmlOutput, 'utf-8');
+console.log(`XML diagram saved to ${xmlFile}`);
 
-// Save the XML to a file.
-// const outputFile = 'diagram.xml';
-const outputFile = `${tab}.xml`;
-fs.writeFileSync(outputFile, xmlOutput, 'utf-8');
-console.log(`XML diagram saved to ${outputFile}`);
+// 2. Generate the BMR DOCX file.
+const docxFile = `${tab}_BMR.docx`;
+generateBmrDocx(operations, docxFile);
