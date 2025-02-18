@@ -9,7 +9,7 @@ const processInstructions = {
   5. Set Argon flow [XX-XX] L/min.
   6. Adjust pH to [XX-XX].
   
-  Specified loading: ….. kg (range: …. - … kg)`
+  Specified loading: ….. kg ( …. - … kg)`
     },
     "loading-liquid <5L": {
       description: `Load required amount of [name] into Reactor 002-XX:
@@ -20,7 +20,7 @@ const processInstructions = {
   5. Set/keep Argon flow [XX-XX] L/min.
   6. Adjust pH to [XX-XX].
   
-  Specified loading: ….. kg (range: …. - … kg)`
+  Specified loading: ….. kg ( …. - … kg)`
     },
     "loading-liquid >5L": {
       description: `Load required amount of [name] into Reactor:
@@ -31,7 +31,7 @@ const processInstructions = {
   5. Set/keep Argon flow [XX-XX] L/min.
   6. Adjust pH to [XX-XX].
   
-  Specified loading: ….. kg (range: …. - … kg)`
+  Specified loading: ….. kg ( …. - … kg)`
     },
     "loading-dropwise addition": {
       description: `Load required amount of [name] into the dropping funnel of Reactor 002-XX:
@@ -44,7 +44,7 @@ const processInstructions = {
   7. Set/keep Argon flow [XX-XX] L/min.
   8. Adjust pH to [XX-XX].
   
-  Specified loading: ….. kg (range: …. - … kg)`
+  Specified loading: ….. kg ( …. - … kg)`
     },
   
     // Additional Operations
@@ -53,7 +53,7 @@ const processInstructions = {
       description: `Perform a heating/cooling operation:
   1. Set temperature to [Set temp].
   2. Target temperature: [Target Temp].
-  3. Monitor actual temperature: [Actual temperature].
+  3. Monitor actual temperature.
   4. Adjust temperature rate to [temperature rate].
   5. Set stirring rate to [Stirring rate].
   6. Configure inert gas flow rate to [Inert gas flow rate].`
@@ -65,7 +65,7 @@ const processInstructions = {
   3. Adjust stirring rate to [Stirring rate].
   4. Hold for the duration: [Time].
   5. Set inert gas flow rate to [Inert gas flow rate].
-  6. Maintain at the break point: [break point].`
+  6. Optional: Keeping the reaction overnight - [break point].`
     },
     "IPC": {
       description: `Perform an IPC operation:
