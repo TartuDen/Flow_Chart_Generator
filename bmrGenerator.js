@@ -7,31 +7,23 @@ import { DOCX_TAB } from "./settings.js";
 // Global constant to replace [project/TP code]
 const TAB = DOCX_TAB;
 
-// Helper: Splits a text block by newline into an array of Paragraphs.
 function createParagraphs(text) {
   return text.split("\n").map((line) => new Paragraph(line));
 }
 
 /**
- * Custom substitution for placeholders other than [XX-XX]:
- * - Replaces [name] with op.reagentName.
- * - Replaces [project/TP code] with TAB.
- * - For any other placeholder like [Target Temp] (ignoring punctuation and case),
- *   look up the matching key in op.parameterValue.
- *   If the value is "NA" or missing, return an empty string.
+ * Replaces [name], [project/TP code], etc.
  */
 function substituteTemplate(template, op) {
   let result = template;
-  // Replace [name]
   if (op.reagentName) {
     result = result.replace(/\[name\]/g, op.reagentName);
   }
-  // Replace [project/TP code]
   result = result.replace(/\[project\/TP code\]/g, TAB);
-  // Replace other placeholders (but leave "[XX-XX]" untouched)
+
+  // Replace other placeholders (but keep [XX-XX] for a later pass).
   result = result.replace(/\[([^\]]+)\]/g, (match, p1) => {
-    if (p1.trim() === "XX-XX") return match; // leave as is for later processing
-    // Normalize placeholder text (remove dots, lowercase)
+    if (p1.trim() === "XX-XX") return match;
     const normPlaceholder = p1.toLowerCase().replace(/\./g, "").trim();
     if (!op.parameterValue) return "";
     for (const key in op.parameterValue) {
@@ -47,13 +39,7 @@ function substituteTemplate(template, op) {
 }
 
 /**
- * For lines containing "[XX-XX]" (typically appended by a unit in the template),
- * we use a mapping to know which parameter key should be substituted.
- * If the parameter exists and is not "NA", we perform the substitution.
- * For example, in the "loading-Solid" template, the line:
- *    "4. Set stirring rate in reactor 002-XX to [XX-XX]rpm."
- * will look for the parameter "Stirring". If its value already includes "rpm",
- * then we replace the entire substring "[XX-XX]rpm" with that value.
+ * For lines with [XX-XX], we look up the parameter in placeholderMap, e.g. "Stirring" => "stirring rate [XX-XX]rpm".
  */
 const placeholderMap = [
   {
@@ -71,21 +57,9 @@ const placeholderMap = [
     paramKey: "pH",
     unit: ""
   }
-  // (Add more mappings here if needed.)
 ];
 
-/**
- * Processes the template line by line:
- * - First, it replaces placeholders (other than [XX-XX]) using substituteTemplate.
- * - Then, for each line that contains "[XX-XX]", it checks our mapping.
- *   If a mapping is found and the corresponding parameter exists (and is not "NA"),
- *   it replaces the placeholder.
- *   For the "unit" lines (like "[XX-XX]rpm"), if the parameter value already contains the unit,
- *   it replaces the entire "[XX-XX]rpm" substring.
- *   If the parameter is missing or "NA", that line is dropped.
- */
 function applyLineByLineSubstitution(template, op) {
-  // First, do the general substitution.
   let substituted = substituteTemplate(template, op);
   const lines = substituted.split("\n");
   const resultLines = [];
@@ -97,14 +71,15 @@ function applyLineByLineSubstitution(template, op) {
         const paramVal = findParamValue(op, rule.paramKey);
         if (paramVal) {
           let newLine;
-          // For unit-appended lines, check if paramVal already contains the unit.
           if (rule.unit && line.includes(`[XX-XX]${rule.unit}`) && paramVal.toLowerCase().includes(rule.unit.toLowerCase())) {
+            // If the paramVal already has the unit appended, replace the entire chunk.
             newLine = line.replace(`[XX-XX]${rule.unit}`, paramVal);
           } else {
             newLine = line.replace("[XX-XX]", paramVal);
           }
           resultLines.push(newLine);
         }
+        // else skip line if paramVal is absent
       } else {
         resultLines.push(line);
       }
@@ -112,12 +87,12 @@ function applyLineByLineSubstitution(template, op) {
       resultLines.push(line);
     }
   }
+
   return resultLines.join("\n");
 }
 
 /**
- * Finds a parameter value in op.parameterValue for a given paramKey (case-insensitive).
- * Returns null if not found or if value is "NA".
+ * Looks up paramKey in op.parameterValue, ignoring case.
  */
 function findParamValue(op, paramKey) {
   if (!op.parameterValue) return null;
@@ -132,8 +107,7 @@ function findParamValue(op, paramKey) {
 }
 
 /**
- * Looks up the template from processInstructions using op.activityName.
- * If not found, falls back to op.description.
+ * If op.activityName is in processInstructions, use that template; else fallback to op.description.
  */
 function getTemplate(op) {
   if (op.activityName && processInstructions[op.activityName]) {
@@ -143,9 +117,8 @@ function getTemplate(op) {
 }
 
 /**
- * Builds the "Actual Data" text for Column 3.
- * For each parameter (except "Amount"), a new line is created.
- * A unit is appended based on a mapping (if available). If a parameter's value is "NA", it is skipped.
+ * In Column 3, for each parameter (except "Amount"), produce a line.
+ * If the parameter is flagged as CP, PC, or CY, add a warning tag.
  */
 function buildActualData(op) {
   const unitMap = {
@@ -157,33 +130,40 @@ function buildActualData(op) {
     "set temp": "°C",
     "target temp": "°C",
     "time": ""
-    // Add other mappings as needed.
   };
 
   const lines = [];
   if (!op.parameterValue) return "";
+
   for (const key in op.parameterValue) {
-    if (key.toLowerCase() === "amount") continue;
+    if (key.toLowerCase() === "amount") continue; // skip amount
     const val = op.parameterValue[key].trim();
     if (val.toUpperCase() === "NA" || val === "") continue;
+
+    // Check if there's a unit
     const unit = unitMap[key.toLowerCase()] || "";
-    const line = `Actual ${key}: __________${unit ? " " + unit : ""};`;
+
+    // Check if there's a criticality flag for this parameter
+    let warnText = "";
+    if (op.parameterCriticalities && op.parameterCriticalities[key]) {
+      // e.g. ["CP", "CY"]
+      const flags = op.parameterCriticalities[key];
+      warnText = ` [WARNING: ${flags.join(", ")}]`;
+    }
+
+    const line = `Actual ${key}: __________${unit ? " " + unit : ""};${warnText}`;
     lines.push(line);
   }
   return lines.join("\n");
 }
 
 /**
- * Creates a DOCX file with a three‑column table:
- *   Column 1: Description (based on the template from operations.js—matched by op.activityName—
- *             with line‐by‐line substitution applied)
- *   Column 2: Times (formatted as 4 separate lines: "Start:", "__:__", "End:", "__:__")
- *   Column 3: Actual Data (one line per parameter, with units appended if available)
+ * Creates the DOCX table (3 columns).
  */
 export async function generateBmrDocx(operations, outputFilePath) {
   const rows = [];
 
-  // Header row.
+  // Header row
   const headerCells = [
     new TableCell({
       children: [new Paragraph("Description")],
@@ -200,14 +180,11 @@ export async function generateBmrDocx(operations, outputFilePath) {
   ];
   rows.push(new TableRow({ children: headerCells }));
 
-  // Process each operation.
+  // Each operation => one row
   operations.forEach((op) => {
     const baseTemplate = getTemplate(op);
-    // Apply our line-by-line substitution for [XX-XX] placeholders.
     const finalDescription = applyLineByLineSubstitution(baseTemplate, op);
-    // Times column (formatted in 4 lines).
     const timesText = "Start:\n__:__\nEnd:\n__:__";
-    // Actual Data column.
     const actualDataText = buildActualData(op);
 
     const rowCells = [
@@ -224,7 +201,7 @@ export async function generateBmrDocx(operations, outputFilePath) {
     rows.push(new TableRow({ children: rowCells }));
   });
 
-  // Build table and document.
+  // Build the table + doc
   const table = new Table({
     rows: rows,
     width: { size: 100, type: WidthType.PERCENTAGE },

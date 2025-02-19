@@ -35,6 +35,11 @@ function parseExcelOperations(filePath, sheetName) {
   const colEquipment1     = headers.indexOf('Equipment code 1');
   const colEquipment2     = headers.indexOf('Equipment code 2');
 
+  // NEW: Find indexes for CP, PC, CY columns (these may or may not exist).
+  const colCP = headers.indexOf('CP'); // “Critical Parameter”
+  const colPC = headers.indexOf('PC'); // “Potentially Critical”
+  const colCY = headers.indexOf('CY'); // “Critical to Yield”
+
   const operations = [];
   let currentOp = null;
   let opNumber = 1;
@@ -62,6 +67,8 @@ function parseExcelOperations(filePath, sheetName) {
         description: getCellValue(row, colDescription) || null,
         reagentName: getCellValue(row, colReagentName) || null,
         parameterValue: {},
+        // NEW: store criticalities in a separate object keyed by parameter
+        parameterCriticalities: {},
         expectedVolume: getCellValue(row, colExpectedVolume) || null,
         equipment:
           getCellValue(row, colEquipment1) ||
@@ -69,22 +76,56 @@ function parseExcelOperations(filePath, sheetName) {
           null
       };
 
+      // Fill in parameter and value
       const paramKey = getCellValue(row, colParameter);
       const paramVal = getCellValue(row, colValue);
       if (paramKey) {
         currentOp.parameterValue[paramKey] = paramVal;
+        // Also check if CP / PC / CY columns have an 'x'
+        addCriticalityFlags(currentOp, paramKey, row);
       }
     } else {
       // Continuation row for the current operation.
       if (!currentOp) continue;
+
       const paramKey = getCellValue(row, colParameter);
       const paramVal = getCellValue(row, colValue);
       if (paramKey) {
         currentOp.parameterValue[paramKey] = paramVal;
+        // also check CP/PC/CY
+        addCriticalityFlags(currentOp, paramKey, row);
       }
     }
   }
   if (currentOp) operations.push(currentOp);
+
+  /**
+   * Helper function that checks CP, PC, CY columns in "row"
+   * and, if present, sets a note in currentOp.parameterCriticalities[paramKey].
+   */
+  function addCriticalityFlags(op, paramKey, row) {
+    // If your CP/PC/CY columns don't exist (== -1), skip them.
+    let flags = [];
+
+    if (colCP >= 0) {
+      const cpVal = getCellValue(row, colCP);
+      if (cpVal.match(/x/i)) flags.push("CP");
+    }
+    if (colPC >= 0) {
+      const pcVal = getCellValue(row, colPC);
+      if (pcVal.match(/x/i)) flags.push("PC");
+    }
+    if (colCY >= 0) {
+      const cyVal = getCellValue(row, colCY);
+      if (cyVal.match(/x/i)) flags.push("CY");
+    }
+
+    // If we found at least one flag, store it under op.parameterCriticalities[paramKey]
+    if (flags.length > 0) {
+      op.parameterCriticalities[paramKey] = flags; // e.g. [ "CP", "CY" ]
+    }
+  }
+
   return operations;
 }
 
