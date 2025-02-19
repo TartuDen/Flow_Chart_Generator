@@ -1,4 +1,5 @@
-//xmlGenerator.js
+// xmlGenerator.js
+import { ROW_HEIGHT, X_INPUT, X_PROCESS, X_OUTPUT, BLOCK_WIDTH, BLOCK_HEIGHT, PROCESS_WIDTH, PROCESS_HEIGHT, EDGE_STYLE } from "./settings.js";
 
 /**
  * generateFlowChartXML(operations):
@@ -78,8 +79,7 @@ export function generateFlowChartXML(operations) {
 
   // Creates an mxCell element representing an edge (arrow) between two vertices.
   function createEdgeCell(id, source, target, extras = '') {
-    const style = 'edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;';
-    return `<mxCell id="${id}" style="${style}" edge="1" source="${source}" target="${target}" parent="1">
+    return `<mxCell id="${id}" style="${EDGE_STYLE}" edge="1" source="${source}" target="${target}" parent="1">
       <mxGeometry relative="1" as="geometry">${extras}</mxGeometry>
     </mxCell>`;
   }
@@ -88,15 +88,10 @@ export function generateFlowChartXML(operations) {
   let currentId = 2; // IDs "0" and "1" are used.
   let lastProcessBlockId = null; // To later link vertically from one PROCESS block to the next.
 
-  const rowHeight = 180;
-  const X_INPUT = 40, X_PROCESS = 220, X_OUTPUT = 480; // Adjusted: OUTPUT block placed further right.
-  const BLOCK_WIDTH = 120, BLOCK_HEIGHT = 60;
-  const PROCESS_WIDTH = 190, PROCESS_HEIGHT = 130;
-
   // --- Process each operation ---
   operations.forEach((op, index) => {
     const { activityType, reagentName, description, equipment, parameterValue } = op;
-    const rowY = 40 + index * rowHeight;
+    const rowY = 40 + index * ROW_HEIGHT;
 
     let inputBlockId = null;
     let processBlockId = null;
@@ -116,7 +111,7 @@ export function generateFlowChartXML(operations) {
             if (!isNaN(numericVal)) {
               val = numericVal.toFixed(2);
             }
-            amountText = `<div>${escapeUser(key)}: ${escapeUser(val)} Kg</div>`; // ADJUST THIS IF NEEDED
+            amountText = `<div>${escapeUser(key)}: ${escapeUser(val)} Kg</div>`;
           }
           // Remove "Amount" from the parameters so it does not appear in the process block.
           delete parameterValue[key];
@@ -229,7 +224,7 @@ export function generateFlowChartXML(operations) {
       ));
     }
 
-    // --- Draw vertical arrow linking the PROCESS block from the previous operation to the current one.
+    // Draw vertical arrow linking the PROCESS block from the previous operation to the current one.
     if (lastProcessBlockId && processBlockId) {
       currentId++;
       cells.push(createEdgeCell(String(currentId), lastProcessBlockId, processBlockId));

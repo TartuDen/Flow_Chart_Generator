@@ -2,9 +2,10 @@
 import { Document, Packer, Paragraph, Table, TableRow, TableCell, WidthType } from "docx";
 import fs from "fs";
 import { processInstructions } from "./operations.js";
+import { DOCX_TAB } from "./settings.js";
 
 // Global constant to replace [project/TP code]
-const TAB = "TP.2 ATI";
+const TAB = DOCX_TAB;
 
 // Helper: Splits a text block by newline into an array of Paragraphs.
 function createParagraphs(text) {
@@ -103,13 +104,11 @@ function applyLineByLineSubstitution(template, op) {
             newLine = line.replace("[XX-XX]", paramVal);
           }
           resultLines.push(newLine);
-        } // If no valid parameter, skip this line.
+        }
       } else {
-        // No mapping rule found? Keep the line as is.
         resultLines.push(line);
       }
     } else {
-      // Lines without [XX-XX] are kept as is.
       resultLines.push(line);
     }
   }
