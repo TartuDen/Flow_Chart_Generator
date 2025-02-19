@@ -35,27 +35,44 @@ export function generateFlowChartXML(operations) {
   // Build the HTML content for a PROCESS block.
   // This function omits the "Amount" parameter (which is handled separately in the INPUT block)
   // and rounds numeric values to two decimals.
+  // In xmlGenerator.js
+
   function buildProcessHtml(equipment, description, parameterValue) {
     const eq = equipment ? escapeUser(equipment) : 'null';
     const desc = description ? escapeUser(description) : '';
     let html = `<b>${eq}</b><div>${desc}<br>`;
+
+    // Helper: determines if a string is strictly numeric (including optional sign and decimal).
+    function isPureNumber(str) {
+      // Matches optional sign (+/-) followed by digits, optionally with a decimal fraction.
+      // Examples of matching: "123", "+12.3", "-0.5"
+      // Examples of not matching: "150-200rpm", "15-25oC"
+      return /^[+-]?(\d+(\.\d+)?)$/.test(str.trim());
+    }
+
     if (parameterValue) {
       for (const [key, val] of Object.entries(parameterValue)) {
         // Skip "Amount" parameters (they will be handled in the INPUT block)
         if (key.trim().toLowerCase() === "amount") continue;
+
         // If the value equals "NA" (ignoring case), skip it.
         if (typeof val === 'string' && val.trim().toUpperCase() === "NA") continue;
+
         let displayVal = val;
-        const numericVal = parseFloat(val);
-        if (!isNaN(numericVal)) {
+        // Only round if the value is purely numeric.
+        if (isPureNumber(val)) {
+          const numericVal = parseFloat(val);
           displayVal = numericVal.toFixed(2);
         }
+
         html += `<div>&nbsp; &nbsp; &nbsp; ${escapeUser(key)}: ${escapeUser(displayVal)},</div>`;
       }
     }
+
     html += '</div><div><br></div>';
     return html;
   }
+
 
   // This function performs the final escaping for an attribute value.
   // It converts all &, <, >, and " into their XML entities.
@@ -176,7 +193,7 @@ export function generateFlowChartXML(operations) {
         outputBlockId,
         X_OUTPUT, rowY,
         BLOCK_WIDTH, BLOCK_HEIGHT,
-        'to be added manually'
+        'Waste'
       ));
 
       // Create horizontal arrows: INPUT → PROCESS and PROCESS → OUTPUT.
@@ -204,7 +221,7 @@ export function generateFlowChartXML(operations) {
         outputBlockId,
         X_OUTPUT, rowY,
         BLOCK_WIDTH, BLOCK_HEIGHT,
-        'to be added manually'
+        'Waste'
       ));
 
       // Create horizontal arrow: PROCESS → OUTPUT.
