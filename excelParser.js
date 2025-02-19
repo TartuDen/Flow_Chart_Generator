@@ -1,3 +1,4 @@
+//excelParser.js
 import xlsx from 'xlsx';
 import fs from 'fs';
 import { generateFlowChartXML } from './xmlGenerator.js';
