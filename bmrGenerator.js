@@ -12,25 +12,51 @@ function createParagraphs(text) {
 }
 
 /**
- * Replaces [name], [project/TP code], etc.
+ * Returns a warning string (e.g., " [WARNING: CP, CY]") if the parameter (placeholder) is flagged 
+ * in op.parameterCriticalities.
+ */
+function getCriticalityWarning(op, placeholder) {
+  if (!op.parameterCriticalities) return "";
+  const normPlaceholder = placeholder.toLowerCase().replace(/\./g, "").trim();
+  for (const key in op.parameterCriticalities) {
+    const normKey = key.toLowerCase().replace(/\./g, "").trim();
+    if (normKey === normPlaceholder) {
+      const flags = op.parameterCriticalities[key];
+      if (flags && flags.length > 0) {
+        return ` [WARNING, PARAMETER IS ${flags.join(", ")}]`;
+      }
+    }
+  }
+  return "";
+}
+
+/**
+ * Performs general substitution for placeholders (other than [XX-XX]):
+ * - Replaces [name] with op.reagentName.
+ * - Replaces [project/TP code] with TAB.
+ * - For any other placeholder (e.g. [Target Temp]), it looks up the matching parameter.
+ *   If found and not "NA", it appends any criticality warning for that parameter.
  */
 function substituteTemplate(template, op) {
   let result = template;
+  // Replace [name]
   if (op.reagentName) {
     result = result.replace(/\[name\]/g, op.reagentName);
   }
+  // Replace [project/TP code]
   result = result.replace(/\[project\/TP code\]/g, TAB);
-
-  // Replace other placeholders (but keep [XX-XX] for a later pass).
+  // Replace other placeholders (except "[XX-XX]")
   result = result.replace(/\[([^\]]+)\]/g, (match, p1) => {
-    if (p1.trim() === "XX-XX") return match;
+    if (p1.trim() === "XX-XX") return match; // leave for later substitution
     const normPlaceholder = p1.toLowerCase().replace(/\./g, "").trim();
     if (!op.parameterValue) return "";
     for (const key in op.parameterValue) {
       const normKey = key.toLowerCase().replace(/\./g, "").trim();
       if (normKey === normPlaceholder) {
         const val = op.parameterValue[key];
-        return val.trim().toUpperCase() === "NA" ? "" : val;
+        if (val.trim().toUpperCase() === "NA") return "";
+        const warn = getCriticalityWarning(op, p1);
+        return val + warn;
       }
     }
     return "";
@@ -39,7 +65,7 @@ function substituteTemplate(template, op) {
 }
 
 /**
- * For lines with [XX-XX], we look up the parameter in placeholderMap, e.g. "Stirring" => "stirring rate [XX-XX]rpm".
+ * Mapping for [XX-XX] placeholders.
  */
 const placeholderMap = [
   {
@@ -59,6 +85,12 @@ const placeholderMap = [
   }
 ];
 
+/**
+ * Processes the template line by line.
+ * For each line with "[XX-XX]", if a mapping rule exists and the corresponding parameter is found,
+ * it replaces the placeholder and appends any criticality warning for that parameter.
+ * If the parameter is missing or "NA", the line is dropped.
+ */
 function applyLineByLineSubstitution(template, op) {
   let substituted = substituteTemplate(template, op);
   const lines = substituted.split("\n");
@@ -72,14 +104,14 @@ function applyLineByLineSubstitution(template, op) {
         if (paramVal) {
           let newLine;
           if (rule.unit && line.includes(`[XX-XX]${rule.unit}`) && paramVal.toLowerCase().includes(rule.unit.toLowerCase())) {
-            // If the paramVal already has the unit appended, replace the entire chunk.
             newLine = line.replace(`[XX-XX]${rule.unit}`, paramVal);
           } else {
             newLine = line.replace("[XX-XX]", paramVal);
           }
+          const warn = getCriticalityWarning(op, rule.paramKey);
+          newLine += warn;
           resultLines.push(newLine);
         }
-        // else skip line if paramVal is absent
       } else {
         resultLines.push(line);
       }
@@ -87,12 +119,11 @@ function applyLineByLineSubstitution(template, op) {
       resultLines.push(line);
     }
   }
-
   return resultLines.join("\n");
 }
 
 /**
- * Looks up paramKey in op.parameterValue, ignoring case.
+ * Finds a parameter value for a given paramKey (case-insensitive).
  */
 function findParamValue(op, paramKey) {
   if (!op.parameterValue) return null;
@@ -107,7 +138,7 @@ function findParamValue(op, paramKey) {
 }
 
 /**
- * If op.activityName is in processInstructions, use that template; else fallback to op.description.
+ * Retrieves the template from processInstructions based on op.activityName.
  */
 function getTemplate(op) {
   if (op.activityName && processInstructions[op.activityName]) {
@@ -117,8 +148,8 @@ function getTemplate(op) {
 }
 
 /**
- * In Column 3, for each parameter (except "Amount"), produce a line.
- * If the parameter is flagged as CP, PC, or CY, add a warning tag.
+ * Builds the "Actual Data" text for Column 3.
+ * (Warnings are now handled inline in Column 1.)
  */
 function buildActualData(op) {
   const unitMap = {
@@ -134,36 +165,24 @@ function buildActualData(op) {
 
   const lines = [];
   if (!op.parameterValue) return "";
-
   for (const key in op.parameterValue) {
-    if (key.toLowerCase() === "amount") continue; // skip amount
+    if (key.toLowerCase() === "amount") continue;
     const val = op.parameterValue[key].trim();
     if (val.toUpperCase() === "NA" || val === "") continue;
-
-    // Check if there's a unit
     const unit = unitMap[key.toLowerCase()] || "";
-
-    // Check if there's a criticality flag for this parameter
-    let warnText = "";
-    if (op.parameterCriticalities && op.parameterCriticalities[key]) {
-      // e.g. ["CP", "CY"]
-      const flags = op.parameterCriticalities[key];
-      warnText = ` [WARNING: ${flags.join(", ")}]`;
-    }
-
-    const line = `Actual ${key}: __________${unit ? " " + unit : ""};${warnText}`;
+    const line = `Actual ${key}: __________${unit ? " " + unit : ""};`;
     lines.push(line);
   }
   return lines.join("\n");
 }
 
 /**
- * Creates the DOCX table (3 columns).
+ * Creates the DOCX file with a three‑column table.
+ * Column 1 now contains the template-based description with inline warnings.
  */
 export async function generateBmrDocx(operations, outputFilePath) {
   const rows = [];
 
-  // Header row
   const headerCells = [
     new TableCell({
       children: [new Paragraph("Description")],
@@ -180,7 +199,6 @@ export async function generateBmrDocx(operations, outputFilePath) {
   ];
   rows.push(new TableRow({ children: headerCells }));
 
-  // Each operation => one row
   operations.forEach((op) => {
     const baseTemplate = getTemplate(op);
     const finalDescription = applyLineByLineSubstitution(baseTemplate, op);
@@ -188,32 +206,18 @@ export async function generateBmrDocx(operations, outputFilePath) {
     const actualDataText = buildActualData(op);
 
     const rowCells = [
-      new TableCell({
-        children: createParagraphs(finalDescription),
-      }),
-      new TableCell({
-        children: createParagraphs(timesText),
-      }),
-      new TableCell({
-        children: createParagraphs(actualDataText),
-      }),
+      new TableCell({ children: createParagraphs(finalDescription) }),
+      new TableCell({ children: createParagraphs(timesText) }),
+      new TableCell({ children: createParagraphs(actualDataText) }),
     ];
     rows.push(new TableRow({ children: rowCells }));
   });
 
-  // Build the table + doc
   const table = new Table({
     rows: rows,
     width: { size: 100, type: WidthType.PERCENTAGE },
   });
-  const doc = new Document({
-    sections: [
-      {
-        children: [table],
-      },
-    ],
-  });
-
+  const doc = new Document({ sections: [{ children: [table] }] });
   const buffer = await Packer.toBuffer(doc);
   fs.writeFileSync(outputFilePath, buffer);
   console.log(`BMR DOCX file saved to ${outputFilePath}`);
