@@ -1,3 +1,5 @@
+//operations.js
+
 const processInstructions = {
   // Loading Operations
   "loading-Solid": {
@@ -5,11 +7,11 @@ const processInstructions = {
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
 3. Load [name] into the Reactor via handhole using a plastic scoop.
-4. Set stirring rate in reactor 002-XX to [Stirring rate].
+4. Set stirring rate in reactor 002-XX to [Stirring].
 5. Set inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH check to [pH check].
 7. Set temperature to [Set temp].
-8. Record actual temperature: [Actual temperature].
+8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Note addition rate: [Addition rate].
 10. Apply loading over time if needed: [Time].
 11. (Optional) Verify loaded material temperature: [Loaded material temp.].
@@ -21,11 +23,11 @@ Specified loading: ….. kg (range: … - … kg)`
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
 3. Pour [name] into the Reactor via handhole using a plastic funnel [project/TP code].
-4. Set/keep stirring rate in reactor 002-XX to [Stirring rate].
+4. Set/keep stirring rate in reactor 002-XX to [Stirring].
 5. Set/keep inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH check to [pH check].
 7. Set temperature to [Set temp].
-8. Record actual temperature: [Actual temperature].
+8. Keep the temperature of reaction mixture in range:: [Temp. of rm].
 9. Note addition rate: [Addition rate].
 10. Apply loading over time if needed: [Time].
 11. (Optional) Verify loaded material temperature: [Loaded material temp.].
@@ -35,13 +37,13 @@ Specified loading: ….. kg (range: … - … kg)`
   "loading-liquid >5L": {
     description: `Load required amount of [name] into Reactor:
 1. Weigh the required amount of [name] using balance 007-XX.
-2. Connect peristaltic pump 001-XX and hose [project/TP code]; set pump to [Addition rate]%.
+2. Connect peristaltic pump 001-XX and hose [project/TP code]; set pump to [Addition rate].
 3. Using the peristaltic pump, load [name] via the loading port.
-4. Set/keep stirring rate in reactor 002-XX to [Stirring rate].
+4. Set/keep stirring rate in reactor 002-XX to [Stirring].
 5. Set/keep inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH check to [pH check].
 7. Set temperature to [Set temp].
-8. Record actual temperature: [Actual temperature].
+8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Apply loading over time if needed: [Time].
 10. (Optional) Verify loaded material temperature: [Loaded material temp.].
 
@@ -52,7 +54,7 @@ Specified loading: ….. kg (range: … - … kg)`
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
 3. Load [name] into the dropping funnel using a plastic funnel [project/TP code].
-4. Set stirring rate in reactor 002-XX to [Stirring rate].
+4. Set stirring rate in reactor 002-XX to [Stirring].
 5. Start drop-wise addition of [name] into the reactor.
 6. Maintain temperature within [Set temp]–[Target Temp] °C.
 7. Set/keep inert gas flow rate to [Inert gas flow rate].
@@ -109,9 +111,9 @@ Specified loading: ….. kg (range: … - … kg)`
     description: `Perform an unloading operation:
 1. Unload [name] using appropriate method: [method of transf.].
 2. Measure unloaded amount: [Amount] kg.
-3. Maintain stirring rate during unloading at [Stirring rate].
+3. Maintain stirring rate during unloading at [Stirring].
 4. Set inert gas flow rate to [Inert gas flow rate].
-5. Monitor break point at [break point].`
+5. Optional: Possible pause - [break point].`
   },
   
   // Heating/Cooling
@@ -119,9 +121,9 @@ Specified loading: ….. kg (range: … - … kg)`
     description: `Perform a heating/cooling operation:
 1. Set temperature to [Set temp].
 2. Target temperature: [Target Temp].
-3. Monitor actual temperature: [Actual temperature].
+3. Keep the temperature of reaction mixture in range: [Temp. of rm].
 4. Adjust temperature rate to [temperature rate].
-5. Set stirring rate to [Stirring rate].
+5. Set stirring rate to [Stirring].
 6. Configure inert gas flow rate to [Inert gas flow rate].`
   },
   
@@ -129,11 +131,11 @@ Specified loading: ….. kg (range: … - … kg)`
   "hold time": {
     description: `Perform a hold time operation:
 1. Set temperature to [Set temp] with target [Target Temp].
-2. Monitor actual temperature: [Actual temperature].
-3. Adjust stirring rate to [Stirring rate].
+2. Keep the temperature of reaction mixture in range: [Temp. of rm].
+3. Adjust stirring rate to [Stirring].
 4. Hold for duration: [Time].
 5. Set inert gas flow rate to [Inert gas flow rate].
-6. Maintain break point at [break point].`
+6. Optional: Possible pause - [break point].`
   },
   
   // IPC
@@ -155,20 +157,20 @@ Specified loading: ….. kg (range: … - … kg)`
 3. Maintain stirring at [Stirring].
 4. Continue until end point: [End point].
 5. Set inert gas flow rate to [Inert gas flow rate].
-6. Monitor and break at [break point].`
+6. Optional: Possible pause - [break point].`
   },
   
   // Extraction/Separation
   "extr./separ.": {
     description: `Perform an extraction/separation operation:
 1. Operate for expected time: [Exp. time].
-2. Monitor for break point: [break point].`
+2. Optional: Possible pause - [break point].`
   },
   
   // Filtration
   "filtration": {
     description: `Perform a filtration operation:
-1. Set stirring rate to [Stirring rate].
+1. Set stirring rate to [Stirring].
 2. Target pressure: [Target pressure].
 3. Monitor actual pressure: [actual pressure].
 4. Continue until end point: [End point].`
@@ -182,11 +184,13 @@ Specified loading: ….. kg (range: … - … kg)`
   },
   
   // Washing FK
-  "Washing FK": {
-    description: `Perform a Washing FK operation:
-1. Use amount: [Amount].
+  "washing FK": {
+    description: `Perform a Washing Filter Cake operation:
+1. Use required amount of [name] for washing Filter cake
 2. Ensure loaded material temperature is [Loaded material temp.].
-3. Mix on filter as per instructions: [Mixing on filter].`
+3. Mix on filter: [Mixing on filter].
+
+Specified loading: ….. kg (range: … - … kg)`
   },
   
   // Dry on Filter
