@@ -91,7 +91,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Packing (first instance)
   "packing": {
-    description: `Perform a packing operation:
+    description: `Pack the product:
 1. Use analytical sample amount: [analytical sample amount].
 2. Retain sample amount: [ret. Sample amount.].
 3. Pack using: [packing material].
@@ -107,7 +107,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Equipment cleaning
   "eq. cleaning": {
-    description: `Perform equipment cleaning:
+    description: `Clean the equipment:
 1. Follow the solvent sequence: [solvent sequence].
 2. Estimated time required: [estim. time required].`
   },
@@ -181,7 +181,7 @@ Record required parameters into table XX.`
   
   // Evaporation
   "evap.": {
-    description: `Perform an evaporation operation:
+    description: `Start evaporation:
 1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
 2. Connect the membrane pump via a cold trap and turn it ON.
 3. Gradually reduce the pressure to reach approximately [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
@@ -202,7 +202,7 @@ Record required parameters into table XX.`
   
   // Filtration
   "filtration": {
-    description: `Perform a filtration operation:
+    description: `Filter the material:
 1. Set the vacuum pump to [Pressure set] and start it.
 2. Transfer the reaction mixture from the Reactor 001-XX to the Nutsch filter in portions, allowing filtration to proceed.
 3. Record actula achieved pressure during filtration: [actual pressure].
@@ -217,14 +217,14 @@ Record required parameters into table XX.`
   },
   // Filtration with Candle Filter
   "filtration with candle filter": {
-    description: `Perform a filtration operation using a candle filter:
+    description: `Filter the reaction mass using candle filter:
 1. Set flow rate to [Flow rate].
 2. Continue until reaching end point: [End point].`
   },
   
   // Washing FK
   "Washing Filter cake": {
-    description: `Perform a Washing Filter Cake operation:
+    description: `Wash filter cake:
 1. Stop membrane pump 001-XX. 
 2. Use required amount of [name] for washing Filter cake
 3. Ensure loaded material temperature is [Loaded material temp.].
@@ -259,7 +259,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Drying at Atmospheric Pressure
   "drying at atm.": {
-    description: `Perform a drying at atmospheric pressure operation:
+    description: `Dry the product in oven 012-XX:
 1. Set temperature on thermostat 011-XX to [Set temp] with overheating protection: [overheating prot.].
 2. Adjust fan setting within range: [fan set. Range].
 3. Set flap to [flap set.].
@@ -309,19 +309,6 @@ Specified loading: ….. kg (range: … - … kg)`
 1. Use a mill of size [mill size].
 2. Process portion size: [portion size].
 3. Mill for [Time].`
-  },
-  
-  // (Repeat packing, eq. cleaning, and waste treatment if needed)
-  "eq. cleaning": {
-    description: `Perform equipment cleaning:
-1. Follow the solvent sequence: [solvent sequence].
-2. Estimated time required: [estim. time required].`
-  },
-  "waste treatment": {
-    description: `Perform waste treatment:
-1. Process water waste: [water waste].
-2. Process organic waste: [organic waste].
-3. Process solid waste: [solid waste].`
   }
 };
 
