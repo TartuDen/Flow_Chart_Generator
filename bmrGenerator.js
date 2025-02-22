@@ -175,7 +175,6 @@ function getTemplate(op) {
 function buildActualData(op) {
   const unitMap = {
     "stirring": "rpm",
-    "stirring, critical for the process!!!": "rpm",
     "argon flow": "L/min",
     "pH": "",
     "temp. of rm": "°C",
@@ -192,7 +191,7 @@ function buildActualData(op) {
     const val = op.parameterValue[key].trim();
     if (val.toUpperCase() === "NA" || val === "") continue;
     const unit = unitMap[key.toLowerCase()] || "";
-    lines.push(`Actual ${key}: __________${unit ? " " + unit : ""};`);
+    lines.push(`Actual ${key}: .........${unit ? " " + unit : ""};\n`);
   }
   return lines.join("\n");
 }
