@@ -12,7 +12,7 @@ const processInstructions = {
 6. Adjust pH to: [pH check].
 7. Set temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
-9. Keep addition rate at: [Addition rate].
+9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
@@ -31,7 +31,7 @@ Specified loading: ….. kg (range: … - … kg)`
 6. Adjust pH to: [pH check].
 7. Set temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
-9. Keep addition rate at: [Addition rate].
+9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
@@ -43,14 +43,14 @@ Specified loading: ….. kg (range: … - … kg)`
   "loading-liquid >5L": {
     description: `Load required amount of [name] into Reactor:
 1. Weigh the required amount of [name] using balance 007-XX.
-2. Connect peristaltic pump 001-XX and hose [project/TP code]; set pump to [Addition rate].
+2. Connect peristaltic pump 001-XX and hose [project/TP code].
 3. Using the peristaltic pump, load [name] via the loading port.
 4. Set/Keep stirring rate in reactor 002-XX to [Stirring].
 5. Set/Keep inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
-9. Keep addition rate at: [Addition rate].
+9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
@@ -69,7 +69,7 @@ Specified loading: ….. kg (range: … - … kg)`
 6. Adjust pH to: [pH check].
 7. Set temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
-9. Keep addition rate at: [Addition rate].
+9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].

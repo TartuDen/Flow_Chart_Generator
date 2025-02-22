@@ -1,8 +1,8 @@
 // settings.js
 
 // Excel file settings
-export const EXCEL_FILE_PATH = "excel_test.xlsm";
-export const EXCEL_TAB = "TP.2 ATI";
+export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.1  20250120 draft.xlsm";
+export const EXCEL_TAB = "TP.3 ATI";
 
 // BMR (DOCX) settings
 export const DOCX_TAB = EXCEL_TAB; // Re-use the Excel tab value for consistency
