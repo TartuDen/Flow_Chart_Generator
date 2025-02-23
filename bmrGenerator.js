@@ -1,16 +1,16 @@
-//BMR Generator Module
-
+// bmrGenerator.js
 import { Document, Packer, Paragraph, Table, TableRow, TableCell, WidthType, TextRun } from "docx";
 import fs from "fs";
 import { processInstructions } from "./operations.js";
-import { DOCX_TAB } from "./settings.js";
+import { DOCX_TAB, BMR_OPTIONS, UNIT_MAP } from "./settings.js";
 
 const TAB = DOCX_TAB;
 
 /**
- * Updated: Replaces placeholders with parameter values wrapped in bold markers.
- * Also, if any placeholder is missing or "NA", the entire line is omitted.
- * Finally, numbered lines are re‑numbered with bold numbering.
+ * Replaces placeholders with parameter values.
+ * If any placeholder is missing or "NA", the entire line is omitted.
+ * Also re‑numbers lines that start with numbering. Bold formatting is applied
+ * based on the BMR_OPTIONS settings.
  */
 function applyLineByLineSubstitution(template, op) {
   const lines = template.split("\n");
@@ -23,19 +23,17 @@ function applyLineByLineSubstitution(template, op) {
     let newLine = line;
 
     for (const phMatch of placeholders) {
-      const fullMatch = phMatch[0]; // e.g. "[Addition rate]"
+      const fullMatch = phMatch[0];
       const phContent = phMatch[1];
 
-      // Special handling for project/TP code and reagent name
       if (phContent.trim().toLowerCase() === "project/tp code") {
-        newLine = newLine.replace(fullMatch, `<b>${TAB}</b>`);
+        newLine = newLine.replace(fullMatch, BMR_OPTIONS.boldPlaceholders ? `<b>${TAB}</b>` : TAB);
         continue;
       }
       if (phContent.trim().toLowerCase() === "name" && op.reagentName) {
-        newLine = newLine.replace(fullMatch, `<b>${op.reagentName}</b>`);
+        newLine = newLine.replace(fullMatch, BMR_OPTIONS.boldPlaceholders ? `<b>${op.reagentName}</b>` : op.reagentName);
         continue;
       }
-
       if (phContent.trim() === "XX-XX") {
         continue;
       } else {
@@ -45,7 +43,8 @@ function applyLineByLineSubstitution(template, op) {
           break;
         } else {
           const warn = getCriticalityWarning(op, phContent);
-          newLine = newLine.replace(fullMatch, `<b>${paramVal + warn}</b>`);
+          const replacement = paramVal + warn;
+          newLine = newLine.replace(fullMatch, BMR_OPTIONS.boldPlaceholders ? `<b>${replacement}</b>` : replacement);
         }
       }
     }
@@ -57,11 +56,10 @@ function applyLineByLineSubstitution(template, op) {
 
   let numberingCounter = 1;
   const reNumberedLines = finalLines.map((l) => {
-    // Remove any HTML tags for pattern matching
     const plain = l.replace(/<[^>]+>/g, "");
     const match = plain.trimStart().match(/^(\d+)\.\s+(.*)$/);
     if (match) {
-      return `<b>${numberingCounter++}.</b> ${match[2]}`;
+      return BMR_OPTIONS.boldPlaceholders ? `<b>${numberingCounter++}.</b> ${match[2]}` : `${numberingCounter++}. ${match[2]}`;
     } else {
       return l;
     }
@@ -121,23 +119,13 @@ function getTemplate(op) {
  * Builds the "Actual Data" text for the third column.
  */
 function buildActualData(op) {
-  const unitMap = {
-    "stirring": "rpm",
-    "argon flow": "L/min",
-    "pH": "",
-    "temp. of rm": "°C",
-    "set temp": "°C",
-    "target temp": "°C",
-    "time": "",
-  };
-
   const lines = [];
   if (!op.parameterValue) return "";
 
   for (const key in op.parameterValue) {
     const val = op.parameterValue[key].trim();
     if (val.toUpperCase() === "NA" || val === "") continue;
-    const unit = unitMap[key.toLowerCase()] || "";
+    const unit = UNIT_MAP[key.toLowerCase()] || "";
     lines.push(`Actual ${key}: .........${unit ? " " + unit : ""};\n`);
   }
   return lines.join("\n");
@@ -145,11 +133,10 @@ function buildActualData(op) {
 
 /**
  * Parses a line that may include <b> markers and returns a formatted Paragraph.
- * Also ensures the very first word of the line is bold.
+ * Ensures the first word is bold if BMR_OPTIONS.boldFirstWord is enabled.
  */
 function parseFormattedLine(line) {
-  // Ensure the first word is bold if not already
-  if (!line.trim().startsWith("<b>")) {
+  if (BMR_OPTIONS.boldFirstWord && !line.trim().startsWith("<b>")) {
     const firstSpaceIndex = line.indexOf(" ");
     if (firstSpaceIndex > 0) {
       const firstWord = line.substring(0, firstSpaceIndex);
@@ -160,7 +147,6 @@ function parseFormattedLine(line) {
     }
   }
 
-  // Split the line into parts based on <b> and </b> markers
   const parts = line.split(/(<\/?b>)/);
   let boldFlag = false;
   const runs = [];
@@ -185,7 +171,7 @@ function createFormattedParagraphs(text) {
 }
 
 /**
- * Original helper to create plain paragraphs (used for non‑description columns).
+ * Helper to create plain Paragraphs.
  */
 function createParagraphs(text) {
   return text.split("\n").map((line) => new Paragraph(line));
@@ -217,7 +203,7 @@ export async function generateBmrDocx(operations, outputFilePath) {
     })
   );
 
-  // For each operation, process the template and substitute placeholders.
+  // Process each operation.
   operations.forEach((op) => {
     const template = getTemplate(op);
     const finalDescription = applyLineByLineSubstitution(template, op);
