@@ -156,7 +156,6 @@ Record required parameters into table XX.`
 Record required parameters into table XX.`
   },
 
-    // IPC
     "Filter prep.": {
       description: `Filter 046-XX setup:
   1. Place a PTFE seal on filtrate receiver top edge.

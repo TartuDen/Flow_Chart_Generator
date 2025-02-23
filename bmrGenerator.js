@@ -1,3 +1,5 @@
+//BMR Generator Module
+
 import { Document, Packer, Paragraph, Table, TableRow, TableCell, WidthType, TextRun } from "docx";
 import fs from "fs";
 import { processInstructions } from "./operations.js";
@@ -6,10 +8,9 @@ import { DOCX_TAB } from "./settings.js";
 const TAB = DOCX_TAB;
 
 /**
- * Applies line‑by‑line substitution on the template.
- * Each placeholder [some text] is replaced by its value (wrapped in bold markers).
- * If any placeholder in a line has no valid value, the entire line is omitted.
- * Also re‑numbers lines starting with numbering.
+ * Updated: Replaces placeholders with parameter values wrapped in bold markers.
+ * Also, if any placeholder is missing or "NA", the entire line is omitted.
+ * Finally, numbered lines are re‑numbered with bold numbering.
  */
 function applyLineByLineSubstitution(template, op) {
   const lines = template.split("\n");
@@ -22,17 +23,19 @@ function applyLineByLineSubstitution(template, op) {
     let newLine = line;
 
     for (const phMatch of placeholders) {
-      const fullMatch = phMatch[0];    // e.g., "[Addition rate]"
-      const phContent = phMatch[1];      // e.g., "Addition rate"
+      const fullMatch = phMatch[0]; // e.g. "[Addition rate]"
+      const phContent = phMatch[1];
 
+      // Special handling for project/TP code and reagent name
       if (phContent.trim().toLowerCase() === "project/tp code") {
-        newLine = newLine.replace(fullMatch, TAB);
+        newLine = newLine.replace(fullMatch, `<b>${TAB}</b>`);
         continue;
       }
       if (phContent.trim().toLowerCase() === "name" && op.reagentName) {
-        newLine = newLine.replace(fullMatch, op.reagentName);
+        newLine = newLine.replace(fullMatch, `<b>${op.reagentName}</b>`);
         continue;
       }
+
       if (phContent.trim() === "XX-XX") {
         continue;
       } else {
@@ -42,24 +45,23 @@ function applyLineByLineSubstitution(template, op) {
           break;
         } else {
           const warn = getCriticalityWarning(op, phContent);
-          // Wrap the inserted parameter (and any warning) in bold markers.
-          newLine = newLine.replace(fullMatch, `<<b>>${paramVal + warn}<</b>>`);
+          newLine = newLine.replace(fullMatch, `<b>${paramVal + warn}</b>`);
         }
       }
     }
+
     if (!removeLine) {
       finalLines.push(newLine);
     }
   }
 
-  // Re‑number lines that start with numbering (e.g., "1. ...", "2. ...")
   let numberingCounter = 1;
   const reNumberedLines = finalLines.map((l) => {
-    const trimmed = l.trimStart();
-    const match = trimmed.match(/^(\d+)\.\s+(.*)$/);
+    // Remove any HTML tags for pattern matching
+    const plain = l.replace(/<[^>]+>/g, "");
+    const match = plain.trimStart().match(/^(\d+)\.\s+(.*)$/);
     if (match) {
-      const lineBody = match[2];
-      return `${numberingCounter++}. ${lineBody}`;
+      return `<b>${numberingCounter++}.</b> ${match[2]}`;
     } else {
       return l;
     }
@@ -69,7 +71,7 @@ function applyLineByLineSubstitution(template, op) {
 }
 
 /**
- * Retrieves any criticality warning for a given placeholder.
+ * Retrieves a warning string if the parameter is flagged.
  */
 function getCriticalityWarning(op, placeholder) {
   if (!op.parameterCriticalities) return "";
@@ -87,7 +89,7 @@ function getCriticalityWarning(op, placeholder) {
 }
 
 /**
- * Looks up the value for a parameter (ignoring case and punctuation).
+ * Finds the actual parameter value for a given placeholder.
  */
 function findParamValue(op, placeholder) {
   if (!op.parameterValue) return null;
@@ -106,21 +108,13 @@ function findParamValue(op, placeholder) {
 }
 
 /**
- * Retrieves the template from processInstructions (or op.description if not found).
- * Also ensures that the first word is wrapped in bold markers.
+ * Retrieves the template from processInstructions or falls back to op.description.
  */
 function getTemplate(op) {
-  let template = "";
   if (op.activityName && processInstructions[op.activityName]) {
-    template = processInstructions[op.activityName].description;
-  } else {
-    template = op.description || "";
+    return processInstructions[op.activityName].description;
   }
-  // Bold the first word if not already bold.
-  if (!template.trim().startsWith("<<b>>")) {
-    template = template.replace(/^(\s*)(\S+)/, `$1<<b>>$2<</b>>`);
-  }
-  return template;
+  return op.description || "";
 }
 
 /**
@@ -150,54 +144,60 @@ function buildActualData(op) {
 }
 
 /**
- * Parses text containing custom bold markers (<<b>> and <</b>>)
- * and returns an array of TextRun objects with appropriate formatting.
+ * Parses a line that may include <b> markers and returns a formatted Paragraph.
+ * Also ensures the very first word of the line is bold.
  */
-function parseTextWithBoldMarkers(text) {
-  const runs = [];
-  let remaining = text;
-  while (remaining.length > 0) {
-    const indexStart = remaining.indexOf("<<b>>");
-    if (indexStart === -1) {
-      runs.push(new TextRun(remaining));
-      break;
+function parseFormattedLine(line) {
+  // Ensure the first word is bold if not already
+  if (!line.trim().startsWith("<b>")) {
+    const firstSpaceIndex = line.indexOf(" ");
+    if (firstSpaceIndex > 0) {
+      const firstWord = line.substring(0, firstSpaceIndex);
+      const rest = line.substring(firstSpaceIndex);
+      line = `<b>${firstWord}</b>${rest}`;
+    } else {
+      line = `<b>${line}</b>`;
     }
-    if (indexStart > 0) {
-      runs.push(new TextRun(remaining.substring(0, indexStart)));
-    }
-    remaining = remaining.substring(indexStart + 5); // Skip <<b>>
-    const indexEnd = remaining.indexOf("<</b>>");
-    if (indexEnd === -1) {
-      runs.push(new TextRun({ text: remaining, bold: true }));
-      break;
-    }
-    const boldText = remaining.substring(0, indexEnd);
-    runs.push(new TextRun({ text: boldText, bold: true }));
-    remaining = remaining.substring(indexEnd + 6); // Skip <</b>>
   }
-  return runs;
+
+  // Split the line into parts based on <b> and </b> markers
+  const parts = line.split(/(<\/?b>)/);
+  let boldFlag = false;
+  const runs = [];
+  for (const part of parts) {
+    if (part === "<b>") {
+      boldFlag = true;
+    } else if (part === "</b>") {
+      boldFlag = false;
+    } else if (part.length > 0) {
+      runs.push(new TextRun({ text: part, bold: boldFlag }));
+    }
+  }
+  return new Paragraph({ children: runs });
 }
 
 /**
- * Creates an array of Paragraph objects from the given text.
- * Each line is parsed for bold markers and converted to rich text.
+ * Creates an array of formatted Paragraph objects from the given text.
+ */
+function createFormattedParagraphs(text) {
+  const lines = text.split("\n");
+  return lines.map((line) => parseFormattedLine(line));
+}
+
+/**
+ * Original helper to create plain paragraphs (used for non‑description columns).
  */
 function createParagraphs(text) {
-  const lines = text.split("\n");
-  const paragraphs = lines.map((line) => {
-    const runs = parseTextWithBoldMarkers(line);
-    return new Paragraph({ children: runs });
-  });
-  return paragraphs;
+  return text.split("\n").map((line) => new Paragraph(line));
 }
 
 /**
- * Creates and saves a DOCX file with a 3‑column table (Description, Times, Actual Data).
+ * Generates and saves a DOCX file with a 3‑column table.
  */
 export async function generateBmrDocx(operations, outputFilePath) {
   const rows = [];
 
-  // Table header
+  // Table Header
   rows.push(
     new TableRow({
       children: [
@@ -217,21 +217,17 @@ export async function generateBmrDocx(operations, outputFilePath) {
     })
   );
 
-  // Process each operation.
+  // For each operation, process the template and substitute placeholders.
   operations.forEach((op) => {
-    // 1) Get the base template and ensure first word is bold.
     const template = getTemplate(op);
-    // 2) Apply line‑by‑line substitution with parameter bolding.
     const finalDescription = applyLineByLineSubstitution(template, op);
-    // 3) Fixed text for the "Times" column.
     const timesText = "Start:\n__:__\nEnd:\n__:__";
-    // 4) Build "Actual Data" text.
     const actualDataText = buildActualData(op);
 
     rows.push(
       new TableRow({
         children: [
-          new TableCell({ children: createParagraphs(finalDescription) }),
+          new TableCell({ children: createFormattedParagraphs(finalDescription) }),
           new TableCell({ children: createParagraphs(timesText) }),
           new TableCell({ children: createParagraphs(actualDataText) }),
         ],
