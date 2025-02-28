@@ -1,0 +1,425 @@
+<mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="3" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;reactor is prepared&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="10" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="4" value="PW water&lt;div&gt;Amount: 150.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="220" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="5" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Add the specified amount of PW into the reactor. 1st refill of 150L reactor.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="190" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="7" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="3" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="8" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Heat the purified water to specified temperature&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 120-&amp;gt;95oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 90oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; temperature rate: straight,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="370" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="5" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="10" value="PW water&lt;div&gt;Amount: 37.50 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="580" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="11" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW into the
+plastic  pot (from 150L reactor). 1st HCl treatment.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="550" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="12" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="10" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="13" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="8" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="14" value="HCl Emprove&lt;div&gt;Amount: 3.75 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="760" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="15" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add 1st portion slowly of HCl into the 
+plastic  pot.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: ???,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="730" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="14" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="11" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="18" value="PSDS-Na&lt;div&gt;Amount: 4.80 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="940" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="19" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add starting material PSDS-Na into the 
+plastic  pot.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: ???,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="910" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="18" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="21" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="15" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="22" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: tbd,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 30 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1090" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="19" target="22" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="24" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1270" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="25" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="22" target="24" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="26" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: ???,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1450" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="27" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="1480" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="28" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="26" target="27" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="29" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="24" target="26" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="30" value="PW water&lt;div&gt;Amount: 37.50 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1660" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="31" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW from 150L reactor into the plastic  pot. 2nd HCl treatment.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1630" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="32" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="30" target="31" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="26" target="31" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="34" value="HCl Emprove&lt;div&gt;Amount: 3.75 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1840" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="35" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add 1st portion slowly of HCl into the 
+plastic  pot.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: ???,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1810" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="36" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="34" target="35" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="37" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="31" target="35" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="38" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 30 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1990" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="39" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="35" target="38" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="40" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2170" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="41" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="38" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="42" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: ???,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2350" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="43" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="2380" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="44" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="42" target="43" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="45" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="40" target="42" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="46" value="PW water&lt;div&gt;Amount: 80.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2560" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="47" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW from 150L reactor into the plastic  pot. 1st wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: rt,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2530" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="48" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="46" target="47" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="49" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="42" target="47" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="50" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 15 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2710" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="51" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="47" target="50" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="52" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2890" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="53" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="50" target="52" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="54" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pH check: NLT 4.0,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3070" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="55" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3100" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="56" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="54" target="55" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="57" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="52" target="54" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="58" value="PW water&lt;div&gt;Amount: 150.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3280" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="59" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Add the specified amount of PW into the
+reactor for heating. 2nd refill of 150L reactor.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3250" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="60" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="58" target="59" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="61" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="54" target="59" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="62" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Heat the purified water to specified temperature&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 120-&amp;gt;95oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 90oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; temperature rate: straight,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3430" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="63" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="59" target="62" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="64" value="PW water&lt;div&gt;Amount: 80.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3640" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="65" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW from 150L reactor into the plastic  pot. 2nd wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: rt,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3610" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="66" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="64" target="65" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="67" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="62" target="65" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="68" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 15 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3790" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="65" target="68" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="70" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3970" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="68" target="70" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="72" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pH check: NLT 4.0,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4150" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="73" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4180" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="74" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="72" target="73" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="70" target="72" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="76" value="PW water&lt;div&gt;Amount: 80.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="4360" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="77" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW from 150L reactor into the plastic  pot. 3rd wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: rt,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4330" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="78" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="76" target="77" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="79" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="72" target="77" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="80" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 15 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4510" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="81" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="77" target="80" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="82" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4690" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="83" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="80" target="82" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="84" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pH check: NLT 4.0,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4870" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="85" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4900" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="86" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="84" target="85" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="87" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="82" target="84" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="88" value="PW water&lt;div&gt;Amount: 150.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="5080" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="89" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Add the specified amount of PW into the
+reactor for heating. 3rd refill of 150L reactor.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: !!! 400 rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5050" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="90" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="88" target="89" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="91" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="84" target="89" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="92" value="&lt;b&gt;glass reactor 150L&lt;/b&gt;&lt;div&gt;Heat the purified water to specified temperature&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 120-&amp;gt;95oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 90oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; temperature rate: straight,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5230" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="93" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="89" target="92" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="94" value="PW water&lt;div&gt;Amount: 80.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="5440" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="95" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Add the specified amount of hot PW from 150L reactor into the plastic  pot. 4th wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: rt,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5410" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="96" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="94" target="95" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="97" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="92" target="95" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="98" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Mix at the specified speed and time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: 250-300rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 15 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5590" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="99" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="95" target="98" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="100" value="&lt;b&gt;PSDSA acidification and washing module&lt;/b&gt;&lt;div&gt;Stirring OFF. Allow the resin to settle for the specified time.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring rate: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 10 min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5770" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="101" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="98" target="100" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="102" value="&lt;b&gt;peristaltic pump&lt;/b&gt;&lt;div&gt;Using a peristaltic pump and a hose with filter tip, carefully transfer the
+acid/water mixture into the Amberlite Waste
+holding container.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pH check: NLT 4.0,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5950" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="103" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="5980" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="104" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="102" target="103" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="105" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="100" target="102" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="106" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Analyse supernatant: pH NLT 4.0 &amp;amp; turbidity (chloride) test.
+a. Measure the pH of the supernatant.
+b. Draw approximately 10ml of the supernatant solution into a glass tube.
+c. Place 5 drops of 0.1N Silver Nitrate solution into the glass tube containing the supernatant solution.
+d. Observe that no turbidity is present and the supernatant is negative for chlorides.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Method: pH and turbidity,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sample amount: 10 mL,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Expected Result: pH NLT 4, turbidity pass,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Failure Action: Repeat water wash with 80 L hot PW until IPC passes,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Pass action: Continue next op,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Estim. Time of analysis: 30 m,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6130" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="107" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="102" target="106" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="108" value="&lt;b&gt;drying oven + sufficient trays&lt;/b&gt;&lt;div&gt;Transfer product onto stainlesssteel trays&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 75-85 oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; overheating prot.: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; fan set. Range: 0.50,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; flap set.: 0.50,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; layer thickness: 1-1.5 cm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; mixing/delumping: Yes, after NLT 12h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 42-48 h,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6310" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="109" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="6340" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="110" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="108" target="109" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="111" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="106" target="108" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="112" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Measure water content of dried resin&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Method: VKF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sample amount: 1 g,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Expected Result: NMT 10.0%,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Failure Action: Dry for additional 18-24h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Pass action: Continue next op,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Estim. Time of analysis: 30 m,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6490" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="113" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="108" target="112" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="114" value="&lt;b&gt;sieve 250 um&lt;/b&gt;&lt;div&gt;Place two polyethylene bags (2ml) in an appropriately sized holding container. Using a 60 mesh stainless steel sieve, screen the resin into the bags. This step must be completed within 4 hours of drying.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sieve size: 250 um,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; portion size: ???,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NMT 4 h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: Probably hygroscopic,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6670" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="115" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="112" target="114" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="116" value="&lt;b&gt;sieve 250 um&lt;/b&gt;&lt;div&gt;Perform cleaning of the 60 mesh sieve. Caution: Do not use a scrubbing brush for cleaning the 60 mesh screen.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; solvent sequence: water, hot gun?,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; estim. time required: 1-2h,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6850" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="117" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="114" target="116" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="118" value="&lt;b&gt;ball mill&lt;/b&gt;&lt;div&gt;Inspect milling balls before use. Discard any milling balls that are found out-of-round, cracked, or showing any sign of deterioration&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; number of jars: 3.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; bead count per jar: 320± 2,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7030" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="119" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="116" target="118" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="120" value="&lt;b&gt;balance&lt;/b&gt;&lt;div&gt;Weigh the specified amount of dried, screened resin into each porcelain mill jar containing the specified amount of ceramic balls as quickly as possible.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; portion size J1: 1600 g,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; portion size J2: 1600 g,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; portion size J3: 1600 g,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7210" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="121" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="118" target="120" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="122" value="&lt;b&gt;ball mill&lt;/b&gt;&lt;div&gt;Place jars on the roller mills and assure that the specified time is set at start up.
+The speed of the mill jars should be set to the specified counts.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; time: 96.5 hours,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; counts J1: 189-197 = 36-38 RPM,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; counts J2: 189-197 = 36-38 RPM,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; counts J3: 189-197 = 36-38 RPM,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7390" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="123" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="120" target="122" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="124" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Take specified amount of sample from each jar and place the sample in an individual air tight container. 
+
+After sampling assure the jar lid gasket is reseated and jar lids are bolted down&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Method: PSD by Laser Diffration,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sample amount: 2g from each jar,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Expected Result: 6 - 10 um,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Failure Action: mill for additional 8h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Pass action: pack sample,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Estim. Time of analysis: 2h,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7570" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="125" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="122" target="124" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="126" value="&lt;b&gt;sieve 250 um&lt;/b&gt;&lt;div&gt;Sieve material from passing jars into single PE-bag. Place the single-bagged resin into a second
+bag and seal each bag individually with a . Place the double bagged resin into a poly container with an airtight seal.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sieve size: 250 um,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; analytical sample amount: ,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ret. Sample amount.: ,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; packing material: double PE-bag in poly container,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7750" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="127" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="124" target="126" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="128" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; solvent sequence: ,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; estim. time required: ,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7930" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="129" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="126" target="128" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="130" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; water waste: ,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; organic waste: ,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; solid waste: ,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="8110" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="131" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="128" target="130" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="132" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; YES: Process finished,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; NO: in case of psd - mill for additional 8h,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="8290" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="133" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="130" target="132" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+      </root>
+    </mxGraphModel>

@@ -5,16 +5,16 @@ const processInstructions = {
   "loading-Solid": {
     description: `Load required amount of [name] into Reactor 002-XX:
 1. Remove the secondary package and carefully open the primary package.
-2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
-3. Load [name] into the Reactor via handhole using a plastic scoop [project/TP code].
-4. Set/Keep stirring rate in reactor 002-XX to [Stirring].
-5. Set/Keep inert gas flow rate to [Inert gas flow rate].
+2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
+3. Load [name] into the Reactor via handhole using a plastic scoop "[project/TP code]".
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set temperature on thermostat 011-XX to [Set temp].
+7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
-11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
+11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
 Record required parameters into table XX.
@@ -24,16 +24,16 @@ Specified loading: ….. kg (range: … - … kg)`
   "loading-liquid <5L": {
     description: `Load required amount of [name] into Reactor 002-XX:
 1. Remove the secondary package and carefully open the primary package.
-2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
-3. Pour [name] into the Reactor via handhole using a plastic funnel [project/TP code].
-4. Set/Keep stirring rate in reactor 002-XX to [Stirring].
-5. Set/Keep inert gas flow rate to [Inert gas flow rate].
+2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
+3. Pour [name] into the Reactor via handhole using a plastic funnel "[project/TP code]".
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set temperature on thermostat 011-XX to [Set temp].
+7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
-11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
+11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
 Record required parameters into table XX.
@@ -41,18 +41,18 @@ Record required parameters into table XX.
 Specified loading: ….. kg (range: … - … kg)`
   },
   "loading-liquid >5L": {
-    description: `Load required amount of [name] into Reactor:
+    description: `Load required amount of [name] into Reactor 002-XX:
 1. Weigh the required amount of [name] using balance 007-XX.
-2. Connect peristaltic pump 001-XX and hose [project/TP code].
+2. Connect peristaltic pump 001-XX and hose "[project/TP code]".
 3. Using the peristaltic pump, load [name] via the loading port.
-4. Set/Keep stirring rate in reactor 002-XX to [Stirring].
-5. Set/Keep inert gas flow rate to [Inert gas flow rate].
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set temperature on thermostat 011-XX to [Set temp].
+7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
-11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
+11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
 Record required parameters into table XX.
@@ -62,16 +62,16 @@ Specified loading: ….. kg (range: … - … kg)`
   "loading-dropwise addition": {
     description: `Load required amount of [name] into the dropping funnel of Reactor 002-XX:
 1. Remove the secondary package and carefully open the primary package.
-2. Weigh the required amount of [name] using balance 007-XX into a jug [project/TP code].
-3. Load [name] into the dropping funnel using a plastic funnel [project/TP code].
-4. Set/Keep stirring rate in reactor 002-XX to [Stirring].
-5. Set/Keep inert gas flow rate to [Inert gas flow rate].
+2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
+3. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set temperature on thermostat 011-XX to [Set temp].
+7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 8. Keep the temperature of reaction mixture in range: [Temp. of rm].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
-11. Keep/Porvide temeprature of loaded material in range: [Loaded material temp.].
+11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
 Record required parameters into table XX.
@@ -122,22 +122,22 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Unloading
   "unloading": {
-    description: `Perform an unloading operation:
+    description: `Perform an unloading:
 1. Unload [name] using appropriate method: [method of transf.].
 2. Measure unloaded amount: [Amount] kg.
 3. Maintain stirring rate during unloading at [Stirring].
-4. Set inert gas flow rate to [Inert gas flow rate].
+4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].`
   },
   
   // Heating/Cooling
   "heating/cooling": {
     description: `Start a heating/cooling operation:
-1. Open cooling water for heating/cooling circulator 011-XX
-2. Set temperature on thermostat 011-XX to [Set temp].
+1. Check that cooling water for heating/cooling circulator 011-XX is openned.
+2. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 3. Keep the temperature of reaction mixture in range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
-5. Set/Keep stirring rate to [Stirring].
+5. Set/Adjust stirring rate to [Stirring].
 6. Adjust inert gas flow rate to [Inert gas flow rate].
 
 Record required parameters into table XX.`
@@ -145,11 +145,11 @@ Record required parameters into table XX.`
   
   // Hold Time
   "hold time": {
-    description: `Start a hold time operation:
-1. Set temperature on thermostat 011-XX to [Set temp].
+    description: `Start a hold time:
+1. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 2. Keep the temperature of reaction mixture in range: [Target Temp].
 3. Adjust stirring rate to [Stirring].
-4. Set inert gas flow rate to [Inert gas flow rate].
+4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Hold for duration: [Time].
 6. Optional: Possible pause - [break point].
 
@@ -161,7 +161,7 @@ Record required parameters into table XX.`
   1. Place a PTFE seal on filtrate receiver top edge.
   2.	Connect suspension receiver to filtrate receiver
   3.	Install filter cloth [Use filter cloth] into filter and fix it with the plastic ring.
-  4.	Connect hose [project/TP code] to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump 001-XX.
+  4.	Connect hose "[project/TP code]" to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump 001-XX.
       Membrane pump 001-XX connected to receiver vacuum valve: 
       Filtration cloth is cut and installed properly: 
   `
@@ -177,13 +177,18 @@ Record required parameters into table XX.`
 5. On IPC pass: [IPC Pass action].
 6. Estimated time for analysis: [Estim. Time of analysis].`
   },
-  
-  // Evaporation
+  // solution preparation
+  "solution prep.": {
+    description: `Prepare "description" solution according to table 1.X:
+    Solution is prepared: 
+`
+  },
+  // Evaporation from reactor
   "evap.": {
-    description: `Start evaporation:
-1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
-2. Connect the membrane pump via a cold trap and turn it ON.
-3. Gradually reduce the pressure to reach approximately [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
+    description: `Start evaporation from Reactor 002-XX:
+1. Set/Adjust temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
+2. Connect the membrane pump via a cold trap and turn it ON. 
+3. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
 4. Maintain stirring at [Stirring].
 5. Continue until: [End point].
 6. Set inert gas flow rate to [Inert gas flow rate].
@@ -191,12 +196,36 @@ Record required parameters into table XX.`
 
 Record required parameters into table XX.`
   },
+
+    // Evaporation from reactor
+    "evap. Rota": {
+      description: `Start evaporation from Rotavapor 009-XX:
+  1. Check Rota bath level. Add more water if needed.
+  2. Carefully connect and tighten Rota flask using special key.
+  3. Set/Adjust temperature of Rota bath [Set temp].
+  4. Turn ON cooling water for condenser.
+  5. Connect the membrane pump via a cold trap and turn it ON. 
+  6. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
+  7. Set/Adjust stirring at [Stirring].
+  8. Connect norprene hose "[project/TP code]" for loading solution, open loading valve and load required amount of solution for evaporation.
+  9. Continue until: [End point].
+  10. Set inert gas flow rate to [Inert gas flow rate].
+  11. Optional: Possible pause - [break point].
+  
+  Record required parameters into table XX.`
+    },
   
   // Extraction/Separation
   "extr./separ.": {
-    description: `Perform an extraction/separation operation:
-1. Operate for expected time: [Exp. time].
-2. Optional: Possible pause - [break point].`
+    description: `Perform an extraction/separation:
+1. Set/Adjust stirring in reactor to [Stirring].
+2. Mix layers for [Time].
+3. Stop stirring and let layers completely separate (visual check). Expected time of separation [Exp. time].
+4. Perform phase separation. The bottom  "description" layer  is stored into container "description", top "description" layer  is stored in container "description";
+
+At the end layers clearly separated: Yes  / No 
+(in case of No, inform PM)
+`
   },
   
   // Filtration
@@ -205,7 +234,7 @@ Record required parameters into table XX.`
 1. Set the vacuum pump to [Pressure set] and start it.
 2. Transfer the reaction mixture from the Reactor 001-XX to the Nutsch filter in portions, allowing filtration to proceed.
 3. Record actula achieved pressure during filtration: [actual pressure].
-4. Continue until: [End point]. Use a spoon [project/TP code] to press and remove cracks that might appear on filter cake.`
+4. Continue until: [End point]. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.`
   },
 
   "Candle Filter prep.": {
@@ -279,7 +308,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Centrifuging
   "centrifuging": {
-    description: `Perform a centrifuging operation:
+    description: `Perform a centrifuging:
 1. Initiate with loading spin at [loading spin].
 2. Proceed with process spin at [process spin].
 3. Process portion size: [portion size].`
@@ -296,7 +325,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Sieving
   "sieving": {
-    description: `Perform a sieving operation:
+    description: `Perform a sieving:
 1. Use a sieve with size [Sieve size].
 2. Process portion size: [portion size].
 3. Consider air, moisture, and light sensitivity of the material.`
@@ -304,7 +333,7 @@ Specified loading: ….. kg (range: … - … kg)`
   
   // Milling
   "milling": {
-    description: `Perform a milling operation:
+    description: `Perform a milling:
 1. Use a mill of size [mill size].
 2. Process portion size: [portion size].
 3. Mill for [Time].`

@@ -1,8 +1,8 @@
 // settings.js
 
 // Excel file settings
-export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.1  20250120 draft.xlsm";
-export const EXCEL_TAB = "TP.3 ATI";
+export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.1  20250228 draft.xlsm";
+export const EXCEL_TAB = "TP.4 ATI";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {
