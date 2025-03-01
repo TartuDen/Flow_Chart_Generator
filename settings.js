@@ -60,7 +60,13 @@ export const UNIT_MAP = {
  * that line is appended to the "Actual Data" column in the BMR document.
  */
 export const ACTUAL_DATA = {
-  "[name]": "Actual loading: ........ kg",
-  "[Stirring]": "Actual stirring set: ........ rpm",
-  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min"
+  "[name]": "Actual loading: ........ kg;",
+  "[Stirring]": "Actual stirring set: ........ rpm;",
+  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min;",
+  "[Set temp]": "Actual temperature set : ........ oC;",
+  "[Target Temp]": "Actual temperature: ........ oC;",
+  "[Expected Result]": "Result: ..............;",
+  "[Pressure set range]": "Actual vacuum: ........ Torr;",
+  "[Exp. time]": "Actual separation time: ........ min"
+
 };
