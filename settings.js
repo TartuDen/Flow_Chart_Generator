@@ -37,13 +37,13 @@ export const PROCESS_HEIGHT = 130;
 // Edge style for XML arrows
 export const EDGE_STYLE = 'edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;';
 
-// BMR options: specify whether to wrap substituted placeholders in bold and force the first word to bold
+// BMR options: specify whether to wrap substituted placeholders in bold
 export const BMR_OPTIONS = {
-  boldPlaceholders: true,
-  boldFirstWord: true,
+  boldPlaceholders: true
 };
 
-// Unit mapping for the "Actual Data" column in BMR
+// Unit mapping (this was previously used, but is no longer required for the new "ACTUAL DATA" approach. 
+// You can keep it or remove it if you no longer need it.)
 export const UNIT_MAP = {
   "stirring": "rpm",
   "argon flow": "L/min",
@@ -51,5 +51,16 @@ export const UNIT_MAP = {
   "temp. of rm": "°C",
   "set temp": "°C",
   "target temp": "°C",
-  "time": "",
+  "time": ""
+};
+
+/**
+ * This object defines the "actual data" lines corresponding to placeholders
+ * that appear in the description. If the placeholder is actually used,
+ * that line is appended to the "Actual Data" column in the BMR document.
+ */
+export const ACTUAL_DATA = {
+  "[name]": "Actual loading: ........ kg",
+  "[Stirring]": "Actual stirring set: ........ rpm",
+  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min"
 };

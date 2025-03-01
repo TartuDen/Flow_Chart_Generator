@@ -133,7 +133,7 @@ Specified loading: ….. kg (range: … - … kg)`
   // Heating/Cooling
   "heating/cooling": {
     description: `Start a heating/cooling operation:
-1. Check that cooling water for heating/cooling circulator 011-XX is openned.
+1. Check that cooling water for heating/cooling circulator 011-XX is opened.
 2. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 3. Keep the temperature of reaction mixture in range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
