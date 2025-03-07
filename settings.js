@@ -1,8 +1,8 @@
 // settings.js
 
 // Excel file settings
-export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.1  20250228 draft.xlsm";
-export const EXCEL_TAB = "TP.4 ATI";
+export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
+export const EXCEL_TAB = "TP.5 ATI";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {
@@ -60,13 +60,14 @@ export const UNIT_MAP = {
  * that line is appended to the "Actual Data" column in the BMR document.
  */
 export const ACTUAL_DATA = {
-  "[name]": "Actual loading: ........ kg;",
-  "[Stirring]": "Actual stirring set: ........ rpm;",
-  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min;",
-  "[Set temp]": "Actual temperature set : ........ oC;",
-  "[Target Temp]": "Actual temperature: ........ oC;",
-  "[Expected Result]": "Result: ..............;",
-  "[Pressure set range]": "Actual vacuum: ........ Torr;",
-  "[Exp. time]": "Actual separation time: ........ min"
+  "[name]": "Warehouse code: ............\n\n(e.g.  XXXX-XX)\n\n1	......... kg\n2	......... kg\n3	......... kg\n4	......... kg\nTotal	......... kg\n",
+  "[Stirring]": "Actual stirring set: ........ rpm;\n",
+  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min;\n",
+  "[Set temp]": "Actual temperature set : ........ oC;\n",
+  "[Target Temp]": "Actual temperature: ........ oC;\n",
+  "[Expected Result]": "Result: ..............;\n",
+  "[Pressure set range]": "Actual pressure: ........ Torr;\n",
+  "[Pressure set]": "Actual set: ........ Torr;\n",
+  "[Exp. time]": "Actual separation time: ........ min;\n"
 
 };

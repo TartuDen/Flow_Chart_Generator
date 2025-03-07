@@ -159,11 +159,12 @@ Record required parameters into table XX.`
     "Filter prep.": {
       description: `Filter 046-XX setup:
   1. Place a PTFE seal on filtrate receiver top edge.
-  2.	Connect suspension receiver to filtrate receiver
-  3.	Install filter cloth [Use filter cloth] into filter and fix it with the plastic ring.
-  4.	Connect hose "[project/TP code]" to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump 001-XX.
-      Membrane pump 001-XX connected to receiver vacuum valve: 
-      Filtration cloth is cut and installed properly: 
+  2. Connect suspension receiver to filtrate receiver
+  3. Install filter cloth into filter and fix it with the plastic ring.
+  4. Connect hose "[project/TP code]" to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump 001-XX.
+      
+  Membrane pump 001-XX connected to receiver vacuum valve: 
+  Filtration cloth is cut and installed properly: 
   `
     },
 
@@ -234,7 +235,8 @@ At the end layers clearly separated: Yes  / No 
 1. Set the vacuum pump to [Pressure set] and start it.
 2. Transfer the reaction mixture from the Reactor 001-XX to the Nutsch filter in portions, allowing filtration to proceed.
 3. Record actula achieved pressure during filtration: [actual pressure].
-4. Continue until: [End point]. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.`
+4. Continue until: [End point]. 
+5. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.`
   },
 
   "Candle Filter prep.": {
@@ -253,7 +255,7 @@ At the end layers clearly separated: Yes  / No 
   // Washing FK
   "Washing Filter cake": {
     description: `Wash filter cake:
-1. Stop membrane pump 001-XX. 
+1. Stop membrane pump 001-XX. Connect outlet to the atmosphere (to prevent filter cloth from floating).
 2. Use required amount of [name] for washing Filter cake
 3. Ensure loaded material temperature is [Loaded material temp.].
 4. Mix on filter: [Mixing on filter].
@@ -265,35 +267,67 @@ Specified loading: ….. kg (range: … - … kg)`
   // Dry on Filter
   "Dry on filter": {
     description: `Dry the filter cake on filter under vacuum:
-1. After all material have been transferred on filter, maintain it on the filter under vacuum.
-2.	Continue to apply vacuum [Pressure set] for [Time] to remove residual solvents.
-3. Consider air, moisture, and light sensitivity of the material.
-4. After finishing drying on filter, pump the filtrate from the filter into waste canister and weigh it.`
+1. Once Filter cake is visually dry, maintain it on the filter under vacuum.
+2. Continue to apply vacuum [Pressure set] for [Time] to remove residual solvents.
+3. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.
+4. Consider air, moisture, and light sensitivity of the material.
+5. After finishing drying on filter, pump the filtrate from the filter into waste canister and weigh it.
+
+m tara = ....... kg\n;
+m gross weight = ....... kg\n;
+m net "type of waste" waste = ....... kg\n; `
   },
   
   // Drying in Vacuum
   "drying in vac.": {
     description: `Dry the product in vacuum oven 012-XX:
-1.	Check and record the tare mass of each tray into table XX.1. 
-2.	Transfer the product (filter cake) onto trays with a layer thickness of [layer thickness].
-3.	Place the trays in the vacuum oven.
-4.	Connect vacuum pump to the oven via cold trap with dry ice.
+1. Check and record the tare mass of each tray into table XX.1. 
+2. Transfer the product (filter cake) onto trays with a layer thickness of [layer thickness]. Divide all wet product approximately evenly between all trays. Crush big lumps with shovel.
+3. Place the trays in the vacuum oven.
+4. Connect vacuum pump to the oven via cold trap with dry ice.
 5. Set overheating protection of the oven to: [overheating prot.].
-6.	Set the oven temperature to; [Set temp] and start the pump with set: [Vacuum].
-7.	Dry the product, checking the weight periodically (NLT 12h after start of drying) to determine dryness [Time].
+6. Set the oven temperature to; [Set temp] and start the pump with set: [Vacuum].
+7. Dry the product, checking the weight periodically (NLT 12h after start of drying) to determine dryness [Time].
 8. Perform Mix/delump: [mixing/delumping].
+
+Record weights in Table X.
+
+Table X filled: 
+
+Overheating set: .......°C
+
+Actual pressure after at least 1h from the start: ...... Torr
+
+Temperature after at least 1h from the start: .......°C
+
 `
   },
   
   // Drying at Atmospheric Pressure
   "drying at atm.": {
     description: `Dry the product in oven 012-XX:
-1. Set temperature on thermostat 011-XX to [Set temp] with overheating protection: [overheating prot.].
-2. Adjust fan setting within range: [fan set. Range].
-3. Set flap to [flap set.].
-4. Ensure layer thickness is [layer thickness].
-5. Mix/delump as necessary: [mixing/delumping].
-6. Dry for [Time].`
+1. Check and record the tare mass of each tray into table XX.1. 
+2. Transfer the product (filter cake) onto trays with a layer thickness of [layer thickness]. Divide all wet product approximately evenly between all trays. Crush big lumps with shovel.
+3. Place the trays in the oven.
+4. Set temperature of the oven to [Set temp] with overheating protection: [overheating prot.].
+5. Adjust fan to: [fan set.].
+6. Set flap to [flap set.].
+7. Dry the product, checking the weight periodically (NLT 12h after start of drying) to determine dryness [Time].
+8. Perform Mix/delump: [mixing/delumping].
+
+Record weights in Table X.
+
+Table X filled: 
+
+Overheating set: .......°C
+
+Actual pressure fan set: .......%;
+
+Actual flap set: .......%;
+
+Temperature after at least 1h from the start: .......°C
+
+`
   },
 
     // Drying at Atmospheric Pressure
@@ -315,7 +349,29 @@ Specified loading: ….. kg (range: … - … kg)`
   },
   
   // Hydrogenation/Pressurized Reaction
-  "Hydrogenation/pressurized reaction": {
+  "H2 reactor preparation": {
+    description: `The high-pressure reactor 037-X is prepared for work according to user manual.
+1. Stirrer drive 021-XX is installed.
+2. Thermosensor 003-XX is connected.
+3. Reactor is connected to H2 gas cylinder (red hose).
+4. Reactor is connected to argon gas cylinder (blue hose).
+5. The vacuum line is connected to membrane pump 001-XX or analogue.
+6. Exhaust of outlet line is directed to ventilation.
+7. Manometer 023-XX is installed.
+
+
+The reactor is set up as required: 
+Cooling water connected:
+Argon is connected: 
+Hydrogen is connected: 
+Outlet hose end is placed under the fume hood: 
+Membrane pump connected: 001-…… 
+Connection to tap water is free of leaks: 
+
+`
+  },
+  // Hydrogenation/Pressurized Reaction
+  "H2 reaction": {
     description: `Perform a hydrogenation/pressurized reaction:
 1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
 2. Adjust stirring to [Stirring].
