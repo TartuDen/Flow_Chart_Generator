@@ -171,12 +171,35 @@ Record required parameters into table XX.`
   // IPC
   "IPC": {
     description: `In-process control:
-1. Use IPC Method: [IPC Method].
-2. Apply sample quenching: [Sample quenching].
-3. Expected Result: [Expected Result].
-4. On IPC failure: [IPC Failure Action].
-5. On IPC pass: [IPC Pass action].
-6. Estimated time for analysis: [Estim. Time of analysis].`
+In-process control (determination of IP.X conversion after [Sampling time]):
+1. Take approximately 1mL of reaction;
+2. Sample is quenched: [Sample quenching].
+3. Close the lid and create argon flow: 0.5-1 L/min;
+3. Label the sample with an IPC number. For example:
+TBD-0XXX-Y IP.5 RM IPC 1, where Y is the batch number (copied from the header) and X is the IPC serial number.
+4. Submit the sample to QC for analysis.
+5. Keep stirring the reaction mixture until the IPC result is available.
+6. Estimated time for analysis: [Estim. Time of analysis]
+Decision criteria based on IPC result:
+•	If IP.X conversion is [Expected Result], proceed with the workup (Operation XX).
+•	On IPC failure: [IPC Failure Action].
+•	On IPC pass: [IPC Pass action].
+
+
+
+
+IPC 1:
+IPC no: 
+TBD-0XXX-Y IP.X RM IPC 1
+Results:
+Corresponds to RelS requirements: 
+ - Yes
+ - No 
+IP.X conversion:
+..... %
+
+
+`
   },
   // solution preparation
   "solution prep.": {
