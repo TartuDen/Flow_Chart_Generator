@@ -1,0 +1,393 @@
+<mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+<mxCell id="1" parent="0"/>
+<mxCell id="3" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Reactor is dried (heated and cooled under argon).&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Heating to the temp.: 120oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; hold time at temp: 10-15min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Argon flow during heating: 5-10 L/min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; cooling to temp.: 15-25oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; argon flow during cooling: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="10" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="4" value="DCM&lt;div&gt;Amount: 60.47 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="220" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="5" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load DCM intor reactor&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15-25oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="190" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="6" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="7" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="3" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="8" value="Imidazole carboxaldehyde (DETO SM.2)&lt;div&gt;Amount: 8.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="400" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="9" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load Im-CHO into reactor in 1kg portion.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15-25oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in portions,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="370" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="8" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="5" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="12" value="DMSA-Cl&lt;div&gt;Amount: 11.96 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="580" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="13" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load DMSA-Cl into dropping funnel and start dropwise addition, keeping rm in required range.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +20… +30oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: pump with perist pump, temp controlled,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 2-5 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="550" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="14" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="12" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="9" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="16" value="DCM&lt;div&gt;Amount: 1.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="760" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="17" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load DCM to rinse hose and reactor walls.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +20… +30oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 2-5 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="730" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="16" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="13" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="20" value="Triethylamine&lt;div&gt;Amount: 12.64 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="940" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="21" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load TEA in portions.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +20… +30oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: pump with perist pump. Portionwise,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="910" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="22" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="20" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="17" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="24" value="DCM&lt;div&gt;Amount: 1.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1120" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="25" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load DCM to rinse hose and reactor walls.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 15-25oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: in one portion,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1090" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="26" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="24" target="25" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="21" target="25" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="28" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep mixing and cooling the reaction mixture under argon to required temp. range.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 20-35oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 15-25min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1270" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="29" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="25" target="28" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="30" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Set heating of reactor to required range&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20-35oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +20… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 2-5 L/min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1450" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="31" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="28" target="30" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="32" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep reaction for 12-44h. At least overnight.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 28oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +20… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 12-44h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Inert gas flow rate: 1-2 L/min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: keep overnight,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1630" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="30" target="32" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="34" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;check the RM in  12-18h&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Sampling time: 12-18h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Expected Result: conv. NLT95%,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; IPC Failure Action: more time, 4-6h more, in extreme case add more dmsa-cl (10% from initial loading).,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1810" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="35" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="32" target="34" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="36" value="water&lt;div&gt;Amount: 24.00 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2020" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="37" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load requred amount of Water for quench with perist pump&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 10oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: temp. controlled, pump with perist pump with portions,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1990" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="38" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="36" target="37" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="39" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="34" target="37" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="40" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep stirring for ~30min&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 30-40min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2170" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="41" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="37" target="40" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="42" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Stop stirring and let phases to separate. Control good separation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. time: 10-15min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2350" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="43" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="2380" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="44" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="42" target="43" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="45" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="40" target="42" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="46" value="water&lt;div&gt;Amount: 13.56 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="2560" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="47" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Separate DCM layer. Remove water layer. Return DCM into reactor. Load req. amount of water to wash DCM layer 3 times. Water 1st wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2530" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="48" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="46" target="47" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="49" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="42" target="47" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="50" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep stirring for 5-10min&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 5-10min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2710" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="51" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="47" target="50" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="52" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Stop stirring and let phases to separate. Control good separation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: al long as needed,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="2890" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="53" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="2920" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="54" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="52" target="53" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="55" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="50" target="52" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="56" value="water&lt;div&gt;Amount: 13.60 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3100" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="57" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Separate DCM layer and return it into reactor. Load req. amount of water to wash DCM layer 3 times. Water 2nd wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3070" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="56" target="57" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="59" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="52" target="57" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="60" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep stirring for 5-10min&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 5-10min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3250" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="61" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="57" target="60" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="62" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Stop stirring and let phases to separate. Control good separation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: al long as needed,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3430" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="63" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="3460" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="64" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="62" target="63" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="65" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="60" target="62" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="66" value="water&lt;div&gt;Amount: 13.60 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="3640" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="67" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Separate DCM layer and return it into reactor. Load req. amount of water to wash DCM layer 3 times. Water 3rd wash.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3610" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="68" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="66" target="67" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="62" target="67" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="70" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep stirring for 5-10min&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 5-10min,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3790" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="71" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="67" target="70" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="72" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Stop stirring and let phases to separate. Control good separation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 20oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: +10… +30oC;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: OFF,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: al long as needed,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="3970" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="73" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4000" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="74" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="72" target="73" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="70" target="72" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="76" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Return DCM layer into reactor and start evaporation.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 60oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 20-35oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set range: 300-400Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: remove NLT40-45% of theoretical DCM,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4150" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="77" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4180" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="78" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="76" target="77" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="79" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="72" target="76" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="80" value="n-Heptane&lt;div&gt;Amount: 14.96 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="4360" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="81" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Load required amount of n-heptane for precipitation&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 40oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Temp. of rm: 20-55oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Addition rate: one portion, pulling with vacuum,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4330" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="82" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="80" target="81" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="83" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="76" target="81" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="84" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Continue evaporate DCM.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 60oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 20-35oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set range: 300-400Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 150-200rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: remove NLT20-25% of theoretical DCM,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4510" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="85" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="4540" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="86" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="84" target="85" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="87" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="81" target="84" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="88" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Cooling down the reaction mixture to required temp.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: -10...0-3oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 0 … +5oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 100-130rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: yes, set up 0-3oC and leave overnight,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4690" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="89" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="84" target="88" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="90" value="&lt;b&gt;Reactor 002-21&lt;/b&gt;&lt;div&gt;Keep reacion mixture stirring at required temperature.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp.: 0-4oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Target Temp.: 0 … +5oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Stirring: 100rpm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: NLT 30min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; break point: keep overnight,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="4870" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="91" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="88" target="90" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="92" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Filter preparation&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5050" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="93" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="90" target="92" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="94" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Filter the product using filter 046-13.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set: 250-350Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: until Filter cake is dry.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: NO,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5230" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="95" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="5260" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="96" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="94" target="95" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="97" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="92" target="94" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="98" value="n-Heptane&lt;div&gt;Amount: 10.94 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="5440" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="99" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Wash FK with req. amount of n-heptane. 1st washing&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Mixing on filter: should be very effeciently stirring on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5410" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="100" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="98" target="99" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="101" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="94" target="99" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="102" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Filter the product.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set: 250-350Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: until Filter cake is dry.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: NO,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5590" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="103" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="5620" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="104" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="102" target="103" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="105" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="99" target="102" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="106" value="n-Heptane&lt;div&gt;Amount: 10.96 Kg&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="5800" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="107" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Wash FK with req. amount of n-heptane. 2nd washing&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Loaded material temp.: 15-25oC (not controlled),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Mixing on filter: should be very effeciently stirring on filter,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5770" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="108" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="106" target="107" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="109" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="102" target="107" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="110" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Filter the product.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set: 250-350Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; End point: until Filter cake is dry.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: NO,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="5950" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="111" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="5980" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="112" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="110" target="111" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="113" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="107" target="110" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="114" value="&lt;b&gt;nutsch filter with cover&lt;/b&gt;&lt;div&gt;Dry product on filter with vacuum.&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 30-50min,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Pressure set: 250-350Torr,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: NO,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6130" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="115" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="6160" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="116" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="114" target="115" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="117" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="110" target="114" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="118" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Drying the product&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Set temp: 40-50oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; overheating prot.: 60oC,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; fan set.: set 70%,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; flap set.: set 70%,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; layer thickness: NMT 4cm,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; mixing/delumping: Yes, after at least 12h of starting of drying,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Time: 24-36h,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. Yield: 0.80,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Exp. Mass: 13.53,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6310" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="119" value="Waste" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="6340" width="120" height="60" as="geometry"/>
+    </mxCell>
+<mxCell id="120" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="118" target="119" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="121" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="114" target="118" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="122" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;Finish drying.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6490" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="123" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="118" target="122" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="124" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; analytical sample amount: 2g,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ret. Sample amount.: 4g,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; packing material: double PE bag.,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; air, moisture, light sensitivity of the material: NO,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6670" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="125" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="122" target="124" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="126" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; YES: Continue next tp,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; NO: repeat n-heptane washing in reactor and then filter out,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="6850" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="127" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="124" target="126" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="128" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; solvent sequence: MeOH, Water, Acetone,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; estim. time required: 3-5h,&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7030" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="129" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="126" target="128" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+<mxCell id="130" value="&lt;b&gt;null&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="7210" width="190" height="130" as="geometry"/>
+    </mxCell>
+<mxCell id="131" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" source="128" target="130" parent="1">
+      <mxGeometry relative="1" as="geometry"></mxGeometry>
+    </mxCell>
+      </root>
+    </mxGraphModel>

@@ -15,7 +15,9 @@ function parseExcelOperations(filePath, sheetName) {
   const sheetData = xlsx.utils.sheet_to_json(worksheet, { header: 1 });
 
   // Find the header row using the synthesis stage column from settings.
-  const headerRowIndex = sheetData.findIndex((row) => row.includes(EXCEL_COLUMNS.synthesisStage));
+  const headerRowIndex = sheetData.findIndex((row) =>
+    row.includes(EXCEL_COLUMNS.synthesisStage)
+  );
   if (headerRowIndex === -1) {
     console.error(`ERROR: '${EXCEL_COLUMNS.synthesisStage}' header not found!`);
     return [];
@@ -40,6 +42,9 @@ function parseExcelOperations(filePath, sheetName) {
   const colPC = headers.indexOf(EXCEL_COLUMNS.pc);
   const colCY = headers.indexOf(EXCEL_COLUMNS.cy);
 
+  // ADDED: find index for comments
+  const colComments = headers.indexOf(EXCEL_COLUMNS.comments);
+
   const operations = [];
   let currentOp = null;
   let opNumber = 1;
@@ -60,6 +65,7 @@ function parseExcelOperations(filePath, sheetName) {
     if (synthesisStageCell) {
       // A new operation starts.
       if (currentOp) operations.push(currentOp);
+
       currentOp = {
         opNumber: opNumber++,
         activityName: getCellValue(row, colActivityName) || null,
@@ -67,13 +73,14 @@ function parseExcelOperations(filePath, sheetName) {
         description: getCellValue(row, colDescription) || null,
         reagentName: getCellValue(row, colReagentName) || null,
         parameterValue: {},
-        // Store criticalities in a separate object keyed by parameter
         parameterCriticalities: {},
         expectedVolume: getCellValue(row, colExpectedVolume) || null,
         equipment:
           getCellValue(row, colEquipment1) ||
           getCellValue(row, colEquipment2) ||
-          null
+          null,
+        // ADDED: store comments
+        comments: getCellValue(row, colComments) || null
       };
 
       // Fill in parameter and value.
@@ -128,10 +135,12 @@ console.log('Parsed Operations:\n', JSON.stringify(operations, null, 2));
 
 // 1. Generate the mxGraph XML.
 const xmlOutput = generateFlowChartXML(operations);
-const xmlFile = `${EXCEL_TAB}.xml`;
+// Save generated XML into /GENERATED_FILES folder.
+const xmlFile = `GENERATED_FILES/${EXCEL_TAB}.xml`;
 fs.writeFileSync(xmlFile, xmlOutput, 'utf-8');
 console.log(`XML diagram saved to ${xmlFile}`);
 
 // 2. Generate the BMR DOCX file.
-const docxFile = `${EXCEL_TAB}_BMR.docx`;
+// Save generated DOCX into /GENERATED_FILES folder.
+const docxFile = `GENERATED_FILES/${EXCEL_TAB}_BMR.docx`;
 generateBmrDocx(operations, docxFile);

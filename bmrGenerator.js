@@ -55,11 +55,14 @@ export async function generateBmrDocx(operations, outputFilePath) {
     const { text: finalDescription, placeholdersUsed } =
       applyLineByLineSubstitution(templateText, op);
 
-    // 2) Optionally bold the first word in the entire multi-line description
-    //    If you don't want this feature, you can remove or comment out the line below.
-    const descriptionWithFirstWordBold = boldFirstWordOfFullDescription(
-      finalDescription
-    );
+    // 2) Optionally bold the first word of the description.
+    let descriptionWithFirstWordBold =
+      boldFirstWordOfFullDescription(finalDescription);
+
+    // APPEND COMMENT INFO AT THE VERY END OF DESCRIPTION, IF PRESENT.
+    if (op.comments) {
+      descriptionWithFirstWordBold += `\nCOMMENT INFO: ${op.comments}`;
+    }
 
     // 3) Build the Actual Data column from placeholders used
     const actualDataText = buildActualData(placeholdersUsed);
@@ -74,7 +77,7 @@ export async function generateBmrDocx(operations, outputFilePath) {
           new TableCell({
             children: [new Paragraph(String(op.opNumber))],
           }),
-          // Column 2: Description
+          // Column 2: Description (with appended comment if any)
           new TableCell({
             children: createFormattedParagraphs(descriptionWithFirstWordBold),
           }),
@@ -157,7 +160,7 @@ function applyLineByLineSubstitution(template, op) {
     const match = plain.trimStart().match(/^(\d+)\.\s+(.*)$/);
     if (match) {
       // Replace "digit-dot-space" with a normal (non-bold) prefix
-      const newPrefix = `${numberingCounter++}.`; // no <b> tags
+      const newPrefix = `${numberingCounter++}.`;
       const digitDotRegex = new RegExp(`^(\\s*)${match[1]}\\.(\\s+)`);
       return l.replace(digitDotRegex, `$1${newPrefix}$2`);
     }
@@ -238,7 +241,6 @@ function buildActualData(placeholdersUsed) {
 
 /**
  * Optionally bold the very first word of the entire multi-line description.
- * If you don't want this, you can remove or comment out its usage.
  */
 function boldFirstWordOfFullDescription(multiLineText) {
   if (!multiLineText) return multiLineText;

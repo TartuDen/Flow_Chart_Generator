@@ -2,7 +2,7 @@
 
 // Excel file settings
 export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
-export const EXCEL_TAB = "TP.5 ATI";
+export const EXCEL_TAB = "TP.1 DETO";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {
@@ -18,7 +18,9 @@ export const EXCEL_COLUMNS = {
   equipment2: 'Equipment code 2',
   cp: 'CP',
   pc: 'PC',
-  cy: 'CY'
+  cy: 'CY',
+  // ADDED COMMENTS COLUMN
+  comments: 'Comments'
 };
 
 // BMR (DOCX) settings
@@ -42,8 +44,7 @@ export const BMR_OPTIONS = {
   boldPlaceholders: true
 };
 
-// Unit mapping (this was previously used, but is no longer required for the new "ACTUAL DATA" approach. 
-// You can keep it or remove it if you no longer need it.)
+// Unit mapping (this was previously used, but is no longer required)
 export const UNIT_MAP = {
   "stirring": "rpm",
   "argon flow": "L/min",
@@ -69,5 +70,4 @@ export const ACTUAL_DATA = {
   "[Pressure set range]": "Actual pressure: ........ Torr;\n",
   "[Pressure set]": "Actual set: ........ Torr;\n",
   "[Exp. time]": "Actual separation time: ........ min;\n"
-
 };
