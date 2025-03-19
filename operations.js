@@ -6,18 +6,18 @@ const processInstructions = {
     description: `Load required amount of [name] into Reactor 002-XX:
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
-3. Load [name] into the Reactor via handhole using a plastic scoop "[project/TP code]".
-4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+3. Load [name] into the Reactor via handhole using plastic funnel and plastic scoop "[project/TP code]".
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
-8. Keep the temperature of reaction mixture in range: [Temp. of rm].
+8. Keep the temperature of reaction mixture in range: [Target Temp].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
-Record required parameters into table XX.
+Record required parameters into table XX every YY min.
 
 Specified loading: ….. kg (range: … - … kg)`
   },
@@ -26,36 +26,37 @@ Specified loading: ….. kg (range: … - … kg)`
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
 3. Pour [name] into the Reactor via handhole using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
-8. Keep the temperature of reaction mixture in range: [Temp. of rm].
+8. Keep the temperature of reaction mixture in range: [Target Temp].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
-Record required parameters into table XX.
+Record required parameters into table XX every YY min.
 
 Specified loading: ….. kg (range: … - … kg)`
   },
   "loading-liquid >5L": {
     description: `Load required amount of [name] into Reactor 002-XX:
 1. Weigh the required amount of [name] using balance 007-XX.
-2. Connect peristaltic pump 001-XX and hose "[project/TP code]".
-3. Using the peristaltic pump, load [name] via the loading port.
-4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
-5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
-6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
-8. Keep the temperature of reaction mixture in range: [Temp. of rm].
-9. Addition is done - [Addition rate].
-10. Loading is performed during: [Time].
-11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
-12. Optional: Possible pause - [break point].
+2. Connect peristaltic pump 001-XX with hose "[project/TP code]".
+3. Set peristaltic pump to [Perist. Pump set].
+4. Using the peristaltic pump, load [name] via the loading port.
+5. Set/Adjust stirring rate in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
+6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+7. Adjust pH to: [pH check].
+8. Set/Adjust temperature on thermostat 011-XX to [Set temp].
+9. Keep the temperature of reaction mixture in range: [Target Temp].
+10. Addition is done - [Addition rate].
+11. Loading is performed during: [Time].
+12. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
+13. Optional: Possible pause - [break point].
 
-Record required parameters into table XX.
+Record required parameters into table XX every YY min.
 
 Specified loading: ….. kg (range: … - … kg)`
   },
@@ -64,24 +65,24 @@ Specified loading: ….. kg (range: … - … kg)`
 1. Remove the secondary package and carefully open the primary package.
 2. Weigh the required amount of [name] using balance 007-XX into a jug "[project/TP code]".
 3. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor 002-XX to [Stirring].
+4. Set/Adjust stirring rate in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on thermostat 011-XX to [Set temp].
-8. Keep the temperature of reaction mixture in range: [Temp. of rm].
+8. Keep the temperature of reaction mixture in range: [Target Temp].
 9. Addition is done - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
 12. Optional: Possible pause - [break point].
 
-Record required parameters into table XX.
+Record required parameters into table XX every YY min.
 
 Specified loading: ….. kg (range: … - … kg)`
   },
   
   // Reactor Preparation (if needed)
   "reactor prep.": {
-    description: `Prepare the reactor:
+    description: `Prepare the Reactor 002-XX:
 1. Heat the reactor to [Heating to the temp.].
 2. Hold the reactor at temperature for [hold time at temp].
 3. Set Argon flow during heating to [Argon flow during heating].
@@ -125,7 +126,7 @@ Specified loading: ….. kg (range: … - … kg)`
     description: `Perform an unloading:
 1. Unload [name] using appropriate method: [method of transf.].
 2. Measure unloaded amount: [Amount] kg.
-3. Maintain stirring rate during unloading at [Stirring].
+3. Maintain stirring rate during unloading at [Stirring] (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].`
   },
@@ -137,7 +138,7 @@ Specified loading: ….. kg (range: … - … kg)`
 2. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 3. Keep the temperature of reaction mixture in range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
-5. Set/Adjust stirring rate to [Stirring].
+5. Set/Adjust stirring rate to [Stirring] (range is recommended and can be adjusted).
 6. Adjust inert gas flow rate to [Inert gas flow rate].
 
 Record required parameters into table XX.`
@@ -148,7 +149,7 @@ Record required parameters into table XX.`
     description: `Start a hold time:
 1. Set/Adjust temperature on thermostat 011-XX to [Set temp].
 2. Keep the temperature of reaction mixture in range: [Target Temp].
-3. Adjust stirring rate to [Stirring].
+3. Adjust stirring rate to [Stirring] (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Hold for duration: [Time].
 6. Optional: Possible pause - [break point].
@@ -157,7 +158,7 @@ Record required parameters into table XX.`
   },
 
     "Filter prep.": {
-      description: `Filter 046-XX setup:
+      description: `Filter 046-6-7 setup:
   1. Place a PTFE seal on filtrate receiver top edge.
   2. Connect suspension receiver to filtrate receiver
   3. Install filter cloth into filter and fix it with the plastic ring.
@@ -165,6 +166,17 @@ Record required parameters into table XX.`
       
   Membrane pump 001-XX connected to receiver vacuum valve: 
   Filtration cloth is cut and installed properly: 
+  
+  Filter 046-2-13 setup:
+  1. Connect suspension receiver to glass receiver from reactor 002-XX with norprene hose "[project/TP code]".
+  2. Connect reactor receiver to membrane pump 001-XX with norprene hose "vacuum".
+  3. Install filter cloth into filter and fix it with the plastic ring.
+      
+  Filter is connected to Reactor's receiver vessel: 
+  Membrane pump 001-XX is connected to Reactor's receiver vacuum valve: 
+  Filtration cloth is cut and installed properly: 
+  
+  
   `
     },
 
@@ -172,14 +184,14 @@ Record required parameters into table XX.`
   "IPC": {
     description: `In-process control:
 In-process control (determination of IP.X conversion after [Sampling time]):
-1. Take approximately 1mL of reaction;
+1. Take approximately 1mL of reaction mixture into a 20 mL vial;
 2. Sample is quenched: [Sample quenching].
-3. Close the lid and create argon flow: 0.5-1 L/min;
-3. Label the sample with an IPC number. For example:
-TBD-0XXX-Y IP.5 RM IPC 1, where Y is the batch number (copied from the header) and X is the IPC serial number.
-4. Submit the sample to QC for analysis.
-5. Keep stirring the reaction mixture until the IPC result is available.
-6. Estimated time for analysis: [Estim. Time of analysis]
+3. Purge the vial with argon;
+4. Label the sample with an IPC number. For example:
+TBD-0XXX-Y IP.X RM IPC 1, where Y is the batch number (copied from the header) and X is the IPC serial number.
+5. Submit the sample to QC for analysis.
+6. Keep stirring the reaction mixture until the IPC result is available.
+7. Estimated time for analysis: [Estim. Time of analysis]
 Decision criteria based on IPC result:
 •	If IP.X conversion is [Expected Result], proceed with the workup (Operation XX).
 •	On IPC failure: [IPC Failure Action].
@@ -213,7 +225,7 @@ IP.X conversion:
 1. Set/Adjust temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
 2. Connect the membrane pump via a cold trap and turn it ON. 
 3. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-4. Maintain stirring at [Stirring].
+4. Maintain stirring at [Stirring] (range is recommended and can be adjusted).
 5. Continue until: [End point].
 6. Set inert gas flow rate to [Inert gas flow rate].
 7. Optional: Possible pause - [break point].
@@ -230,7 +242,7 @@ Record required parameters into table XX.`
   4. Turn ON cooling water for condenser.
   5. Connect the membrane pump via a cold trap and turn it ON. 
   6. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-  7. Set/Adjust stirring at [Stirring].
+  7. Set/Adjust stirring at [Stirring] (range is recommended and can be adjusted).
   8. Connect norprene hose "[project/TP code]" for loading solution, open loading valve and load required amount of solution for evaporation.
   9. Continue until: [End point].
   10. Set inert gas flow rate to [Inert gas flow rate].
@@ -241,11 +253,11 @@ Record required parameters into table XX.`
   
   // Extraction/Separation
   "extr./separ.": {
-    description: `Perform an extraction/separation:
-1. Set/Adjust stirring in reactor to [Stirring].
+    description: `Perform extraction/separation:
+1. Set/Adjust stirring in reactor to [Stirring] (range is recommended and can be adjusted).
 2. Mix layers for [Time].
 3. Stop stirring and let layers completely separate (visual check). Expected time of separation [Exp. time].
-4. Perform phase separation. The bottom  "description" layer  is stored into container "description", top "description" layer  is stored in container "description";
+4. Perform phase separation. Bottom "description" phase is stored into canister "[project/TP code]", top "description" layer  is stored in canister "[project/TP code]";
 
 At the end layers clearly separated: Yes  / No 
 (in case of No, inform PM)
@@ -255,11 +267,15 @@ At the end layers clearly separated: Yes  / No 
   // Filtration
   "filtration": {
     description: `Filter the material:
-1. Set the vacuum pump to [Pressure set] and start it.
-2. Transfer the reaction mixture from the Reactor 001-XX to the Nutsch filter in portions, allowing filtration to proceed.
-3. Record actula achieved pressure during filtration: [actual pressure].
-4. Continue until: [End point]. 
-5. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.`
+1. Keep stirring in Reactor 002-XX to 150-60rpm (gradually decreasing).
+2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump 001-XX to Nutsch filter 046-XX. Set the peristaltic pump to 40-60%.
+3. Set the vacuum pump to [Pressure set] and start it.
+4. Start peristaltic pump, open reactor’s valve and transfer the reaction mixture from the Reactor 002-XX to the Nutsch filter 046-XX in portions, allowing filtration to proceed.
+5. Record actula achieved pressure during filtration: [actual pressure].
+6. Continue until: [End point]. 
+7. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.
+
+NB! Once Reactor’s receiver is 2/3 full, stop the process, release the vacuum from the system, connect filter outlet to atmosphere and empty filtrate into "[project/TP code]". Resume the process afterwards.`
   },
 
   "Candle Filter prep.": {
@@ -277,7 +293,7 @@ At the end layers clearly separated: Yes  / No 
   
   // Washing FK
   "Washing Filter cake": {
-    description: `Wash filter cake:
+    description: `Wash filter cake with required amount of [name]:
 1. Stop membrane pump 001-XX. Connect outlet to the atmosphere (to prevent filter cloth from floating).
 2. Use required amount of [name] for washing Filter cake
 3. Ensure loaded material temperature is [Loaded material temp.].
@@ -309,8 +325,8 @@ m net "type of waste" waste = ....... kg\n; `
 3. Place the trays in the vacuum oven.
 4. Connect vacuum pump to the oven via cold trap with dry ice.
 5. Set overheating protection of the oven to: [overheating prot.].
-6. Set the oven temperature to; [Set temp] and start the pump with set: [Vacuum].
-7. Dry the product, checking the weight periodically (NLT 12h after start of drying) to determine dryness [Time].
+6. Set the oven temperature to; [Set temp] and start the pump with set: [Pressure set range].
+7. Dry the product, checking the weight periodically (NLT 12h after start of drying) to determine dryness [Time]. In 2-3h weight loss should be less than 2-3%.
 8. Perform Mix/delump: [mixing/delumping].
 
 Record weights in Table X.
@@ -344,7 +360,7 @@ Table X filled: 
 
 Overheating set: .......°C
 
-Actual pressure fan set: .......%;
+Actual fan set: .......%;
 
 Actual flap set: .......%;
 
@@ -397,7 +413,7 @@ Connection to tap water is free of leaks: 
   "H2 reaction": {
     description: `Perform a hydrogenation/pressurized reaction:
 1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
-2. Adjust stirring to [Stirring].
+2. Adjust stirring to [Stirring] (range is recommended and can be adjusted).
 3. Run the reaction for [Time].
 4. Set hydrogen pressure to [H2 pressure].`
   },

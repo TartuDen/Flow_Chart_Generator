@@ -49,7 +49,7 @@ export const UNIT_MAP = {
   "stirring": "rpm",
   "argon flow": "L/min",
   "pH": "",
-  "temp. of rm": "°C",
+  "Target Temp": "°C",
   "set temp": "°C",
   "target temp": "°C",
   "time": ""
@@ -69,5 +69,6 @@ export const ACTUAL_DATA = {
   "[Expected Result]": "Result: ..............;\n",
   "[Pressure set range]": "Actual pressure: ........ Torr;\n",
   "[Pressure set]": "Actual set: ........ Torr;\n",
-  "[Exp. time]": "Actual separation time: ........ min;\n"
+  "[Exp. time]": "Actual separation time: ........ min;\n",
+  "[Perist. Pump set]": "Actual peristaltic pump set: ........ %;\n"
 };
