@@ -1,5 +1,7 @@
 // settings.js
 
+import exp from "constants";
+
 // Excel file settings
 export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
 export const EXCEL_TAB = "TP.1 DETO";
@@ -72,3 +74,14 @@ export const ACTUAL_DATA = {
   "[Exp. time]": "Actual separation time: ........ min;\n",
   "[Perist. Pump set]": "Actual peristaltic pump set: ........ %;\n"
 };
+
+export const PARAMS_TO_OMIT = [
+  "Amount",
+  "Loaded material temp.",
+  "Set temp",
+  "Addition rate",
+  "air, moisture, light sensitivity of the material",
+  "Mixing on filter",
+  "Stirring",
+  "Pressure set",
+  "layer thickness"]

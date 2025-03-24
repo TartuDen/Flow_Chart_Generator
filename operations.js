@@ -183,7 +183,7 @@ Record required parameters into table XX.`
   // IPC
   "IPC": {
     description: `In-process control:
-In-process control (determination of IP.X conversion after [Sampling time]):
+In-process control (determination of IP.X conversion after [Sample taken in]):
 1. Take approximately 1mL of reaction mixture into a 20 mL vial;
 2. Sample is quenched: [Sample quenching].
 3. Purge the vial with argon;

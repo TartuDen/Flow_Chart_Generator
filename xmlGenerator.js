@@ -1,5 +1,4 @@
-// xmlGenerator.js
-import { ROW_HEIGHT, X_INPUT, X_PROCESS, X_OUTPUT, BLOCK_WIDTH, BLOCK_HEIGHT, PROCESS_WIDTH, PROCESS_HEIGHT, EDGE_STYLE } from "./settings.js";
+import { ROW_HEIGHT, X_INPUT, X_PROCESS, X_OUTPUT, BLOCK_WIDTH, BLOCK_HEIGHT, PROCESS_WIDTH, PROCESS_HEIGHT, EDGE_STYLE, PARAMS_TO_OMIT } from "./settings.js";
 
 /**
  * generateFlowChartXML(operations):
@@ -31,8 +30,14 @@ export function generateFlowChartXML(operations) {
 
     if (parameterValue) {
       for (const [key, val] of Object.entries(parameterValue)) {
-        if (key.trim().toLowerCase() === "amount") continue;
-        if (typeof val === 'string' && val.trim().toUpperCase() === "NA") continue;
+        // Check if the parameter key is in the omit list (case-insensitive)
+        if (PARAMS_TO_OMIT.some(param => param.trim().toLowerCase() === key.trim().toLowerCase())) {
+          continue;
+        }
+        // Exclude if the value is "NA" (case-insensitive)
+        if (typeof val === 'string' && val.trim().toUpperCase() === "NA") {
+          continue;
+        }
         let displayVal = val;
         if (isPureNumber(val)) {
           const numericVal = parseFloat(val);
@@ -84,6 +89,11 @@ export function generateFlowChartXML(operations) {
     let amountText = '';
     if (parameterValue) {
       for (const key in parameterValue) {
+        // Here we use the omit list; if the key is omitted, skip it.
+        if (PARAMS_TO_OMIT.some(param => param.trim().toLowerCase() === key.trim().toLowerCase())) {
+          // Optionally, if "Amount" is to be specially processed, you can handle that before skipping.
+          continue;
+        }
         if (key.trim().toLowerCase() === "amount") {
           let val = parameterValue[key];
           if (typeof val === 'string' && val.trim().toUpperCase() !== "NA") {
