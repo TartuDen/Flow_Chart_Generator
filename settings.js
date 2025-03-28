@@ -4,7 +4,7 @@ import exp from "constants";
 
 // Excel file settings
 export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
-export const EXCEL_TAB = "TP.1 DETO";
+export const EXCEL_TAB = "TP.1 ATI";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {

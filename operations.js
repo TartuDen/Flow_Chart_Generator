@@ -5,13 +5,13 @@ const processInstructions = {
   "loading-Solid": {
     description: `Load [name] into reactor 002-XX:
 1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug [project/TP code].
-3. Load [name] into 002-XX via handhole using a plastic scoop [project/TP code].
-4. Set/Adjust stirring rate in 002-XX to [Stirring].
+2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+3. Load [name] into reactor via handhole using a plastic scoop and plastic funnel "[project/TP code]".
+4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp].
-8. Keep reaction mixture temperature in range: [Temp. of rm].
+7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+8. Keep reaction mixture temperature in range: [Target Temp.].
 9. Addition speed - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
@@ -26,13 +26,13 @@ Specified loading: ….. kg (range: … - … kg)
     description: `Load [name] into reactor 002-XX: 
 
 1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug [project/TP code].
-3. Pour [name] into 002-XX via handhole using a plastic funnel [project/TP code].
-4. Set/Adjust stirring rate in 002-XX to [Stirring].
+2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+3. Pour [name] into reactor via handhole using a plastic funnel "[project/TP code]".
+4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp].
-8. Keep reaction mixture temperature in range: [Temp. of rm].
+7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+8. Keep reaction mixture temperature in range: [Target Temp.].
 9. Addition speed - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
@@ -47,12 +47,12 @@ Specified loading: ….. kg (range: … - … kg)
     description: `Load [name] into reactor 002-XX: 
 
 1. Weigh [name] on balance 007-XX
-2. Transfer [name] into 002-XX with peristaltic pump and hose [project/TP code].
-3. Set/Adjust stirring rate in 002-XX to [Stirring].
+2. Transfer [name] into reactor with peristaltic pump and hose "[project/TP code]". Set peristaltic pump to [Perist. Pump set].
+3. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Adjust pH to: [pH check].
-6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp].
-7. Keep reaction mixture temperature in range: [Temp. of rm].
+6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+7. Keep reaction mixture temperature in range: [Target Temp.].
 8. Addition speed - [Addition rate].
 9. Loading is performed during: [Time].
 10. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
@@ -67,13 +67,13 @@ Specified loading: ….. kg (range: … - … kg)
     description: `Load [name] into Reactor 002-XX dropping funnel: 
 
 1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug [project/TP code].
-3. Load [name] into the dropping funnel using a plastic funnel [project/TP code].
-4. Set/Adjust stirring rate in 002-XX to [Stirring].
+2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+3. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
+4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp].
-8. Keep reaction mixture temperature in range: [Temp. of rm].
+7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+8. Keep reaction mixture temperature in range: [Target Temp.].
 9. Addition speed - [Addition rate].
 10. Loading is performed during: [Time].
 11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
@@ -88,20 +88,20 @@ Specified loading: ….. kg (range: … - … kg)
   "loading-suspend": {
     description: `Prepare suspension of [name1] in [name2] and load into Reactor 002-XX:
 1. Weigh Materials:
-  a. Weigh the required amount of [name1] using Balance 007-XX.
-  b. Weigh the required amount of [name2] using Balance 007-XX.
+  a. Weigh the [name1] using Balance 007-XX.
+  b. Weigh the [name2] using Balance 007-XX.
 2. Prepare Suspension:
   a. In a suitable container (5L jug), add the [name2].
   b. Slowly add [name1] into the [name2] while stirring to create a suspension.
   c. Ensure that the suspension is well mixed.
   d. Note: [name1] is a dusty product; wear appropriate personal protective equipment (PPE) including masks and protective clothing during handling.
 3. Load Suspension into Reactor:
-  a. Set/Adjust temperature on thermostat 011-XX to [Set temp].
+  a. Set/Adjust temperature on thermostat 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
   b. Keep the temperature of reaction mixture in range: [Target Temp].
   c. Set/Adjust inert gas flow rate to [Inert gas flow rate].
-  d. Load the suspension into Reactor 002-XX by carefully pouring through a funnel "[project/TP code]" trying to minimize splashing and exposure.
+  d. Load the suspension into Reactor by carefully pouring through a funnel "[project/TP code]" trying to minimize splashing and exposure.
 4. Stirring:
-  a. Set the stirring speed to [Stirring] (range is recommended and can be adjusted).
+  a. Set the stirring speed to [Stirring] (recommended range) (range is recommended and can be adjusted).
   b. Note: Ensure stirring is adequate to keep the suspension homogeneous.
 
 Record required parameters into table XX every YY min.
@@ -133,10 +133,10 @@ Actual loading of [name2]:
   "reactor prep.": {
     description: `Reactor 002-XX preparation:
 
-1. Heat 002-XX to [Heating to the temp.].
-2. Hold 002-XX at temperature for [hold time at temp].
+1. Heat Reactor to [Heating to the temp.].
+2. Hold Reactor at temperature for [hold time at temp].
 3. Set Argon flow during heating to [Argon flow during heating].
-4. Cool 002-XX to [cooling to temp.].
+4. Cool Reactor to [cooling to temp.].
 5. Set Argon flow during cooling to [Argon flow during cooling].
 `
   },
@@ -177,7 +177,7 @@ Actual loading of [name2]:
     description: `Perform an unloading:
 1. Unload [name] using appropriate method: [method of transf.].
 2. Measure unloaded amount: [Amount] kg.
-3. Maintain stirring rate during unloading at [Stirring] (range is recommended and can be adjusted).
+3. Maintain stirring rate during unloading at [Stirring] (recommended range) (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].`
   },
@@ -200,10 +200,10 @@ Actual loading of [name2]:
     description: `Start heating/cooling with heating/cooling circulator 011-XX:
 
 1. Check that cooling water for 011-XX is opened.
-2. Set/Adjust temperature on 011-XX to [Set temp].
+2. Set/Adjust temperature on 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
 3. Keep reaction mixture temperature in range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
-5. Set/Adjust stirring in reactor 002-XX to [Stirring].
+5. Set/Adjust stirring in reactor 002-XX to [Stirring] (recommended range).
 6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 
 Fill Table X at least every Y minutes.
@@ -216,7 +216,7 @@ Fill Table X at least every Y minutes.
 
 1. Set/Adjust heating/cooling circulator 011-XX to [Set temp].
 2. Keep reaction mixture temperature in range: [Target Temp] for [Time].
-3. Set/Adjust stirring in reactor 002-XX to [Stirring].
+3. Set/Adjust stirring in reactor 002-XX to [Stirring] (recommended range).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].
 
@@ -268,7 +268,6 @@ Decision criteria based on IPC result:
 
 
 IPC 1:
-IPC no: 
 TBD-0XXX-Y IP.X RM IPC 1
 Results:
 Corresponds to RelS requirements: 
@@ -290,10 +289,10 @@ IP.X conversion:
   "evap.": {
     description: `Start evaporation in reactor 002-XX:
 
-1. Set/Adjust temperature heating/cooling circulator 011-XX to [Set temp] with target [Target Temp].
+1. Set/Adjust temperature heating/cooling circulator 011-XX to [Set temp] with target [Target Temp] (keep jacket/RM temp. difference below 50oC).
 2. Connect a membrane pump via a cold trap and turn it ON.
 3. Gradually reduce pressure [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-4. Set/Adjust stirring to [Stirring].
+4. Set/Adjust stirring to [Stirring] (recommended range).
 5. Continue until: [End point].
 6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 7. Optional: Possible pause - [break point].
@@ -307,13 +306,13 @@ Fill Table X at least every Y minutes.
       description: `Start evaporation in rotary evaporator 009-XX:
 
 1. Check 009-XX bath level. Add more RO water if needed.
-2. Connect and tighten flask [project/TP code] using a special key.
+2. Connect and tighten flask "[project/TP code]" using a special key.
 3. Set/Adjust bath temperature to [Set temp].
 4. Turn ON condenser cooling water.
 5. Connect membrane pump via a cold trap and turn it ON.
 6. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-7. Set/Adjust stirring to [Stirring].
-8. Connect hose [project/TP code] for loading solution, open loading valve and load required amount of solution for evaporation.
+7. Set/Adjust stirring to [Stirring] (recommended range).
+8. Connect hose "[project/TP code]" for loading solution, open loading valve and load solution for evaporation.
 9. Continue until: [End point].
 10. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 11. Optional: Possible pause - [break point].
@@ -325,7 +324,7 @@ Fill Table X at least every Y minutes.
   // Extraction/Separation
   "extr./separ.": {
     description: `Perform extraction/separation:
-1. Set/Adjust stirring in reactor to [Stirring] (range is recommended and can be adjusted).
+1. Set/Adjust stirring in reactor to [Stirring] (recommended range) (range is recommended and can be adjusted).
 2. Mix layers for [Time].
 3. Stop stirring and let layers completely separate (visual check). Expected time of separation [Exp. time].
 4. Perform phase separation. Bottom "description" phase is stored into canister "[project/TP code]", top "description" layer  is stored in canister "[project/TP code]";
@@ -339,9 +338,9 @@ At the end layers clearly separated: Yes  / No 
   "filtration": {
     description: `Filter the material:
 1. Keep stirring in Reactor 002-XX to 150-60rpm (gradually decreasing).
-2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump 001-XX to Nutsch filter 046-XX. Set the peristaltic pump to 40-60%.
+2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump 001-XX to Nutsch filter. Set the peristaltic pump to 40-60%.
 3. Set the vacuum pump to [Pressure set] and start it.
-4. Start peristaltic pump, open reactor’s valve and transfer the reaction mixture from the Reactor 002-XX to the Nutsch filter 046-XX in portions, allowing filtration to proceed.
+4. Start peristaltic pump, open reactor’s valve and transfer the reaction mixture from the Reactor to the Nutsch filter in portions, allowing filtration to proceed.
 5. Record actula achieved pressure during filtration: [actual pressure].
 6. Continue until: [End point]. 
 7. Use a spoon "[project/TP code]" to press and remove cracks that might appear on filter cake.
@@ -364,9 +363,9 @@ NB! Once Reactor’s receiver is 2/3 full, stop the process, release the vacuum 
   
   // Washing FK
   "Washing Filter cake": {
-    description: `Wash filter cake with required amount of [name]:
+    description: `Wash filter cake with [name]:
 1. Stop membrane pump 001-XX. Connect outlet to the atmosphere (to prevent filter cloth from floating).
-2. Use required amount of [name] for washing Filter cake
+2. Use [name] for washing Filter cake
 3. Ensure loaded material temperature is [Loaded material temp.].
 4. Mix on filter: [Mixing on filter].
 5. Restart membrane pump and continue filtration.
@@ -484,7 +483,7 @@ Connection to tap water is free of leaks: 
   "H2 reaction": {
     description: `Perform a hydrogenation/pressurized reaction:
 1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
-2. Adjust stirring to [Stirring] (range is recommended and can be adjusted).
+2. Adjust stirring to [Stirring] (recommended range) (range is recommended and can be adjusted).
 3. Run the reaction for [Time].
 4. Set hydrogen pressure to [H2 pressure].`
   },
