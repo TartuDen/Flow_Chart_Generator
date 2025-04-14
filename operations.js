@@ -7,7 +7,7 @@ const processInstructions = {
 1. Remove secondary package and open primary package.
 2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
 3. Load [name] into reactor via handhole using a plastic scoop and plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
+4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
@@ -19,7 +19,7 @@ const processInstructions = {
 
 Fill Table X at least every Y minutes.
 
-Specified loading: ….. kg (range: … - … kg)
+Specified loading: ….. kg (… - … kg)
 `
   },
   "loading-liquid <5L": {
@@ -28,7 +28,7 @@ Specified loading: ….. kg (range: … - … kg)
 1. Remove secondary package and open primary package.
 2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
 3. Pour [name] into reactor via handhole using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
+4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
@@ -40,7 +40,7 @@ Specified loading: ….. kg (range: … - … kg)
 
 Fill Table X at least every Y minutes.
 
-Specified loading: ….. kg (range: … - … kg)
+Specified loading: ….. kg (… - … kg)
 `
   },
   "loading-liquid >5L": {
@@ -48,7 +48,7 @@ Specified loading: ….. kg (range: … - … kg)
 
 1. Weigh [name] on balance 007-XX
 2. Transfer [name] into reactor with peristaltic pump and hose "[project/TP code]". Set peristaltic pump to [Perist. Pump set].
-3. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
+3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Adjust pH to: [pH check].
 6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
@@ -60,7 +60,7 @@ Specified loading: ….. kg (range: … - … kg)
 
 Fill Table X at least every Y minutes.
 
-Specified loading: ….. kg (range: … - … kg)
+Specified loading: ….. kg (… - … kg)
 `
   },
   "loading-dropwise addition": {
@@ -69,7 +69,7 @@ Specified loading: ….. kg (range: … - … kg)
 1. Remove secondary package and open primary package.
 2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
 3. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (recommended range).
+4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
 5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 6. Adjust pH to: [pH check].
 7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
@@ -81,7 +81,7 @@ Specified loading: ….. kg (range: … - … kg)
 
 Fill Table X at least every Y minutes.
 
-Specified loading: ….. kg (range: … - … kg)
+Specified loading: ….. kg (… - … kg)
 `
   },
 
@@ -106,9 +106,9 @@ Specified loading: ….. kg (range: … - … kg)
 
 Record required parameters into table XX every YY min.
 
-Specified loading [name1]: ….. kg (range: … - … kg)
+Specified loading [name1]: ….. kg (… - … kg)
 
-Specified loading [name2]: ….. kg (range: … - … kg)
+Specified loading [name2]: ….. kg (… - … kg)
 
 
 
@@ -190,7 +190,7 @@ Actual loading of [name2]:
 3. Turn off stirrer. Let precipitate settle on the bottom of reactor for [Time].
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].
-6. After required time passed, pump liquid part (top layer) from reactor into “direction”. Use peristaltic pump and hose [project/TP code]. Peristaltic pump set: [Perist. Pump set].
+6. After required time passed, pump liquid part (top layer) from reactor into “direction”. Use peristaltic pump and hose "[project/TP code]". Peristaltic pump set: [Perist. Pump set].
 7. Stop when [End point].
 `
 },
@@ -203,7 +203,7 @@ Actual loading of [name2]:
 2. Set/Adjust temperature on 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
 3. Keep reaction mixture temperature in range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
-5. Set/Adjust stirring in reactor 002-XX to [Stirring] (recommended range).
+5. Set/Adjust stirring in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
 6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 
 Fill Table X at least every Y minutes.
@@ -216,7 +216,7 @@ Fill Table X at least every Y minutes.
 
 1. Set/Adjust heating/cooling circulator 011-XX to [Set temp].
 2. Keep reaction mixture temperature in range: [Target Temp] for [Time].
-3. Set/Adjust stirring in reactor 002-XX to [Stirring] (recommended range).
+3. Set/Adjust stirring in reactor 002-XX to [Stirring] (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Optional: Possible pause - [break point].
 
@@ -255,7 +255,7 @@ In-process control (determination of IP.X conversion after [Sample taken in]):
 2. Sample is quenched: [Sample quenching].
 3. Purge the vial with argon;
 4. Label the sample with an IPC number. For example:
-TBD-0XXX-Y IP.X RM IPC 1, where Y is the batch number (copied from the header) and X is the IPC serial number.
+TBD-0XXX-Y IP.? RM IPC X, where Y is the batch number (copied from the header) and X is the IPC serial number.
 5. Submit the sample to QC for analysis.
 6. Keep stirring the reaction mixture until the IPC result is available.
 7. Estimated time for analysis: [Estim. Time of analysis]
@@ -292,7 +292,7 @@ IP.X conversion:
 1. Set/Adjust temperature heating/cooling circulator 011-XX to [Set temp] with target [Target Temp] (keep jacket/RM temp. difference below 50oC).
 2. Connect a membrane pump via a cold trap and turn it ON.
 3. Gradually reduce pressure [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-4. Set/Adjust stirring to [Stirring] (recommended range).
+4. Set/Adjust stirring to [Stirring] (range is recommended and can be adjusted).
 5. Continue until: [End point].
 6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 7. Optional: Possible pause - [break point].
@@ -311,7 +311,7 @@ Fill Table X at least every Y minutes.
 4. Turn ON condenser cooling water.
 5. Connect membrane pump via a cold trap and turn it ON.
 6. Gradually reduce the pressure within the range [Pressure set range]. Make sure the condenser is not overflooded with condensed solvent, adjust pressure accordingly.
-7. Set/Adjust stirring to [Stirring] (recommended range).
+7. Set/Adjust stirring to [Stirring] (range is recommended and can be adjusted).
 8. Connect hose "[project/TP code]" for loading solution, open loading valve and load solution for evaporation.
 9. Continue until: [End point].
 10. Set/Adjust inert gas flow rate to [Inert gas flow rate].
@@ -370,7 +370,7 @@ NB! Once Reactor’s receiver is 2/3 full, stop the process, release the vacuum 
 4. Mix on filter: [Mixing on filter].
 5. Restart membrane pump and continue filtration.
 
-Specified loading: ….. kg (range: … - … kg)`
+Specified loading: ….. kg (… - … kg)`
   },
   
   // Dry on Filter

@@ -4,7 +4,7 @@ import exp from "constants";
 
 // Excel file settings
 export const EXCEL_FILE_PATH = "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
-export const EXCEL_TAB = "TP.1 ATI";
+export const EXCEL_TAB = "TP.1 DETO";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {
@@ -29,14 +29,14 @@ export const EXCEL_COLUMNS = {
 export const DOCX_TAB = EXCEL_TAB; // Re-use the Excel tab value for consistency
 
 // Layout settings for XML Generator
-export const ROW_HEIGHT = 180;
-export const X_INPUT = 40;
+export const ROW_HEIGHT = 150;// to change row height
+export const X_INPUT = 60;
 export const X_PROCESS = 220;
-export const X_OUTPUT = 480;
+export const X_OUTPUT = 450;
 export const BLOCK_WIDTH = 120;
 export const BLOCK_HEIGHT = 60;
 export const PROCESS_WIDTH = 190;
-export const PROCESS_HEIGHT = 130;
+export const PROCESS_HEIGHT = 120; // to change height of process block
 
 // Edge style for XML arrows
 export const EDGE_STYLE = 'edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;';
@@ -78,10 +78,6 @@ export const ACTUAL_DATA = {
 export const PARAMS_TO_OMIT = [
   "Amount",
   "Loaded material temp.",
-  "Set temp",
-  "Addition rate",
   "air, moisture, light sensitivity of the material",
   "Mixing on filter",
-  "Stirring",
-  "Pressure set",
   "layer thickness"]
