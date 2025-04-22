@@ -4,18 +4,17 @@ const processInstructions = {
   // Loading Operations
   "loading-Solid": {
     description: `Load [name] into reactor 002-XX:
-1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
-3. Load [name] into reactor via handhole using a plastic scoop and plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
-6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
-8. Keep reaction mixture temperature in range: [Target Temp.].
-9. Addition speed - [Addition rate].
-10. Loading is performed during: [Time].
-11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
-12. Optional: Possible pause - [break point].
+1. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+2. Load [name] into reactor via handhole using a plastic scoop and plastic funnel "[project/TP code]".
+3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
+4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+5. Adjust pH to: [pH check].
+6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+7. Keep reaction mixture temperature in range: [Target Temp.].
+8. Addition speed - [Addition rate].
+9. Loading is performed during: [Time].
+10. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
+11. Optional: Possible pause - [break point].
 
 Fill Table X at least every Y minutes.
 
@@ -25,18 +24,17 @@ Specified loading: ….. kg (… - … kg)
   "loading-liquid <5L": {
     description: `Load [name] into reactor 002-XX: 
 
-1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
-3. Pour [name] into reactor via handhole using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
-6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
-8. Keep reaction mixture temperature in range: [Target Temp.].
-9. Addition speed - [Addition rate].
-10. Loading is performed during: [Time].
-11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
-12. Optional: Possible pause - [break point].
+1. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+2. Pour [name] into reactor via handhole using a plastic funnel "[project/TP code]".
+3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
+4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+5. Adjust pH to: [pH check].
+6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+7. Keep reaction mixture temperature in range: [Target Temp.].
+8. Addition speed - [Addition rate].
+9. Loading is performed during: [Time].
+10. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
+11. Optional: Possible pause - [break point].
 
 Fill Table X at least every Y minutes.
 
@@ -47,7 +45,7 @@ Specified loading: ….. kg (… - … kg)
     description: `Load [name] into reactor 002-XX: 
 
 1. Weigh [name] on balance 007-XX
-2. Transfer [name] into reactor with peristaltic pump and hose "[project/TP code]". Set peristaltic pump to [Perist. Pump set].
+2. Transfer [name] into reactor with peristaltic pump and hose "[project/TP code]" via handhole (fix hose to the hole with plastic ties). Set peristaltic pump to [Perist. Pump set].
 3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
 4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
 5. Adjust pH to: [pH check].
@@ -66,18 +64,17 @@ Specified loading: ….. kg (… - … kg)
   "loading-dropwise addition": {
     description: `Load [name] into Reactor 002-XX dropping funnel: 
 
-1. Remove secondary package and open primary package.
-2. Weigh [name] on balance 007-XX into jug "[project/TP code]".
-3. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
-4. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-5. Set/Adjust inert gas flow rate to [Inert gas flow rate].
-6. Adjust pH to: [pH check].
-7. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
-8. Keep reaction mixture temperature in range: [Target Temp.].
-9. Addition speed - [Addition rate].
-10. Loading is performed during: [Time].
-11. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
-12. Optional: Possible pause - [break point].
+1. Weigh [name] on balance 007-XX into jug "[project/TP code]".
+2. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
+3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
+4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+5. Adjust pH to: [pH check].
+6. Set/Adjust temperature on heating/cooling circulator 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
+7. Keep reaction mixture temperature in range: [Target Temp.].
+8. Addition speed - [Addition rate].
+9. Loading is performed during: [Time].
+10. Keep/Provide temperature of loaded material in range: [Loaded material temp.].
+11. Optional: Possible pause - [break point].
 
 Fill Table X at least every Y minutes.
 
@@ -116,7 +113,7 @@ Warehouse code of [name1]:
 .........................
 (eg. XXXX-XXX)
   
-Actual loading of [name1]: 
+Loading of [name1]: 
 
 
 
@@ -124,7 +121,7 @@ Warehouse code of [name2]:
 .........................
 (eg. XXXX-XXX)
   
-Actual loading of [name2]: 
+Loading of [name2]: 
 
 `
   },
@@ -212,7 +209,7 @@ Fill Table X at least every Y minutes.
   
   // Hold Time
   "hold time": {
-    description: `Start a hold time:
+    description: `Hold time:
 
 1. Set/Adjust heating/cooling circulator 011-XX to [Set temp].
 2. Keep reaction mixture temperature in range: [Target Temp] for [Time].
@@ -229,18 +226,18 @@ Fill Table X at least every Y minutes.
   1. Place a PTFE seal on filtrate receiver top edge.
   2. Connect suspension receiver to filtrate receiver
   3. Install filter cloth into filter and fix it with the plastic ring.
-  4. Connect hose "[project/TP code]" to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump 001-XX.
+  4. Connect hose "[project/TP code]" to filtrate receiver vacuum valve. Connect other end of hose to a membrane pump.
       
-  Membrane pump 001-XX connected to receiver vacuum valve: 
+  Membrane pump connected to receiver vacuum valve: 
   Filtration cloth is cut and installed properly: 
   
   Filter 046-2-13 setup:
   1. Connect suspension receiver to glass receiver from reactor 002-XX with norprene hose "[project/TP code]".
-  2. Connect reactor receiver to membrane pump 001-XX with norprene hose "vacuum".
+  2. Connect reactor receiver to membrane pump with norprene hose "vacuum".
   3. Install filter cloth into filter and fix it with the plastic ring.
       
   Filter is connected to Reactor's receiver vessel: 
-  Membrane pump 001-XX is connected to Reactor's receiver vacuum valve: 
+  Membrane pump is connected to Reactor's receiver vacuum valve: 
   Filtration cloth is cut and installed properly: 
   
   
@@ -254,12 +251,11 @@ In-process control (determination of IP.X conversion after [Sample taken in]):
 1. Take approximately 1mL of reaction mixture into a 20 mL vial;
 2. Sample is quenched: [Sample quenching].
 3. Purge the vial with argon;
-4. Label the sample with an IPC number. For example:
-TBD-0XXX-Y IP.? RM IPC X, where Y is the batch number (copied from the header) and X is the IPC serial number.
+4. Label the sample with an IPC number.
 5. Submit the sample to QC for analysis.
 6. Keep stirring the reaction mixture until the IPC result is available.
 7. Estimated time for analysis: [Estim. Time of analysis]
-Decision criteria based on IPC result:
+Acceptance criteria based on IPC result:
 •	If IP.X conversion is [Expected Result], proceed with the workup (Operation XX).
 •	On IPC failure: [IPC Failure Action].
 •	On IPC pass: [IPC Pass action].
@@ -268,7 +264,7 @@ Decision criteria based on IPC result:
 
 
 IPC 1:
-TBD-0XXX-Y IP.X RM IPC 1
+TBD-0XXX-.... IP.X RM IPC 1
 Results:
 Corresponds to RelS requirements: 
  - Yes
@@ -338,7 +334,7 @@ At the end layers clearly separated: Yes  / No 
   "filtration": {
     description: `Filter the material:
 1. Keep stirring in Reactor 002-XX to 150-60rpm (gradually decreasing).
-2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump 001-XX to Nutsch filter. Set the peristaltic pump to 40-60%.
+2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump to Nutsch filter. Set the peristaltic pump to 40-60%.
 3. Set the vacuum pump to [Pressure set] and start it.
 4. Start peristaltic pump, open reactor’s valve and transfer the reaction mixture from the Reactor to the Nutsch filter in portions, allowing filtration to proceed.
 5. Record actula achieved pressure during filtration: [actual pressure].
@@ -364,7 +360,7 @@ NB! Once Reactor’s receiver is 2/3 full, stop the process, release the vacuum 
   // Washing FK
   "Washing Filter cake": {
     description: `Wash filter cake with [name]:
-1. Stop membrane pump 001-XX. Connect outlet to the atmosphere (to prevent filter cloth from floating).
+1. Stop membrane pump. Connect outlet to the atmosphere (to prevent filter cloth from floating).
 2. Use [name] for washing Filter cake
 3. Ensure loaded material temperature is [Loaded material temp.].
 4. Mix on filter: [Mixing on filter].
@@ -405,7 +401,7 @@ Table X filled: 
 
 Overheating set: .......°C
 
-Actual pressure after at least 1h from the start: ...... Torr
+Pressure after at least 1h from the start: ...... Torr
 
 Temperature after at least 1h from the start: .......°C
 
@@ -430,9 +426,9 @@ Table X filled: 
 
 Overheating set: .......°C
 
-Actual fan set: .......%;
+Fan set: .......%;
 
-Actual flap set: .......%;
+Flap set: .......%;
 
 Temperature after at least 1h from the start: .......°C
 
@@ -464,7 +460,7 @@ Temperature after at least 1h from the start: .......°C
 2. Thermosensor 003-XX is connected.
 3. Reactor is connected to H2 gas cylinder (red hose).
 4. Reactor is connected to argon gas cylinder (blue hose).
-5. The vacuum line is connected to membrane pump 001-XX or analogue.
+5. The vacuum line is connected to membrane pump or analogue.
 6. Exhaust of outlet line is directed to ventilation.
 7. Manometer 023-XX is installed.
 
@@ -482,7 +478,7 @@ Connection to tap water is free of leaks: 
   // Hydrogenation/Pressurized Reaction
   "H2 reaction": {
     description: `Perform a hydrogenation/pressurized reaction:
-1. Set temperature on thermostat 011-XX to [Set temp] with target [Target Temp].
+1. Set temperature on thermostat 011-XX to [Set temp] with target temperature in reaction mixture within [Target Temp].
 2. Adjust stirring to [Stirring] (recommended range) (range is recommended and can be adjusted).
 3. Run the reaction for [Time].
 4. Set hydrogen pressure to [H2 pressure].`

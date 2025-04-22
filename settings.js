@@ -64,15 +64,15 @@ export const UNIT_MAP = {
  */
 export const ACTUAL_DATA = {
   "[name]": "Warehouse code: ............\n\n(e.g.  XXXX-XX)\n\n1	......... kg\n2	......... kg\n3	......... kg\n4	......... kg\nTotal	......... kg\n",
-  "[Stirring]": "Actual stirring set: ........ rpm;\n",
-  "[Inert gas flow rate]": "Actual gas flow set: ........ L/min;\n",
-  "[Set temp]": "Actual temperature set : ........ oC;\n",
-  "[Target Temp]": "Actual temperature: ........ oC;\n",
+  "[Stirring]": "Stirring set: ........ rpm;\n",
+  "[Inert gas flow rate]": "gas flow set: ........ L/min;\n",
+  "[Set temp]": "Temperature set : ........ oC;\n",
+  "[Target Temp]": "Temperature: ........ oC;\n",
   "[Expected Result]": "Result: ..............;\n",
-  "[Pressure set range]": "Actual pressure: ........ Torr;\n",
-  "[Pressure set]": "Actual set: ........ Torr;\n",
-  "[Exp. time]": "Actual separation time: ........ min;\n",
-  "[Perist. Pump set]": "Actual peristaltic pump set: ........ %;\n"
+  "[Pressure set range]": "Pressure set: ........ Torr;\n",
+  "[Pressure set]": "Pressure set: ........ Torr;\n",
+  "[Exp. time]": "Separation time: ........ min;\n",
+  "[Perist. Pump set]": "Peristaltic pump set: ........ %;\n"
 };
 
 export const PARAMS_TO_OMIT = [
