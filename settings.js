@@ -63,16 +63,16 @@ export const UNIT_MAP = {
  * that line is appended to the "Actual Data" column in the BMR document.
  */
 export const ACTUAL_DATA = {
-  "[name]": "Warehouse code: ............\n\n(e.g.  XXXX-XX)\n\n1	......... kg\n2	......... kg\n3	......... kg\n4	......... kg\nTotal	......... kg\n",
-  "[Stirring]": "Stirring set: ........ rpm;\n",
-  "[Inert gas flow rate]": "gas flow set: ........ L/min;\n",
-  "[Set temp]": "Temperature set : ........ oC;\n",
-  "[Target Temp]": "Temperature: ........ oC;\n",
+  "[name]": "Warehouse code: ............\n\n(e.g.  XXXX-XX)\n\n	......... kg\n\n",
+  "[Stirring]": "Stirring: ........ rpm;\n",
+  "[Inert gas flow rate]": "Gas flow: ........ L/min;\n",
+  "[Set temp]": "Temperature set : ........ °C;\n",
+  "[Target Temp]": "Temperature of reaction mixture: ........ °C;\n",
   "[Expected Result]": "Result: ..............;\n",
   "[Pressure set range]": "Pressure set: ........ Torr;\n",
   "[Pressure set]": "Pressure set: ........ Torr;\n",
   "[Exp. time]": "Separation time: ........ min;\n",
-  "[Perist. Pump set]": "Peristaltic pump set: ........ %;\n"
+  "[Perist. Pump set]": "Peristaltic pump: ........ %;\n"
 };
 
 export const PARAMS_TO_OMIT = [
