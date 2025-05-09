@@ -47,15 +47,15 @@ export const BMR_OPTIONS = {
 };
 
 // Unit mapping (this was previously used, but is no longer required)
-export const UNIT_MAP = {
-  "stirring": "rpm",
-  "argon flow": "L/min",
-  "pH": "",
-  "Target Temp": "°C",
-  "set temp": "°C",
-  "target temp": "°C",
-  "time": ""
-};
+// export const UNIT_MAP = {
+//   "stirring": "rpm",
+//   "argon flow": "L/min",
+//   "pH": "",
+//   "Target Temp": "°C",
+//   "set temp": "°C",
+//   "target temp": "°C",
+//   "time": ""
+// };
 
 /**
  * This object defines the "actual data" lines corresponding to placeholders

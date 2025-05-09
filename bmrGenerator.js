@@ -272,7 +272,7 @@ function getCriticalityWarning(op, placeholder) {
     if (normKey === normPlaceholder) {
       const flags = op.parameterCriticalities[key];
       if (flags && flags.length > 0) {
-        return ` [WARNING, PARAMETER IS ${flags.join(", ")}]`;
+        return ` WARNING, PARAMETER IS ${flags.join(", ")}`;
       }
     }
   }
