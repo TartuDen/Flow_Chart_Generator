@@ -7,8 +7,8 @@ const processInstructions = {
 
 1. Weigh [name] on balance 007-XX into jug "[project/TP code]" in ca Xkg portion.
 2. Load [name] into reactor via handhole using a plastic scoop and plastic funnel "[project/TP code]".
-3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+3. Stirring rate in reactor [Stirring] (range is recommended and can be adjusted).
+4. Inert gas flow rate [Inert gas flow rate].
 5. Adjust pH to: [pH check]. Measurement is done after 3-5 min from last addition.
 6. Set/Adjust temperature on thermostat to [Set temp] (keep jacket/RM temp. difference below 50oC).
 7. Keep reaction mixture temperature in range: [Target Temp.].
@@ -27,8 +27,8 @@ Specified loading: ….. kg (… - … kg)
 
 1. Weigh [name] using balance 007-XX into jug "[project/TP code]".
 2. Pour [name] into reactor via handhole using a plastic funnel "[project/TP code]".
-3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+3. Stirring rate in reactor [Stirring] (range is recommended and can be adjusted).
+4. Inert gas flow rate [Inert gas flow rate].
 5. Adjust pH to: [pH check]. Measurement is done after 3-5 min from last addition.
 6. Set/Adjust temperature on thermostat to [Set temp] (keep jacket/RM temp. difference below 50oC).
 7. Keep reaction mixture temperature in range: [Target Temp.].
@@ -49,8 +49,8 @@ Specified loading: ….. kg (… - … kg)
 2. Connect peristaltic pump and hose "[project/TP code]".
 3. Using peristaltic pump, load [name] via handhole. Secure hose to handhole with plastic tie.
 4. Set peristaltic pump to [Perist. Pump set].
-5. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-6. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+5. Stirring rate in reactor [Stirring] (range is recommended and can be adjusted).
+6. Inert gas flow rate [Inert gas flow rate].
 7. Adjust pH to: [pH check]. Measurement is done after 3-5 min from last addition.
 8. Set/Adjust temperature on thermostat to [Set temp] (keep jacket/RM temp. difference below 50oC).
 9. Keep reaction mixture temperature in range: [Target Temp.].
@@ -69,8 +69,8 @@ Specified loading: ….. kg (… - … kg)
 
 1. Weigh [name] on balance 007-XX into jug "[project/TP code]".
 2. Load [name] into the dropping funnel using a plastic funnel "[project/TP code]".
-3. Set/Adjust stirring rate in reactor to [Stirring] (range is recommended and can be adjusted).
-4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+3. Stirring rate in reactor [Stirring] (range is recommended and can be adjusted).
+4. Inert gas flow rate [Inert gas flow rate].
 5. Adjust pH to: [pH check]. Measurement is done after 3-5 min from last addition.
 6. Set/Adjust temperature on thermostat to [Set temp] (keep jacket/RM temp. difference below 50oC).
 7. Keep reaction mixture temperature in range: [Target Temp.].
@@ -99,7 +99,7 @@ Specified loading: ….. kg (… - … kg)
 3. Load Suspension into Reactor:
   a. Set/Adjust temperature on thermostat to [Set temp] (keep jacket/RM temp. difference below 50oC).
   b. Keep the temperature of reaction mixture in range: [Target Temp].
-  c. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+  c. Inert gas flow rate [Inert gas flow rate].
   d. Load the suspension into Reactor by carefully pouring through a funnel "[project/TP code]" trying to minimize splashing and exposure.
 4. Stirring:
   a. Set the stirring speed to [Stirring] (range is recommended and can be adjusted).
@@ -184,7 +184,7 @@ Loading of [name2]:
 1. Unload [name] using appropriate method: [method of transf.].
 2. Measure unloaded amount: [Amount] kg.
 3. Maintain stirring rate during unloading at [Stirring] (range is recommended and can be adjusted).
-4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+4. Inert gas flow rate [Inert gas flow rate].
 5. Optional: Keep reaction mixture overnight - [break point].`
   },
 
@@ -195,7 +195,7 @@ Loading of [name2]:
 1. Set/Adjust thermostat 011-XX to [Set temp].
 2. Keep reaction mixture temperature in range: [Target Temp].
 3. Turn off stirrer. Let precipitate settle on the bottom of reactor for [Time].
-4. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+4. Inert gas flow rate [Inert gas flow rate].
 5. Optional: Keep reaction mixture overnight - [break point].
 6. After required time passed, pump liquid part (top layer) from reactor into “direction”. Use peristaltic pump and hose "[project/TP code]". Peristaltic pump set: [Perist. Pump set].
 7. Stop when [End point].
@@ -315,7 +315,7 @@ Record parameters into Table X every YY min or more often.
 7. Set/Adjust stirring to [Stirring] (range is recommended and can be adjusted).
 8. Connect hose "[project/TP code]" for loading solution, open loading valve and load solution for evaporation.
 9. Continue until: [End point].
-10. Set/Adjust inert gas flow rate to [Inert gas flow rate].
+10. Inert gas flow rate [Inert gas flow rate].
 11. Optional: Keep reaction mixture overnight - [break point].
 
 Record parameters into Table X every YY min or more often.
