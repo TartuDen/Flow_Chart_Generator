@@ -1,9 +1,15 @@
 // excelParser.js
-import xlsx from 'xlsx';
-import fs from 'fs';
-import { generateFlowChartXML } from './xmlGenerator.js';
-import { generateBmrDocx } from './bmrGenerator.js';
-import { EXCEL_FILE_PATH, EXCEL_TAB, EXCEL_COLUMNS } from './settings.js';
+import xlsx from "xlsx";
+import fs from "fs";
+import path from "path";
+import { generateFlowChartXML } from "./xmlGenerator.js";
+import { generateAllDocs } from "./bmrGenerator.js";
+import {
+  EXCEL_FILE_PATH,
+  EXCEL_TAB,
+  EXCEL_COLUMNS,
+  GENERATED_FILES_DIR,
+} from "./settings.js";
 
 /**
  * Reads an Excel file and parses the operations.
@@ -16,7 +22,7 @@ function parseExcelOperations(filePath, sheetName) {
 
   // Find the header row using the synthesis stage column from settings.
   const headerRowIndex = sheetData.findIndex((row) =>
-    row.includes(EXCEL_COLUMNS.synthesisStage)
+    row.includes(EXCEL_COLUMNS.synthesisStage),
   );
   if (headerRowIndex === -1) {
     console.error(`ERROR: '${EXCEL_COLUMNS.synthesisStage}' header not found!`);
@@ -27,15 +33,15 @@ function parseExcelOperations(filePath, sheetName) {
 
   // Get the column indexes using the mapping.
   const colSynthesisStage = headers.indexOf(EXCEL_COLUMNS.synthesisStage);
-  const colActivityName   = headers.indexOf(EXCEL_COLUMNS.activityName);
-  const colActivityType   = headers.indexOf(EXCEL_COLUMNS.activityType);
-  const colDescription    = headers.indexOf(EXCEL_COLUMNS.description);
-  const colReagentName    = headers.indexOf(EXCEL_COLUMNS.reagentName);
-  const colParameter      = headers.indexOf(EXCEL_COLUMNS.parameter);
-  const colValue          = headers.indexOf(EXCEL_COLUMNS.value);
+  const colActivityName = headers.indexOf(EXCEL_COLUMNS.activityName);
+  const colActivityType = headers.indexOf(EXCEL_COLUMNS.activityType);
+  const colDescription = headers.indexOf(EXCEL_COLUMNS.description);
+  const colReagentName = headers.indexOf(EXCEL_COLUMNS.reagentName);
+  const colParameter = headers.indexOf(EXCEL_COLUMNS.parameter);
+  const colValue = headers.indexOf(EXCEL_COLUMNS.value);
   const colExpectedVolume = headers.indexOf(EXCEL_COLUMNS.expectedVolume);
-  const colEquipment1     = headers.indexOf(EXCEL_COLUMNS.equipment1);
-  const colEquipment2     = headers.indexOf(EXCEL_COLUMNS.equipment2);
+  const colEquipment1 = headers.indexOf(EXCEL_COLUMNS.equipment1);
+  const colEquipment2 = headers.indexOf(EXCEL_COLUMNS.equipment2);
 
   // Find indexes for CP, PC, CY columns.
   const colCP = headers.indexOf(EXCEL_COLUMNS.cp);
@@ -51,7 +57,7 @@ function parseExcelOperations(filePath, sheetName) {
 
   // Helper to read a cell value safely.
   const getCellValue = (row, colIndex) => {
-    if (colIndex < 0 || row[colIndex] === undefined) return '';
+    if (colIndex < 0 || row[colIndex] === undefined) return "";
     return String(row[colIndex]).trim();
   };
 
@@ -79,8 +85,7 @@ function parseExcelOperations(filePath, sheetName) {
           getCellValue(row, colEquipment1) ||
           getCellValue(row, colEquipment2) ||
           null,
-        // ADDED: store comments
-        comments: getCellValue(row, colComments) || null
+        comments: getCellValue(row, colComments) || null, // ADDED: store comments
       };
 
       // Fill in parameter and value.
@@ -108,19 +113,10 @@ function parseExcelOperations(filePath, sheetName) {
    * Checks CP, PC, CY columns in a row and sets criticality flags.
    */
   function addCriticalityFlags(op, paramKey, row) {
-    let flags = [];
-    if (colCP >= 0) {
-      const cpVal = getCellValue(row, colCP);
-      if (cpVal.match(/x/i)) flags.push("CP");
-    }
-    if (colPC >= 0) {
-      const pcVal = getCellValue(row, colPC);
-      if (pcVal.match(/x/i)) flags.push("PC");
-    }
-    if (colCY >= 0) {
-      const cyVal = getCellValue(row, colCY);
-      if (cyVal.match(/x/i)) flags.push("CY");
-    }
+    const flags = [];
+    if (colCP >= 0 && getCellValue(row, colCP).match(/x/i)) flags.push("CP");
+    if (colPC >= 0 && getCellValue(row, colPC).match(/x/i)) flags.push("PC");
+    if (colCY >= 0 && getCellValue(row, colCY).match(/x/i)) flags.push("CY");
     if (flags.length > 0) {
       op.parameterCriticalities[paramKey] = flags;
     }
@@ -130,17 +126,24 @@ function parseExcelOperations(filePath, sheetName) {
 }
 
 // --- MAIN EXECUTION ---
-const operations = parseExcelOperations(EXCEL_FILE_PATH, EXCEL_TAB);
-console.log('Parsed Operations:\n', JSON.stringify(operations, null, 2));
+(async () => {
+  // Ensure our output directory exists
+  if (!fs.existsSync(GENERATED_FILES_DIR)) {
+    fs.mkdirSync(GENERATED_FILES_DIR, { recursive: true });
+  }
 
-// 1. Generate the mxGraph XML.
-const xmlOutput = generateFlowChartXML(operations);
-// Save generated XML into /GENERATED_FILES folder.
-const xmlFile = `GENERATED_FILES/${EXCEL_TAB}.xml`;
-fs.writeFileSync(xmlFile, xmlOutput, 'utf-8');
-console.log(`XML diagram saved to ${xmlFile}`);
+  // 1) Parse operations from Excel
+  const operations = parseExcelOperations(EXCEL_FILE_PATH, EXCEL_TAB);
+  console.log("Parsed Operations:\n", JSON.stringify(operations, null, 2));
 
-// 2. Generate the BMR DOCX file.
-// Save generated DOCX into /GENERATED_FILES folder.
-const docxFile = `GENERATED_FILES/${EXCEL_TAB}_BMR.docx`;
-generateBmrDocx(operations, docxFile);
+  // 2) Generate the mxGraph XML.
+  const xmlOutput = generateFlowChartXML(operations);
+  const xmlFile = path.join(GENERATED_FILES_DIR, `${EXCEL_TAB}.xml`);
+  fs.writeFileSync(xmlFile, xmlOutput, "utf-8");
+  console.log(`XML diagram saved to ${xmlFile}`);
+
+  // 3) Generate both DOCX files (BMR + operations list)
+  const bmrFilename = `${EXCEL_TAB}_BMR.docx`;
+  await generateAllDocs(operations, bmrFilename);
+  console.log("✅ BMR and operations DOCX files generated.");
+})();
