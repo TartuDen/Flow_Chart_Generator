@@ -37,15 +37,21 @@ export const DOCX_TAB = EXCEL_TAB; // Re-use the Excel tab value for consistency
 // Where to drop all generated .docx files
 export const GENERATED_FILES_DIR = path.resolve(__dirname, "./GENERATED_FILES");
 
-// Layout settings for XML Generator
-export const ROW_HEIGHT = 150; // to change row height
-export const X_INPUT = 60;
-export const X_PROCESS = 220;
-export const X_OUTPUT = 450;
-export const BLOCK_WIDTH = 120;
-export const BLOCK_HEIGHT = 60;
-export const PROCESS_WIDTH = 190;
-export const PROCESS_HEIGHT = 120; // to change height of process block
+// ──────────────  LAYOUT  ──────────────────
+// Horizontal co-ordinate of the middle (PROCESS) column
+export const X_PROCESS = 220;           
+
+// Widths – unchanged
+export const BLOCK_WIDTH   = 120;       // INPUT / OUTPUT
+export const PROCESS_WIDTH = 190;       // PROCESS
+
+// Dynamic sizing helpers
+export const LINE_HEIGHT            = 20;   // px per text line
+export const BLOCK_VERTICAL_PADDING = 5;   // top + bottom padding
+export const MIN_PROCESS_HEIGHT     = 80;  // fallback if little text
+export const VERTICAL_SPACING       = 30;   // gap between rows
+export const HORIZONTAL_GAP         = 40;   // gap left / right of PROCESS
+export const BLOCK_HEIGHT           = 60;   // INPUT / OUTPUT height (unchanged)
 
 // Edge style for XML arrows
 export const EDGE_STYLE =

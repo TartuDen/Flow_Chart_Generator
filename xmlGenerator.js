@@ -1,170 +1,225 @@
-import { ROW_HEIGHT, X_INPUT, X_PROCESS, X_OUTPUT, BLOCK_WIDTH, BLOCK_HEIGHT, PROCESS_WIDTH, PROCESS_HEIGHT, EDGE_STYLE, PARAMS_TO_OMIT } from "./settings.js";
+import {
+  X_PROCESS,
+  BLOCK_WIDTH,
+  BLOCK_HEIGHT,
+  PROCESS_WIDTH,
+  LINE_HEIGHT,
+  BLOCK_VERTICAL_PADDING,
+  MIN_PROCESS_HEIGHT,
+  VERTICAL_SPACING,
+  HORIZONTAL_GAP,
+  EDGE_STYLE,
+  PARAMS_TO_OMIT,
+} from "./settings.js";
 
-/**
- * generateFlowChartXML(operations):
- * Builds an mxGraph XML string for a 3‑column flow chart (INPUT, PROCESS, OUTPUT)
- */
+/* ──────────────────────────────────────────────────────────────── */
+/*  Helper: escape text for XML/HTML                              */
+function escapeUser(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+/*  Helper: additional escape for attribute strings               */
+function finalEscape(str) {
+  if (!str) return "";
+  return escapeUser(str).replace(/"/g, "&quot;");
+}
+
+/*  Build an <mxCell> vertex (block)                              */
+function createBlockCell(id, x, y, width, height, label) {
+  const escapedLabel = finalEscape(label);
+  return `<mxCell id="${id}" value="${escapedLabel}" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+    <mxGeometry x="${x}" y="${y}" width="${width}" height="${height}" as="geometry"/>
+  </mxCell>`;
+}
+
+/*  Build an <mxCell> edge (arrow)                                */
+function createEdgeCell(id, source, target, extras = "") {
+  return `<mxCell id="${id}" style="${EDGE_STYLE}" edge="1" source="${source}" target="${target}" parent="1">
+    <mxGeometry relative="1" as="geometry">${extras}</mxGeometry>
+  </mxCell>`;
+}
+
+/*  Build HTML for a PROCESS block (same logic as original)       */
+function buildProcessHtml(equipment, description, parameterValue) {
+  const eq = equipment ? escapeUser(equipment) : "null";
+  const desc = description ? escapeUser(description) : "";
+  let html = `<b>${eq}</b><div>${desc}<br>`;
+
+  function isPureNumber(str) {
+    return /^[+-]?(\d+(\.\d+)?)$/.test(str.trim());
+  }
+
+  if (parameterValue) {
+    for (const [key, val] of Object.entries(parameterValue)) {
+      // omit parameters in the blacklist (case‑insensitive)
+      if (
+        PARAMS_TO_OMIT.some(
+          (p) => p.trim().toLowerCase() === key.trim().toLowerCase()
+        )
+      )
+        continue;
+      // skip NA
+      if (typeof val === "string" && val.trim().toUpperCase() === "NA") continue;
+
+      let displayVal = val;
+      if (isPureNumber(val)) {
+        const num = parseFloat(val);
+        displayVal = num.toFixed(2);
+      }
+      html += `<div>&nbsp;&nbsp;&nbsp; ${escapeUser(key)}: ${escapeUser(
+        displayVal
+      )},</div>`;
+    }
+  }
+  html += "</div><div><br></div>";
+  return html;
+}
+
+/*  Roughly estimate vertical lines to size the block             */
+function estimateLines(html) {
+  return (html.match(/<div/g) || []).length + 1; // +1 for the <b>…</b> line
+}
+
+/*  Build PROCESS block + height                                  */
+function buildProcessBlock(equipment, description, parameterValue) {
+  const html = buildProcessHtml(equipment, description, parameterValue);
+  const lines = estimateLines(html);
+  const height = Math.max(
+    MIN_PROCESS_HEIGHT,
+    lines * LINE_HEIGHT + BLOCK_VERTICAL_PADDING
+  );
+  return { html, height };
+}
+
+/* ──────────────────────────────────────────────────────────────── */
+/*  PUBLIC: generateFlowChartXML                                   */
 export function generateFlowChartXML(operations) {
   const cells = [];
-  // Basic mxGraph model root:
-  cells.push('<mxCell id="0"/>');
-  cells.push('<mxCell id="1" parent="0"/>');
-
-  // Escapes user-supplied text.
-  function escapeUser(s) {
-    if (!s) return '';
-    return s.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-  }
-
-  // Build HTML content for a PROCESS block.
-  function buildProcessHtml(equipment, description, parameterValue) {
-    const eq = equipment ? escapeUser(equipment) : 'null';
-    const desc = description ? escapeUser(description) : '';
-    let html = `<b>${eq}</b><div>${desc}<br>`;
-
-    function isPureNumber(str) {
-      return /^[+-]?(\d+(\.\d+)?)$/.test(str.trim());
-    }
-
-    if (parameterValue) {
-      for (const [key, val] of Object.entries(parameterValue)) {
-        // Check if the parameter key is in the omit list (case-insensitive)
-        if (PARAMS_TO_OMIT.some(param => param.trim().toLowerCase() === key.trim().toLowerCase())) {
-          continue;
-        }
-        // Exclude if the value is "NA" (case-insensitive)
-        if (typeof val === 'string' && val.trim().toUpperCase() === "NA") {
-          continue;
-        }
-        let displayVal = val;
-        if (isPureNumber(val)) {
-          const numericVal = parseFloat(val);
-          displayVal = numericVal.toFixed(2);
-        }
-        html += `<div>&nbsp; &nbsp; &nbsp; ${escapeUser(key)}: ${escapeUser(displayVal)},</div>`;
-      }
-    }
-    html += '</div><div><br></div>';
-    return html;
-  }
-
-  // Final escaping for an attribute value.
-  function finalEscape(s) {
-    if (!s) return '';
-    return s.replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
-
-  // Creates an mxCell element representing a block.
-  function createBlockCell(id, x, y, width, height, label) {
-    const escapedLabel = finalEscape(label);
-    return `<mxCell id="${id}" value="${escapedLabel}" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-      <mxGeometry x="${x}" y="${y}" width="${width}" height="${height}" as="geometry"/>
-    </mxCell>`;
-  }
-
-  // Creates an mxCell element representing an edge.
-  function createEdgeCell(id, source, target, extras = '') {
-    return `<mxCell id="${id}" style="${EDGE_STYLE}" edge="1" source="${source}" target="${target}" parent="1">
-      <mxGeometry relative="1" as="geometry">${extras}</mxGeometry>
-    </mxCell>`;
-  }
+  cells.push("<mxCell id=\"0\"/>");
+  cells.push("<mxCell id=\"1\" parent=\"0\"/>");
 
   let currentId = 2;
   let lastProcessBlockId = null;
+  let currentY = 40; // top margin for first row
 
-  operations.forEach((op, index) => {
-    const { activityType, reagentName, description, equipment, parameterValue } = op;
-    const rowY = 40 + index * ROW_HEIGHT;
+  operations.forEach((op) => {
+    const {
+      activityType,
+      reagentName,
+      description,
+      equipment,
+      parameterValue,
+    } = op;
 
+    /* 1️⃣  Build PROCESS block HTML + dynamic height */
+    const { html: processHtml, height: processHeight } = buildProcessBlock(
+      equipment,
+      description,
+      parameterValue
+    );
+
+    /* 2️⃣  Calculate positions for this row */
+    const processY = currentY;
+    const inputY = processY + (processHeight - BLOCK_HEIGHT) / 2; // vertically centred
+    const outputY = inputY;
+
+    const X_INPUT = X_PROCESS - HORIZONTAL_GAP - BLOCK_WIDTH;
+    const X_OUTPUT = X_PROCESS + PROCESS_WIDTH + HORIZONTAL_GAP;
+
+    const inputLabel = reagentName ? escapeUser(reagentName) : "";
+
+    /* IDs for this row */
     let inputBlockId = null;
     let processBlockId = null;
     let outputBlockId = null;
 
-    let safeReagent = reagentName ? escapeUser(reagentName) : '';
-    let amountText = '';
-    if (parameterValue) {
-      for (const key in parameterValue) {
-        // Here we use the omit list; if the key is omitted, skip it.
-        if (PARAMS_TO_OMIT.some(param => param.trim().toLowerCase() === key.trim().toLowerCase())) {
-          // Optionally, if "Amount" is to be specially processed, you can handle that before skipping.
-          continue;
-        }
-        if (key.trim().toLowerCase() === "amount") {
-          let val = parameterValue[key];
-          if (typeof val === 'string' && val.trim().toUpperCase() !== "NA") {
-            const numericVal = parseFloat(val);
-            if (!isNaN(numericVal)) {
-              val = numericVal.toFixed(2);
-            }
-            amountText = `<div>${escapeUser(key)}: ${escapeUser(val)} Kg</div>`;
-          }
-          delete parameterValue[key];
-          break;
-        }
+    const addEdge = (src, tgt) => {
+      currentId += 1;
+      cells.push(createEdgeCell(String(currentId), src, tgt));
+    };
+
+    /* 3️⃣  Draw blocks & edges depending on activityType */
+    switch (activityType) {
+      case "input->process": {
+        // INPUT
+        currentId += 1;
+        inputBlockId = String(currentId);
+        cells.push(
+          createBlockCell(inputBlockId, X_INPUT, inputY, BLOCK_WIDTH, BLOCK_HEIGHT, inputLabel)
+        );
+        // PROCESS
+        currentId += 1;
+        processBlockId = String(currentId);
+        cells.push(
+          createBlockCell(processBlockId, X_PROCESS, processY, PROCESS_WIDTH, processHeight, processHtml)
+        );
+        addEdge(inputBlockId, processBlockId);
+        break;
       }
-    }
-    const inputLabel = safeReagent + amountText;
 
-    if (activityType === 'input->process') {
-      currentId++;
-      inputBlockId = String(currentId);
-      cells.push(createBlockCell(inputBlockId, X_INPUT, rowY, BLOCK_WIDTH, BLOCK_HEIGHT, inputLabel));
-      currentId++;
-      processBlockId = String(currentId);
-      const processHtml = buildProcessHtml(equipment, description, parameterValue);
-      cells.push(createBlockCell(processBlockId, X_PROCESS, rowY - 30, PROCESS_WIDTH, PROCESS_HEIGHT, processHtml));
-      currentId++;
-      cells.push(createEdgeCell(String(currentId), inputBlockId, processBlockId));
-    } else if (activityType === 'input->process->output') {
-      currentId++;
-      inputBlockId = String(currentId);
-      cells.push(createBlockCell(inputBlockId, X_INPUT, rowY, BLOCK_WIDTH, BLOCK_HEIGHT, inputLabel));
-      currentId++;
-      processBlockId = String(currentId);
-      const processHtml = buildProcessHtml(equipment, description, parameterValue);
-      cells.push(createBlockCell(processBlockId, X_PROCESS, rowY - 30, PROCESS_WIDTH, PROCESS_HEIGHT, processHtml));
-      currentId++;
-      outputBlockId = String(currentId);
-      cells.push(createBlockCell(outputBlockId, X_OUTPUT, rowY, BLOCK_WIDTH, BLOCK_HEIGHT, 'Waste'));
-      currentId++;
-      cells.push(createEdgeCell(String(currentId), inputBlockId, processBlockId));
-      currentId++;
-      cells.push(createEdgeCell(String(currentId), processBlockId, outputBlockId));
-    } else if (activityType === 'process->output') {
-      currentId++;
-      processBlockId = String(currentId);
-      const processHtml = buildProcessHtml(equipment, description, parameterValue);
-      cells.push(createBlockCell(processBlockId, X_PROCESS, rowY - 30, PROCESS_WIDTH, PROCESS_HEIGHT, processHtml));
-      currentId++;
-      outputBlockId = String(currentId);
-      cells.push(createBlockCell(outputBlockId, X_OUTPUT, rowY, BLOCK_WIDTH, BLOCK_HEIGHT, 'Waste'));
-      currentId++;
-      cells.push(createEdgeCell(String(currentId), processBlockId, outputBlockId));
-    } else {
-      currentId++;
-      processBlockId = String(currentId);
-      const processHtml = buildProcessHtml(equipment, description, parameterValue);
-      cells.push(createBlockCell(processBlockId, X_PROCESS, rowY - 30, PROCESS_WIDTH, PROCESS_HEIGHT, processHtml));
+      case "input->process->output": {
+        // INPUT
+        currentId += 1;
+        inputBlockId = String(currentId);
+        cells.push(
+          createBlockCell(inputBlockId, X_INPUT, inputY, BLOCK_WIDTH, BLOCK_HEIGHT, inputLabel)
+        );
+        // PROCESS
+        currentId += 1;
+        processBlockId = String(currentId);
+        cells.push(
+          createBlockCell(processBlockId, X_PROCESS, processY, PROCESS_WIDTH, processHeight, processHtml)
+        );
+        // OUTPUT
+        currentId += 1;
+        outputBlockId = String(currentId);
+        cells.push(
+          createBlockCell(outputBlockId, X_OUTPUT, outputY, BLOCK_WIDTH, BLOCK_HEIGHT, "Waste")
+        );
+        addEdge(inputBlockId, processBlockId);
+        addEdge(processBlockId, outputBlockId);
+        break;
+      }
+
+      case "process->output": {
+        // PROCESS
+        currentId += 1;
+        processBlockId = String(currentId);
+        cells.push(
+          createBlockCell(processBlockId, X_PROCESS, processY, PROCESS_WIDTH, processHeight, processHtml)
+        );
+        // OUTPUT
+        currentId += 1;
+        outputBlockId = String(currentId);
+        cells.push(
+          createBlockCell(outputBlockId, X_OUTPUT, outputY, BLOCK_WIDTH, BLOCK_HEIGHT, "Waste")
+        );
+        addEdge(processBlockId, outputBlockId);
+        break;
+      }
+
+      default: // only PROCESS
+        currentId += 1;
+        processBlockId = String(currentId);
+        cells.push(
+          createBlockCell(processBlockId, X_PROCESS, processY, PROCESS_WIDTH, processHeight, processHtml)
+        );
     }
 
+    /* 4️⃣  Chain down edges between successive PROCESS blocks */
     if (lastProcessBlockId && processBlockId) {
-      currentId++;
-      cells.push(createEdgeCell(String(currentId), lastProcessBlockId, processBlockId));
+      addEdge(lastProcessBlockId, processBlockId);
     }
-    if (processBlockId) {
-      lastProcessBlockId = processBlockId;
-    }
+    if (processBlockId) lastProcessBlockId = processBlockId;
+
+    /* 5️⃣  Advance Y for next row */
+    currentY += processHeight + VERTICAL_SPACING;
   });
 
-  const xml = `<mxGraphModel>
-      <root>
-        ${cells.join('\n')}
-      </root>
-    </mxGraphModel>`;
-  return xml;
+  /* 6️⃣  Wrap up XML */
+  return `<mxGraphModel><root>\n${cells.join("\n")}\n</root></mxGraphModel>`;
 }
