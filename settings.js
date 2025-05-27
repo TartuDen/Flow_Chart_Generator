@@ -10,8 +10,8 @@ const __dirname = path.dirname(__filename);
 
 // Excel file settings
 export const EXCEL_FILE_PATH =
-  "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.2  20250305 draft.xlsm";
-export const EXCEL_TAB = "TP.1 DETO";
+  "//TBDCenter/08-Arendus/01 RD-PR Projects/03 Atipamezole/01 RnD/04 SCHEMES, LITERATURE, PROCEDURES/SD-PGI Atipamezol 2.3_draft.xlsm";
+export const EXCEL_TAB = "TP.3 ATI";
 
 // Excel columns mapping
 export const EXCEL_COLUMNS = {
