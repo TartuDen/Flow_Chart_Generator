@@ -1,102 +1,159 @@
-# Excel to Draw.io Flow Chart Generator
+# Excel to Draw.io Flow‑Chart Generator
 
-This project is a Node.js utility that reads an Excel file, extracts process operations from a specified sheet, and generates an mxGraph XML file that can be imported into [Draw.io (diagrams.net)](https://www.diagrams.net/) to create a flow chart.
+This project is a **Node.js** utility that reads an Excel workbook, extracts the
+process operations defined on a given sheet, and automatically builds an
+mxGraph‑compatible XML file that can be imported into
+**[Draw.io (diagrams.net)](https://www.diagrams.net/)** to visualise the flow as a
+diagram.
 
-## Features
+---
 
-- **Excel Parsing:** Extracts operations based on a "Synthesis stage" header.
-- **Flow Chart Generation:** Supports multiple activity types (e.g., `input->process`, `input->process->output`, etc.) by generating appropriate blocks and connecting arrows.
-- **XML Output:** Produces an mxGraph XML diagram with properly escaped attribute values so that it can be imported directly into Draw.io.
-- **Custom Output File Name:** The XML file is saved with a name based on the specified tab name.
+## ✨ Features
 
-## Prerequisites
+* **Excel parsing** – operations are detected by a non‑empty
+  **“Synthesis stage”** column so a single physical row in Excel can span
+  multiple parameter lines.
+* **Flow‑chart generation** – understands `input→process`,
+  `input→process→output`, `process→output` and plain `process` activity types and
+  wires the blocks accordingly.
+* **Dynamic block sizing** – each *PROCESS* rectangle automatically expands to
+  fit its description and parameter list; matching *INPUT* / *OUTPUT* blocks are
+  vertically centred.
+* **XML output** – produces a Draw.io‑ready file with all entity names correctly
+  escaped.
+* **BMR & operations **DOCX** reports** – optional generation of batch‑record and
+  template documentation via the *docx* library.
 
-- [Node.js](https://nodejs.org/) (version 12 or later is recommended)
-- npm (Node package manager, usually installed with Node.js)
+---
 
-## Installation
+## 🛠️ Prerequisites (Windows 11)
 
-1. **Clone or Download** the repository to your local machine.
-2. Open a terminal (or command prompt) in the project directory.
-3. Run the following command to install the required modules:
+| Tool                             | Why you need it                     | Install link                                                                                           |
+| -------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Node.js LTS (≥ 18.x)**         | Runs the scripts, installs packages | [https://nodejs.org/en](https://nodejs.org/en)                                                         |
+| **Git for Windows** *(optional)* | Easiest way to clone the repo       | [https://gitforwindows.org](https://gitforwindows.org)                                                 |
+| **Microsoft Excel**              | To view / edit the source workbook  | Part of Microsoft 365 or Office 2021                                                                   |
+| Draw.io Desktop *(optional)*    | Offline editing of the diagram      | [https://github.com/jgraph/drawio-desktop/releases](https://github.com/jgraph/drawio-desktop/releases) |
 
-```bash
-   npm install
+> **TIP** If you do *not* have admin rights, grab the **.zip**/portable versions
+> of Node.js and Draw.io and unzip them somewhere in your user folder; the
+> script works fine with those.
+
+---
+
+## 📦 Installation
+
+### 1  Get the code
+
+```powershell
+# With Git (recommended)
+cd %USERPROFILE%\Projects
+git clone https://github.com/YourOrg/flow-chart-generator.git
+cd flow-chart-generator
+
+# – or – download ZIP
+#   ➜  Extract the archive, then:
+cd path\to\flow-chart-generator
 ```
-This installs the xlsx module (and uses Node’s built-in fs module).
 
-## Configuration
-Before running the script, update the following constants in excelParser.js:
+### 2  Install the Node dependencies
 
-### filePath
-The full path to your Excel file. For example:
-
-```bash
-const filePath = 'your file path';
+```powershell
+npm install
 ```
 
-### tab
-The name of the sheet (tab) within the Excel file from which to extract the data. For example:
+This pulls in 📄 **xlsx** (Excel reader), 📄 **docx** (DOCX writer) and
+any other libraries declared in `package.json`.
 
-```bash
-const tab = 'tab name';
-```
-## Usage
-### Running from the Command Line
-1. Open a terminal or command prompt in the project directory.
+---
 
-2. Run the following command:
+## 🔧 Configuration
 
-```bash
+All runtime settings live in **`settings.js`**.  The most important ones are:
+
+| Constant              | Purpose                                 | Example                  |
+| --------------------- | --------------------------------------- | ------------------------ |
+| `EXCEL_FILE_PATH`     | Absolute path to the source workbook    | `"C:/Data/Project.xlsm"` |
+| `EXCEL_TAB`           | Sheet name containing the process table | `"TP.3 ATI"`             |
+| `GENERATED_FILES_DIR` | Where XML & DOCX files are saved        | `./GENERATED_FILES`      |
+
+Open **`settings.js`** in your editor, tweak the paths, then save.
+
+> **Network paths** – UNC shares work fine (`"\\Server\Share\File.xlsm"`) but
+> you *must* escape back‑slashes inside strings or use regular `/` slashes.
+
+---
+
+## ▶️ First Run (two options)
+
+### A  PowerShell / Command Prompt
+
+```powershell
+cd path\to\flow-chart-generator
 node excelParser.js
 ```
-The script will:
 
-* Parse the Excel file using the provided filePath and tab.
-* Output the parsed operations as JSON in the console.
-* Generate an mxGraph XML diagram and save it to a file named <tab>.xml (for example, TP.1 project.xml).
-  
-## Using a Batch File on Windows
-If you prefer a clickable solution for Windows users, you can create a batch file (e.g., runParser.bat) with the following contents:
+You should see:
 
-```bat
-@echo off
-REM Run the Node.js script
-node excelParser.js
-pause
 ```
-Double-click the batch file to run the script.
-Note: This approach still requires Node.js and the necessary modules to be installed on the system.
+Parsed Operations:
+  … JSON preview …
+XML diagram saved to …/GENERATED_FILES/TP.3 ATI.xml
+✅ BMR and operations DOCX files generated.
+```
 
-## Importing the Generated XML into Draw.io
-1. Open Draw.io (diagrams.net) in your browser or use the Draw.io desktop app.
-2. In Draw.io, go to File → Import From → Device (or File → Open).
-3. Select the generated XML file (named after your tab constant, e.g., TP.1 ATI.xml).
-4. The flow chart diagram will be imported and displayed.
+### B  Double‑click (Windows only)
 
-## Code Overview
-1. excelParser.js
-Contains the code to:
+1. Create a file named **`runParser.bat`** in the project root with:
 
-  * Parse the Excel file and extract operations.
-  * Generate the mxGraph XML using the generateFlowChartXML function from xmlGenerator.js.
-  * Save the XML to a file (named after the tab name).
-2. xmlGenerator.js
-Contains the generateFlowChartXML function that:
+   ```bat
+   @echo off
+   node excelParser.js
+   pause
+   ```
+2. Double‑click the batch file.  A console window will open, run the script and
+   wait for you to press a key before closing.
 
-  * Builds the mxGraph XML diagram using the operations data.
-  * Escapes HTML content so that < and > characters are replaced with XML entities.
-  * Sets up the layout (positions and sizes) for the blocks and arrows.
+---
 
-## Troubleshooting
-1. Missing Modules:
-If you get errors about missing modules, ensure you have run npm install.
+## 🖇️ Importing the XML into Draw.io
 
-2. Incorrect File Path or Tab Name:
-Verify that the constants filePath and tab in excelParser.js are set to the correct values for your Excel file and sheet.
+1. Launch **Draw.io** (web or desktop).
+2. **File → Import from Device** and pick the generated `…xml` file.
+3. The full flow‑chart appears, ready to style or embed.
 
-3. Empty Diagram in Draw.io:
-If the XML file appears empty when imported into Draw.io, check the console output to confirm that operations were parsed correctly. Also, ensure that you are importing the correct XML file.
+---
 
-## License
-This project is open source and available under the MIT License.
+## 🗺️ Project Structure
+
+| File / folder      | Role                                                       |
+| ------------------ | ---------------------------------------------------------- |
+| `excelParser.js`   | Orchestrates: reads Excel → builds XML → (optionally) DOCX |
+| `xmlGenerator.js`  | Converts operations → mxGraph XML (dynamic block sizing)   |
+| `bmrGenerator.js`  | Creates BMR + operations **.docx** reports                 |
+| `operations.js`    | Re‑usable step templates for the BMR                       |
+| `settings.js`      | **All configurable constants live here**                   |
+| `GENERATED_FILES/` | Output folder – safe to delete/regenerate                  |
+
+---
+
+## 🩺 Troubleshooting
+
+| Symptom                                         | Fix                                                             |
+| ----------------------------------------------- | --------------------------------------------------------------- |
+| **`Error: Cannot find module …`**               | Run `npm install` again or delete `node_modules` and reinstall. |
+| **`ENOENT: no such file or directory … .xlsm`** |                                                                 |
+
+| **agram in Draw.io**                | Confirm the console shows parsed operations.  If zero, verify you have the correct *sheet* (`EXCEL_TAB`) and the header row really contains **“Synthesis stage”**. |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Blocked script / security prompt** | Right‑click the `.bat`, choose *Properties → Unblock*, or run from PowerShell `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.                        |
+
+---
+
+## 📄 License
+
+MIT — see `LICENSE` for details.
+
+| Check `EXCEL_FILE_PATH` is correct and reachable. |
+| ------------------------------------------------- |
+| **Empty di**                                      |
