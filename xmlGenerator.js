@@ -1,3 +1,4 @@
+// xmlGenerator.js
 import {
   X_PROCESS,
   BLOCK_WIDTH,

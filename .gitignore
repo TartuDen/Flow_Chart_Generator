@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# GENERATED FILES FOLDER
+/GENERATED_FILES
