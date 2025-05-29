@@ -131,3 +131,6 @@ dist
 
 # GENERATED FILES FOLDER
 /GENERATED_FILES
+
+/node
+*.bat
