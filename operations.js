@@ -210,7 +210,7 @@ Loading of [name2]:
 2. Set/Adjust temperature on 011-XX to [Set temp] (keep jacket/RM temp. difference below 50oC).
 3. Adjust reaction mixture temperature to range: [Target Temp].
 4. Provide temperature gradient: [cooling/heating grad.].
-5. Stirring in reactor 002-XX [Stirring] (recommended). 
+5. Stirring in reactor [Stirring] (recommended). 
 6. Inert gas flow rate [Inert gas flow rate].
 
 Record parameters into Table X every YY min or more often.
@@ -223,7 +223,7 @@ Record parameters into Table X every YY min or more often.
 
 1. Ensure that temperature on thermostat is set to [Set temp].
 2. Hold temperature of reaction mixture in range: [Target Temp] for [Time].
-3. Stirring in reactor 002-XX [Stirring] (recommended).
+3. Stirring in reactor [Stirring] (recommended).
 4. Inert gas flow rate [Inert gas flow rate].
 5. Optional: Keep reaction mixture overnight - [break point].
 
@@ -356,7 +356,7 @@ next op.______________
   "filtration": {
     description: `Filter the material:
 
-1. Keep stirring in Reactor 002-XX to 150-60rpm (gradually decreasing).
+1. Keep stirring in Reactor to 150-60rpm (gradually decreasing).
 2. Connect norprene hose "[project/TP code]" from reactor valve and through peristaltic pump to Nutsch filter. Set the peristaltic pump to 40-60%.
 3. Set the membrane pump to [Pressure set] and start it.
 4. Start peristaltic pump, open reactor’s valve and transfer the reaction mixture from the Reactor to the Nutsch filter in portions, allowing filtration to proceed.
