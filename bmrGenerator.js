@@ -45,7 +45,7 @@ export async function generateAllDocs(operations, bmrOutputFileName) {
   const operationsFilename = `operations_${dateStr}.docx`;
   const operationsPath = path.join(GENERATED_FILES_DIR, operationsFilename);
 
-  // await generateOperationsDocx(operationsPath);
+  await generateOperationsDocx(operationsPath);
 }
 
 /**
@@ -277,5 +277,5 @@ function createCell(content, widthPercent) {
 }
 
 // Export core functions
-// export { generateBmrDocx, generateOperationsDocx };
-export { generateBmrDocx};
+export { generateBmrDocx, generateOperationsDocx };
+// export { generateBmrDocx};
