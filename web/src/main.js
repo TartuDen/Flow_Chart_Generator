@@ -9,6 +9,9 @@ import {
 
 const fileInput = document.getElementById("excelFile");
 const sheetSelect = document.getElementById("sheetSelect");
+const includeXml = document.getElementById("includeXml");
+const includeBmr = document.getElementById("includeBmr");
+const includeJson = document.getElementById("includeJson");
 const includeOpsDocx = document.getElementById("includeOpsDocx");
 const generateBtn = document.getElementById("generateBtn");
 const statusEl = document.getElementById("status");
@@ -230,16 +233,28 @@ generateBtn.addEventListener("click", async () => {
     }
 
     const safeSheetName = sanitizeName(sheetName) || baseFileName;
-    const xml = generateFlowChartXML(operations);
-    const json = JSON.stringify(operations, null, 2);
-    const bmrBlob = await generateBmrDocxBlob(operations, sheetName);
+    if (!includeXml.checked && !includeBmr.checked && !includeJson.checked && !includeOpsDocx.checked) {
+      setStatus("Select at least one output to generate.", "error");
+      return;
+    }
 
-    downloadBlob(new Blob([xml], { type: "text/xml" }), `${safeSheetName}.xml`);
-    downloadBlob(
-      new Blob([json], { type: "application/json" }),
-      `${safeSheetName}_operations.json`
-    );
-    downloadBlob(bmrBlob, `${safeSheetName}_BMR.docx`);
+    if (includeXml.checked) {
+      const xml = generateFlowChartXML(operations);
+      downloadBlob(new Blob([xml], { type: "text/xml" }), `${safeSheetName}.xml`);
+    }
+
+    if (includeJson.checked) {
+      const json = JSON.stringify(operations, null, 2);
+      downloadBlob(
+        new Blob([json], { type: "application/json" }),
+        `${safeSheetName}_operations.json`
+      );
+    }
+
+    if (includeBmr.checked) {
+      const bmrBlob = await generateBmrDocxBlob(operations, sheetName);
+      downloadBlob(bmrBlob, `${safeSheetName}_BMR.docx`);
+    }
 
     if (includeOpsDocx.checked) {
       const opsBlob = await generateOperationsDocxBlob();

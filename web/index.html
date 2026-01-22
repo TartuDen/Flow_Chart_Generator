@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMR/flow chart generator</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f7b6c'/%3E%3Cpath d='M18 44l5-14 17-17 8 8-17 17-14 6z' fill='%23fff7ee'/%3E%3Cpath d='M41 15l8 8' stroke='%230a5f54' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,11 +21,11 @@
     <div class="bg-orb bg-orb--two"></div>
     <main class="shell">
       <header class="hero">
-        <p class="eyebrow">Local only • no uploads</p>
+        <p class="eyebrow">Hi TBD team!</p>
         <h1>BMR/flow chart generator</h1>
         <p class="lede">
           Pick an Excel file, choose a tab, and download the generated XML, JSON,
-          and BMR document. Everything stays in your browser.
+          and BMR document.
         </p>
       </header>
 
@@ -28,7 +33,6 @@
         <div class="field">
           <label for="excelFile">Excel workbook</label>
           <input id="excelFile" type="file" accept=".xlsx,.xlsm,.xls" />
-          <p class="hint">We only read the file locally in your browser.</p>
         </div>
 
         <div class="field">
@@ -38,10 +42,23 @@
           </select>
         </div>
 
-        <div class="field field--inline">
+        <div class="field">
+          <label>Outputs</label>
+          <label class="toggle">
+            <input id="includeXml" type="checkbox" checked />
+            <span>Flowchart XML</span>
+          </label>
+          <label class="toggle">
+            <input id="includeBmr" type="checkbox" checked />
+            <span>BMR DOCX</span>
+          </label>
+          <label class="toggle">
+            <input id="includeJson" type="checkbox" />
+            <span>Operations JSON</span>
+          </label>
           <label class="toggle">
             <input id="includeOpsDocx" type="checkbox" />
-            <span>Generate operations DOCX</span>
+            <span>Operations DOCX</span>
           </label>
         </div>
 
