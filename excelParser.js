@@ -76,6 +76,21 @@ function parseExcelOperations(filePath, sheetName) {
   let currentOp = null;
   let opNumber = 1;
 
+  const appendComment = (op, comment) => {
+    const trimmed = (comment || "").trim();
+    if (!trimmed) return;
+    if (!op.comments) {
+      op.comments = trimmed;
+    } else {
+      op.comments += `; ${trimmed}`;
+    }
+  };
+  const isMissingParamValue = (value) => {
+    if (value === null || value === undefined) return true;
+    const trimmed = String(value).trim();
+    return !trimmed || trimmed.toUpperCase() === "NA";
+  };
+
   // Process each row below the header.
   for (let r = headerRowIndex + 1; r <= range.e.r; r++) {
     if (!watchCols.some((c) => getCellValue(r, c))) continue;
@@ -99,13 +114,14 @@ function parseExcelOperations(filePath, sheetName) {
           getCellValue(r, colIndexByKey.equipment1) ||
           getCellValue(r, colIndexByKey.equipment2) ||
           null,
-        comments: getCellValue(r, colIndexByKey.comments) || null,
+        comments: null,
       };
+      appendComment(currentOp, getCellValue(r, colIndexByKey.comments));
 
       // Fill in parameter and value.
       const paramKey = getCellValue(r, colIndexByKey.parameter);
       const paramVal = getCellValue(r, colIndexByKey.value);
-      if (paramKey) {
+      if (paramKey && !isMissingParamValue(paramVal)) {
         currentOp.parameterValue[paramKey] = paramVal;
         addCriticalityFlags(currentOp, paramKey, r);
       }
@@ -113,9 +129,11 @@ function parseExcelOperations(filePath, sheetName) {
       // Continuation row for the current operation.
       if (!currentOp) continue;
 
+      appendComment(currentOp, getCellValue(r, colIndexByKey.comments));
+
       const paramKey = getCellValue(r, colIndexByKey.parameter);
       const paramVal = getCellValue(r, colIndexByKey.value);
-      if (paramKey) {
+      if (paramKey && !isMissingParamValue(paramVal)) {
         currentOp.parameterValue[paramKey] = paramVal;
         addCriticalityFlags(currentOp, paramKey, r);
       }
