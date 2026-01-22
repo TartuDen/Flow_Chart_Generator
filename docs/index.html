@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMR/flow chart generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/Flow_Chart_Generator/assets/index-C60rtfOr.js"></script>
+    <link rel="stylesheet" crossorigin href="/Flow_Chart_Generator/assets/index-B_aW9ARs.css">
+  </head>
+  <body>
+    <div class="bg-orb bg-orb--one"></div>
+    <div class="bg-orb bg-orb--two"></div>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Local only • no uploads</p>
+        <h1>BMR/flow chart generator</h1>
+        <p class="lede">
+          Pick an Excel file, choose a tab, and download the generated XML, JSON,
+          and BMR document. Everything stays in your browser.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="field">
+          <label for="excelFile">Excel workbook</label>
+          <input id="excelFile" type="file" accept=".xlsx,.xlsm,.xls" />
+          <p class="hint">We only read the file locally in your browser.</p>
+        </div>
+
+        <div class="field">
+          <label for="sheetSelect">Worksheet</label>
+          <select id="sheetSelect" disabled>
+            <option value="">Select a workbook first</option>
+          </select>
+        </div>
+
+        <div class="field field--inline">
+          <label class="toggle">
+            <input id="includeOpsDocx" type="checkbox" />
+            <span>Generate operations DOCX</span>
+          </label>
+        </div>
+
+        <button id="generateBtn" type="button" disabled>Generate files</button>
+        <p id="status" class="status"></p>
+      </section>
+
+      <footer class="footer">
+        <span>Outputs: XML flow chart, JSON operations, BMR DOCX.</span>
+      </footer>
+    </main>
+  </body>
+</html>
