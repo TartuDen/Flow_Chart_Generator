@@ -81,7 +81,21 @@ function buildProcessHtml(equipment, description, parameterValue) {
 
 /*  Roughly estimate vertical lines to size the block             */
 function estimateLines(html) {
-  return (html.match(/<div/g) || []).length + 1; // +1 for the <b>…</b> line
+  const text = html
+    .replace(/<div>/g, "\n")
+    .replace(/<br>/g, "\n")
+    .replace(/<\/div>/g, "")
+    .replace(/<[^>]+>/g, "");
+  const lines = text
+    .split(/\n+/)
+    .map((line) => line.replace(/\s+/g, " ").trim())
+    .filter((line) => line.length > 0);
+  const charsPerLine = Math.max(28, Math.floor(PROCESS_WIDTH / 4));
+  let total = 0;
+  for (const line of lines) {
+    total += Math.max(1, Math.ceil(line.length / charsPerLine));
+  }
+  return Math.max(1, total);
 }
 
 /*  Build PROCESS block + height                                  */
