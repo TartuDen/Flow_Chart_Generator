@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node excelParser.js",
+    "dev:web": "vite --config web/vite.config.js",
+    "build:web": "vite build --config web/vite.config.js --base=/Flow_Chart_Generator/",
+    "preview:web": "vite preview --config web/vite.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -19,6 +22,9 @@
     "wmf": "^1.0.2",
     "word": "^0.3.0",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
   },
   "keywords": [],
   "author": "",
