@@ -13,6 +13,9 @@ import {
   PARAMS_TO_OMIT,
 } from "./settings.js";
 
+const normalizeKey = (value = "") => value.trim().toLowerCase();
+const PARAMS_TO_OMIT_SET = new Set(PARAMS_TO_OMIT.map(normalizeKey));
+
 /* ──────────────────────────────────────────────────────────────── */
 /*  Helper: escape text for XML/HTML                              */
 function escapeUser(str) {
@@ -56,18 +59,14 @@ function buildProcessHtml(equipment, description, parameterValue) {
 
   if (parameterValue) {
     for (const [key, val] of Object.entries(parameterValue)) {
-      // omit parameters in the blacklist (case‑insensitive)
-      if (
-        PARAMS_TO_OMIT.some(
-          (p) => p.trim().toLowerCase() === key.trim().toLowerCase()
-        )
-      )
-        continue;
+      // omit parameters in the blacklist (case-insensitive)
+
+      if (PARAMS_TO_OMIT_SET.has(normalizeKey(key))) continue;
       // skip NA
       if (typeof val === "string" && val.trim().toUpperCase() === "NA") continue;
 
       let displayVal = val;
-      if (isPureNumber(val)) {
+      if (typeof val === "string" && isPureNumber(val)) {
         const num = parseFloat(val);
         displayVal = num.toFixed(2);
       }
