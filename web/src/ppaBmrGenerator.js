@@ -43,12 +43,12 @@ export async function generatePpaBmrDocxBlob(worksheet) {
   ];
 
   for (const operation of operations) {
-    const { descriptionLines, recordingLines } = formatOperation(operation);
+    const { descriptionBlocks, recordingLines } = formatOperation(operation);
     rows.push(
       new TableRow({
         children: [
           createTextCell([String(operation.opNumber)]),
-          createTextCell(descriptionLines),
+          createDescriptionCell(descriptionBlocks),
           createTextCell(["__:__"]),
           createTextCell(recordingLines),
         ],
@@ -150,8 +150,10 @@ export function parsePpaOperations(worksheet) {
 }
 
 function formatOperation(operation) {
-  const descriptionLines = operation.description ? [operation.description] : [];
-  const endDescriptionLines = [];
+  const descriptionBlocks = operation.description
+    ? [{ type: "HEADING", text: operation.description }]
+    : [];
+  const endDescriptionBlocks = [];
   const recordingLines = [];
   const seenRecordingTemplates = new Set();
 
@@ -162,7 +164,10 @@ function formatOperation(operation) {
     if (missingValue && !includeWhenMissing) continue;
 
     if (!mapping) {
-      descriptionLines.push(`${parameter.name}: ${parameter.value}`);
+      descriptionBlocks.push({
+        type: "PARAMETER",
+        text: `${parameter.name}: ${parameter.value}`,
+      });
       continue;
     }
 
@@ -177,10 +182,15 @@ function formatOperation(operation) {
         descriptionText = applyValue(mapping.description.template, parameter.value);
       }
 
-      const target = mapping.description.position === "END"
-        ? endDescriptionLines
-        : descriptionLines;
-      target.push(...splitLines(descriptionText));
+      const block = {
+        type: mapping.description.position === "END" ? "END" : "PARAMETER",
+        text: descriptionText,
+        boldLabel: isAmount,
+      };
+      const target = block.type === "END"
+        ? endDescriptionBlocks
+        : descriptionBlocks;
+      target.push(block);
     }
 
     if (mapping.recording.visibility === "YES") {
@@ -198,8 +208,8 @@ function formatOperation(operation) {
     }
   }
 
-  descriptionLines.push(...endDescriptionLines);
-  return { descriptionLines, recordingLines };
+  descriptionBlocks.push(...endDescriptionBlocks);
+  return { descriptionBlocks, recordingLines };
 }
 
 function applyValue(template, value) {
@@ -231,6 +241,88 @@ function createTextCell(lines) {
     ? lines.map((line) => new Paragraph(String(line)))
     : [new Paragraph("")];
   return new TableCell({ children: paragraphs });
+}
+
+function createDescriptionCell(blocks) {
+  const paragraphs = [];
+  let parameterNumber = 1;
+
+  for (const block of blocks) {
+    if (block.type === "HEADING") {
+      paragraphs.push(
+        createRichParagraph(block.text, {
+          bold: true,
+          spacingAfter: 240,
+        })
+      );
+      continue;
+    }
+
+    if (block.type === "PARAMETER") {
+      paragraphs.push(
+        createRichParagraph(block.text, {
+          prefix: `${parameterNumber++}. `,
+        })
+      );
+      continue;
+    }
+
+    paragraphs.push(
+      createRichParagraph(block.text, {
+        boldLabel: block.boldLabel,
+        spacingBefore: 240,
+      })
+    );
+  }
+
+  return new TableCell({
+    children: paragraphs.length ? paragraphs : [new Paragraph("")],
+  });
+}
+
+function createRichParagraph(
+  text,
+  { prefix = "", bold = false, boldLabel = false, spacingBefore, spacingAfter } = {}
+) {
+  const lines = splitLines(text);
+  const children = [];
+
+  lines.forEach((line, index) => {
+    const linePrefix = index === 0 ? prefix : "";
+    const content = `${linePrefix}${line}`;
+    const breakCount = index === 0 ? undefined : 1;
+
+    if (boldLabel && index === 0) {
+      const colonIndex = content.indexOf(":");
+      if (colonIndex >= 0) {
+        children.push(
+          new TextRun({
+            text: content.slice(0, colonIndex + 1),
+            bold: true,
+            break: breakCount,
+          }),
+          new TextRun({ text: content.slice(colonIndex + 1) })
+        );
+        return;
+      }
+    }
+
+    children.push(
+      new TextRun({
+        text: content,
+        bold,
+        break: breakCount,
+      })
+    );
+  });
+
+  return new Paragraph({
+    children,
+    spacing: {
+      before: spacingBefore,
+      after: spacingAfter,
+    },
+  });
 }
 
 // These small helpers keep this generator independent from the existing XLSX
