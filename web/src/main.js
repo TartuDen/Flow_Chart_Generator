@@ -6,6 +6,7 @@ import {
   generateBmrDocxBlob,
   generateOperationsDocxBlob,
 } from "./bmrGenerator.js";
+import { generatePpaBmrDocxBlob } from "./ppaBmrGenerator.js";
 
 const fileInput = document.getElementById("excelFile");
 const sheetSelect = document.getElementById("sheetSelect");
@@ -13,6 +14,7 @@ const includeXml = document.getElementById("includeXml");
 const includeBmr = document.getElementById("includeBmr");
 const includeJson = document.getElementById("includeJson");
 const includeOpsDocx = document.getElementById("includeOpsDocx");
+const includePpaBmr = document.getElementById("includePpaBmr");
 const generateBtn = document.getElementById("generateBtn");
 const statusEl = document.getElementById("status");
 
@@ -233,7 +235,13 @@ generateBtn.addEventListener("click", async () => {
     }
 
     const safeSheetName = sanitizeName(sheetName) || baseFileName;
-    if (!includeXml.checked && !includeBmr.checked && !includeJson.checked && !includeOpsDocx.checked) {
+    if (
+      !includeXml.checked &&
+      !includeBmr.checked &&
+      !includeJson.checked &&
+      !includeOpsDocx.checked &&
+      !includePpaBmr.checked
+    ) {
       setStatus("Select at least one output to generate.", "error");
       return;
     }
@@ -259,6 +267,11 @@ generateBtn.addEventListener("click", async () => {
     if (includeOpsDocx.checked) {
       const opsBlob = await generateOperationsDocxBlob();
       downloadBlob(opsBlob, `operations_${formatDate()}.docx`);
+    }
+
+    if (includePpaBmr.checked) {
+      const ppaBmrBlob = await generatePpaBmrDocxBlob(worksheet);
+      downloadBlob(ppaBmrBlob, `${safeSheetName}_BMR_draft_from_PPA.docx`);
     }
   } catch (error) {
     setStatus(`Generation failed: ${error.message}`, "error");

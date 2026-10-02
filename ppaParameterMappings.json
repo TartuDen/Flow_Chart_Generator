@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "instructions": {
+    "visibility": "Set a description or recording visibility to YES or NO.",
+    "renaming": "Edit the corresponding template. Use {value} where the Excel value should appear.",
+    "matching": "Excel parameter names are matched case-insensitively after trimming whitespace.",
+    "recordingPlaceholder": "The underscore characters are printed as the space in which the operator records actual data."
+  },
+  "parameters": [
+    {
+      "sourceNames": ["Heating to the temp."],
+      "description": { "visibility": "YES", "template": "Heat to: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual temperature after heating: ______" }
+    },
+    {
+      "sourceNames": ["hold time at temp"],
+      "description": { "visibility": "YES", "template": "Hold at temperature for: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual hold time: ______" }
+    },
+    {
+      "sourceNames": ["Argon flow during heating"],
+      "description": { "visibility": "YES", "template": "Argon flow during heating: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual argon flow during heating: ______" }
+    },
+    {
+      "sourceNames": ["cooling to temp."],
+      "description": { "visibility": "YES", "template": "Cool to: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual temperature after cooling: ______" }
+    },
+    {
+      "sourceNames": ["argon flow during cooling"],
+      "description": { "visibility": "YES", "template": "Argon flow during cooling: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual argon flow during cooling: ______" }
+    },
+    {
+      "sourceNames": ["Vacuum applied"],
+      "description": { "visibility": "YES", "template": "Vacuum applied: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual vacuum: ______" }
+    },
+    {
+      "sourceNames": ["Purge reactor with inert gas"],
+      "description": { "visibility": "YES", "template": "Purge reactor with: {value}" },
+      "recording": { "visibility": "NO", "template": "Purge completed: ☐" }
+    },
+    {
+      "sourceNames": ["Consider eq. material compatibility with the process."],
+      "description": { "visibility": "YES", "template": "Equipment material compatibility: {value}" },
+      "recording": { "visibility": "YES", "template": "Compatibility confirmed: ☐" }
+    },
+    {
+      "sourceNames": ["analytical sample amount"],
+      "description": { "visibility": "YES", "template": "Analytical sample amount: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual analytical sample amount: ______" }
+    },
+    {
+      "sourceNames": ["ret. Sample amount."],
+      "description": { "visibility": "YES", "template": "Retention sample amount: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual retention sample amount: ______" }
+    },
+    {
+      "sourceNames": ["packing material"],
+      "description": { "visibility": "YES", "template": "Packaging material: {value}" },
+      "recording": { "visibility": "YES", "template": "Packaging material/lot used: ______" }
+    },
+    {
+      "sourceNames": ["air, moisture, light sensitivity of the material"],
+      "description": { "visibility": "YES", "template": "Material handling precautions: {value}" },
+      "recording": { "visibility": "NO", "template": "Handling precautions followed: ☐" }
+    },
+    {
+      "sourceNames": ["YES"],
+      "description": { "visibility": "YES", "template": "If compliant: {value}" },
+      "recording": { "visibility": "YES", "template": "QDQS result: ☐ Complies  ☐ Does not comply" }
+    },
+    {
+      "sourceNames": ["NO"],
+      "description": { "visibility": "YES", "template": "If not compliant: {value}" },
+      "recording": { "visibility": "YES", "template": "Action taken if not compliant: ______" }
+    },
+    {
+      "sourceNames": ["solvent sequence"],
+      "description": { "visibility": "YES", "template": "Cleaning solvent sequence: {value}" },
+      "recording": { "visibility": "YES", "template": "Cleaning completed as specified: ☐" }
+    },
+    {
+      "sourceNames": ["estim. time required"],
+      "description": { "visibility": "YES", "template": "Estimated cleaning time: {value}" },
+      "recording": { "visibility": "NO", "template": "Actual cleaning duration: ______" }
+    },
+    {
+      "sourceNames": ["water waste"],
+      "description": { "visibility": "YES", "template": "Water-waste handling: {value}" },
+      "recording": { "visibility": "YES", "template": "Water waste handled as specified: ☐" }
+    },
+    {
+      "sourceNames": ["organic waste"],
+      "description": { "visibility": "YES", "template": "Organic-waste handling: {value}" },
+      "recording": { "visibility": "YES", "template": "Organic waste handled as specified: ☐" }
+    },
+    {
+      "sourceNames": ["solid waste"],
+      "description": { "visibility": "YES", "template": "Solid-waste handling: {value}" },
+      "recording": { "visibility": "YES", "template": "Solid waste handled as specified: ☐" }
+    },
+    {
+      "sourceNames": ["Amount"],
+      "description": {
+        "visibility": "YES",
+        "template": "Specified loading: ______ kg (______ - ______ kg)",
+        "position": "END"
+      },
+      "recording": {
+        "visibility": "YES",
+        "template": "Warehouse code:\n____________________\n\nActual amount loaded:\n____________________ kg"
+      },
+      "specialHandling": "AMOUNT",
+      "notes": "For an internal transfer such as Amount=all, omit Warehouse code, use 'Specified transfer: all', and record 'Actual amount transferred: ______ kg'."
+    },
+    {
+      "sourceNames": ["Loaded material temp."],
+      "description": { "visibility": "YES", "template": "Loaded material temperature: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual material temperature: ______" }
+    },
+    {
+      "sourceNames": ["Set temp"],
+      "description": { "visibility": "YES", "template": "Temperature setpoint: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual temperature setpoint: ______" }
+    },
+    {
+      "sourceNames": ["Target Temp."],
+      "description": { "visibility": "YES", "template": "Target process temperature: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual process temperature: ______" }
+    },
+    {
+      "sourceNames": ["Stirring"],
+      "description": { "visibility": "YES", "template": "Stirring setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual stirring setting: ______" }
+    },
+    {
+      "sourceNames": ["Addition rate"],
+      "description": { "visibility": "YES", "template": "Addition rate/mode: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual addition rate/mode: ______" }
+    },
+    {
+      "sourceNames": ["Perist. Pump set"],
+      "description": { "visibility": "YES", "template": "Peristaltic-pump setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual pump setting: ______" }
+    },
+    {
+      "sourceNames": ["Time"],
+      "description": { "visibility": "YES", "template": "Specified duration: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual duration: ______" }
+    },
+    {
+      "sourceNames": ["Inert gas flow rate"],
+      "description": { "visibility": "YES", "template": "Inert-gas flow/status: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual inert-gas flow/status: ______" }
+    },
+    {
+      "sourceNames": ["break point"],
+      "description": { "visibility": "YES", "template": "Permitted break point: {value}" },
+      "recording": { "visibility": "YES", "template": "Break point taken: ☐ Yes  ☐ No\nTime: ______" }
+    },
+    {
+      "sourceNames": ["pH check"],
+      "description": { "visibility": "YES", "template": "Specified pH: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual pH: ______" }
+    },
+    {
+      "sourceNames": ["method of transf."],
+      "description": { "visibility": "YES", "template": "Transfer method: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual transfer method: ______" }
+    },
+    {
+      "sourceNames": ["cooling/heating grad."],
+      "description": { "visibility": "YES", "template": "Heating/cooling profile: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual heating/cooling profile: ______" }
+    },
+    {
+      "sourceNames": ["Pressure set"],
+      "description": { "visibility": "YES", "template": "Specified pressure: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual pressure: ______" }
+    },
+    {
+      "sourceNames": ["Pressure set in reactor"],
+      "description": { "visibility": "YES", "template": "Specified reactor pressure: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual reactor pressure: ______" }
+    },
+    {
+      "sourceNames": ["Pressure set range"],
+      "description": { "visibility": "YES", "template": "Specified pressure range: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual vacuum/pressure: ______" }
+    },
+    {
+      "sourceNames": ["actual pressure"],
+      "description": { "visibility": "NO", "template": "Actual pressure: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual pressure: ______" },
+      "includeWhenValueMissing": "YES",
+      "notes": "Deduplicate this Recording field when the same operation also contains a specified pressure parameter."
+    },
+    {
+      "sourceNames": ["H2 pressure"],
+      "description": { "visibility": "YES", "template": "Specified hydrogen pressure: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual hydrogen pressure: ______" }
+    },
+    {
+      "sourceNames": ["MAX Jacket Temp."],
+      "description": { "visibility": "YES", "template": "Maximum jacket temperature: {value}" },
+      "recording": { "visibility": "YES", "template": "Maximum actual jacket temperature: ______" }
+    },
+    {
+      "sourceNames": ["End point"],
+      "description": { "visibility": "YES", "template": "Endpoint: {value}" },
+      "recording": { "visibility": "YES", "template": "Endpoint met: ☐ Yes\nObservation: ______" }
+    },
+    {
+      "sourceNames": ["End point, volume left"],
+      "description": { "visibility": "YES", "template": "Endpoint/volume criterion: {value}" },
+      "recording": { "visibility": "YES", "template": "Volume remaining at endpoint: ______" }
+    },
+    {
+      "sourceNames": ["IPC Method"],
+      "description": { "visibility": "YES", "template": "IPC method: {value}" },
+      "recording": { "visibility": "YES", "template": "IPC method/reference used: ______" }
+    },
+    {
+      "sourceNames": ["Sample taken in"],
+      "description": { "visibility": "YES", "template": "Sample to be taken after: {value}" },
+      "recording": { "visibility": "YES", "template": "Sample taken after: ______" }
+    },
+    {
+      "sourceNames": ["Sample quenching"],
+      "description": { "visibility": "YES", "template": "Sample quenching: {value}" },
+      "recording": { "visibility": "YES", "template": "Sample quenched: ☐ Yes" }
+    },
+    {
+      "sourceNames": ["Expected Result"],
+      "description": { "visibility": "YES", "template": "Acceptance criterion: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual IPC result: ______" }
+    },
+    {
+      "sourceNames": ["IPC Failure Action"],
+      "description": { "visibility": "YES", "template": "Action if IPC fails: {value}" },
+      "recording": { "visibility": "YES", "template": "Failure action taken, if applicable: ______" }
+    },
+    {
+      "sourceNames": ["IPC Pass action"],
+      "description": { "visibility": "YES", "template": "Action if IPC passes: {value}" },
+      "recording": { "visibility": "YES", "template": "Pass action completed: ☐" }
+    },
+    {
+      "sourceNames": ["Estim. Time of analysis"],
+      "description": { "visibility": "YES", "template": "Estimated analysis time: {value}" },
+      "recording": { "visibility": "NO", "template": "Actual analysis time: ______" }
+    },
+    {
+      "sourceNames": ["Exp. time"],
+      "description": { "visibility": "YES", "template": "Expected separation time: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual separation time: ______" }
+    },
+    {
+      "sourceNames": ["Use filter cloth <specify>", "Use filter cloth"],
+      "description": { "visibility": "YES", "template": "Specified filter cloth: {value}" },
+      "recording": { "visibility": "YES", "template": "Filter cloth ID/lot: ______" }
+    },
+    {
+      "sourceNames": ["filter size"],
+      "description": { "visibility": "YES", "template": "Specified filter size: {value}" },
+      "recording": { "visibility": "YES", "template": "Filter ID/size used: ______" }
+    },
+    {
+      "sourceNames": ["Flow rate"],
+      "description": { "visibility": "YES", "template": "Specified flow rate: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual flow rate: ______" }
+    },
+    {
+      "sourceNames": ["Filter media / centrifuge bag"],
+      "description": { "visibility": "YES", "template": "Specified filter media/bag: {value}" },
+      "recording": { "visibility": "YES", "template": "Filter media/bag ID: ______" }
+    },
+    {
+      "sourceNames": ["Mixing on filter"],
+      "description": { "visibility": "YES", "template": "Mixing on filter: {value}" },
+      "recording": { "visibility": "YES", "template": "Mixed on filter: ☐ Yes" }
+    },
+    {
+      "sourceNames": ["Centrifuge speed during wash"],
+      "description": { "visibility": "YES", "template": "Centrifuge wash setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual centrifuge wash setting: ______" }
+    },
+    {
+      "sourceNames": ["overheating prot."],
+      "description": { "visibility": "YES", "template": "Overheating-protection setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual protection setting/status: ______" }
+    },
+    {
+      "sourceNames": ["layer thickness"],
+      "description": { "visibility": "YES", "template": "Maximum layer thickness: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual layer thickness: ______" }
+    },
+    {
+      "sourceNames": ["mixing/delumping"],
+      "description": { "visibility": "YES", "template": "Mixing/delumping requirement: {value}" },
+      "recording": { "visibility": "YES", "template": "Mixed/delumped: ☐ Yes" }
+    },
+    {
+      "sourceNames": ["fan set."],
+      "description": { "visibility": "YES", "template": "Fan setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual fan setting: ______" }
+    },
+    {
+      "sourceNames": ["flap set."],
+      "description": { "visibility": "YES", "template": "Flap setting: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual flap setting: ______" }
+    },
+    {
+      "sourceNames": ["loading spin"],
+      "description": { "visibility": "YES", "template": "Centrifuge loading speed: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual loading speed/setting: ______" }
+    },
+    {
+      "sourceNames": ["process spin"],
+      "description": { "visibility": "YES", "template": "Centrifuge process speed: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual process speed/setting: ______" }
+    },
+    {
+      "sourceNames": ["portion size"],
+      "description": { "visibility": "YES", "template": "Specified portion size: {value}" },
+      "recording": { "visibility": "YES", "template": "Actual portion size: ______" }
+    },
+    {
+      "sourceNames": ["Sieve size"],
+      "description": { "visibility": "YES", "template": "Specified sieve size: {value}" },
+      "recording": { "visibility": "YES", "template": "Sieve ID/size used: ______" }
+    },
+    {
+      "sourceNames": ["mill size"],
+      "description": { "visibility": "YES", "template": "Specified mill/screen size: {value}" },
+      "recording": { "visibility": "YES", "template": "Mill/screen ID or size used: ______" }
+    }
+  ]
+}
