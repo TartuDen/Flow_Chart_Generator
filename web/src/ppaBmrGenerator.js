@@ -199,6 +199,7 @@ function formatOperation(operation) {
         recordingText = "Actual amount transferred:\n____________________ kg";
       }
       recordingText = applyValue(recordingText, parameter.value);
+      recordingText = normalizeRecordingPlaceholders(recordingText);
 
       if (!seenRecordingTemplates.has(recordingText)) {
         if (recordingLines.length) recordingLines.push("");
@@ -214,6 +215,10 @@ function formatOperation(operation) {
 
 function applyValue(template, value) {
   return template.replaceAll("{value}", value);
+}
+
+function normalizeRecordingPlaceholders(value) {
+  return value.replace(/_+/g, "............");
 }
 
 function splitLines(value) {

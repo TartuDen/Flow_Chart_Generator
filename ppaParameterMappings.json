@@ -4,7 +4,7 @@
     "visibility": "Set a description or recording visibility to YES or NO.",
     "renaming": "Edit the corresponding template. Use {value} where the Excel value should appear.",
     "matching": "Excel parameter names are matched case-insensitively after trimming whitespace.",
-    "recordingPlaceholder": "The underscore characters are printed as the space in which the operator records actual data."
+    "recordingPlaceholder": "Any run of underscores in a Recording template is rendered as exactly twelve dots: ............"
   },
   "parameters": [
     {
