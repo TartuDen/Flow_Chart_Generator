@@ -51,21 +51,15 @@
             <span>Flowchart XML</span>
           </label>
           <label class="toggle">
-            <input id="includeBmr" type="checkbox" checked />
-            <span>BMR DOCX</span>
+            <input id="includePpaBmr" type="checkbox" checked />
+            <span>BMR_draft_from_PPA DOCX</span>
           </label>
           <label class="toggle">
             <input id="includeJson" type="checkbox" />
             <span>Operations JSON</span>
           </label>
-          <label class="toggle">
-            <input id="includeOpsDocx" type="checkbox" />
-            <span>Operations DOCX</span>
-          </label>
-          <label class="toggle">
-            <input id="includePpaBmr" type="checkbox" />
-            <span>BMR_draft_from_PPA DOCX</span>
-          </label>
+          <input id="includeBmr" type="checkbox" hidden />
+          <input id="includeOpsDocx" type="checkbox" hidden />
         </div>
 
         <button id="generateBtn" type="button" disabled>Generate files</button>
