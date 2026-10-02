@@ -10,27 +10,27 @@
     {
       "sourceNames": ["Heating to the temp."],
       "description": { "visibility": "YES", "template": "Heat to: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual temperature after heating: ______" }
+      "recording": { "visibility": "YES", "template": "Temperature after heating: ______" }
     },
     {
       "sourceNames": ["hold time at temp"],
       "description": { "visibility": "YES", "template": "Hold at temperature for: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual hold time: ______" }
+      "recording": { "visibility": "YES", "template": "Hold time: ______" }
     },
     {
       "sourceNames": ["Argon flow during heating"],
       "description": { "visibility": "YES", "template": "Argon flow during heating: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual argon flow during heating: ______" }
+      "recording": { "visibility": "YES", "template": "Argon flow during heating: ______" }
     },
     {
       "sourceNames": ["cooling to temp."],
       "description": { "visibility": "YES", "template": "Cool to: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual temperature after cooling: ______" }
+      "recording": { "visibility": "YES", "template": "Temperature after cooling: ______" }
     },
     {
       "sourceNames": ["argon flow during cooling"],
       "description": { "visibility": "YES", "template": "Argon flow during cooling: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual argon flow during cooling: ______" }
+      "recording": { "visibility": "YES", "template": "Argon flow during cooling: ______" }
     },
     {
       "sourceNames": ["Vacuum applied"],
@@ -50,17 +50,17 @@
     {
       "sourceNames": ["analytical sample amount"],
       "description": { "visibility": "YES", "template": "Analytical sample amount: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual analytical sample amount: ______" }
+      "recording": { "visibility": "NO", "template": "Actual analytical sample amount: ______" }
     },
     {
       "sourceNames": ["ret. Sample amount."],
       "description": { "visibility": "YES", "template": "Retention sample amount: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual retention sample amount: ______" }
+      "recording": { "visibility": "NO", "template": "Actual retention sample amount: ______" }
     },
     {
       "sourceNames": ["packing material"],
-      "description": { "visibility": "YES", "template": "Packaging material: {value}" },
-      "recording": { "visibility": "YES", "template": "Packaging material/lot used: ______" }
+      "description": { "visibility": "NO", "template": "Packaging material: {value}" },
+      "recording": { "visibility": "NO", "template": "Packaging material/lot used: ______" }
     },
     {
       "sourceNames": ["air, moisture, light sensitivity of the material"],
@@ -70,17 +70,17 @@
     {
       "sourceNames": ["YES"],
       "description": { "visibility": "YES", "template": "If compliant: {value}" },
-      "recording": { "visibility": "YES", "template": "QDQS result: ☐ Complies  ☐ Does not comply" }
+      "recording": { "visibility": "NO", "template": "QDQS result: ☐ Complies  ☐ Does not comply" }
     },
     {
       "sourceNames": ["NO"],
       "description": { "visibility": "YES", "template": "If not compliant: {value}" },
-      "recording": { "visibility": "YES", "template": "Action taken if not compliant: ______" }
+      "recording": { "visibility": "NO", "template": "Action taken if not compliant: ______" }
     },
     {
       "sourceNames": ["solvent sequence"],
       "description": { "visibility": "YES", "template": "Cleaning solvent sequence: {value}" },
-      "recording": { "visibility": "YES", "template": "Cleaning completed as specified: ☐" }
+      "recording": { "visibility": "NO", "template": "Cleaning completed as specified: ☐" }
     },
     {
       "sourceNames": ["estim. time required"],
@@ -90,17 +90,17 @@
     {
       "sourceNames": ["water waste"],
       "description": { "visibility": "YES", "template": "Water-waste handling: {value}" },
-      "recording": { "visibility": "YES", "template": "Water waste handled as specified: ☐" }
+      "recording": { "visibility": "NO", "template": "Water waste handled as specified: ☐" }
     },
     {
       "sourceNames": ["organic waste"],
       "description": { "visibility": "YES", "template": "Organic-waste handling: {value}" },
-      "recording": { "visibility": "YES", "template": "Organic waste handled as specified: ☐" }
+      "recording": { "visibility": "NO", "template": "Organic waste handled as specified: ☐" }
     },
     {
       "sourceNames": ["solid waste"],
       "description": { "visibility": "YES", "template": "Solid-waste handling: {value}" },
-      "recording": { "visibility": "YES", "template": "Solid waste handled as specified: ☐" }
+      "recording": { "visibility": "NO", "template": "Solid waste handled as specified: ☐" }
     },
     {
       "sourceNames": ["Amount"],
@@ -119,42 +119,42 @@
     {
       "sourceNames": ["Loaded material temp."],
       "description": { "visibility": "YES", "template": "Loaded material temperature: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual material temperature: ______" }
+      "recording": { "visibility": "YES", "template": "Loaded material temperature: ______" }
     },
     {
       "sourceNames": ["Set temp"],
       "description": { "visibility": "YES", "template": "Temperature setpoint: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual temperature setpoint: ______" }
+      "recording": { "visibility": "YES", "template": "Temperature setpoint: ______" }
     },
     {
       "sourceNames": ["Target Temp."],
       "description": { "visibility": "YES", "template": "Target process temperature: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual process temperature: ______" }
+      "recording": { "visibility": "YES", "template": "Pprocess temperature: ______" }
     },
     {
       "sourceNames": ["Stirring"],
       "description": { "visibility": "YES", "template": "Stirring setting: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual stirring setting: ______" }
+      "recording": { "visibility": "YES", "template": "Stirring setting: ______" }
     },
     {
       "sourceNames": ["Addition rate"],
       "description": { "visibility": "YES", "template": "Addition rate/mode: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual addition rate/mode: ______" }
+      "recording": { "visibility": "YES", "template": "Addition rate/mode: ______" }
     },
     {
       "sourceNames": ["Perist. Pump set"],
       "description": { "visibility": "YES", "template": "Peristaltic-pump setting: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual pump setting: ______" }
+      "recording": { "visibility": "YES", "template": "Pump setting: ______" }
     },
     {
       "sourceNames": ["Time"],
       "description": { "visibility": "YES", "template": "Specified duration: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual duration: ______" }
+      "recording": { "visibility": "YES", "template": "Duration: ______" }
     },
     {
       "sourceNames": ["Inert gas flow rate"],
       "description": { "visibility": "YES", "template": "Inert-gas flow/status: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual inert-gas flow/status: ______" }
+      "recording": { "visibility": "YES", "template": "Inert-gas flow: ______" }
     },
     {
       "sourceNames": ["break point"],
@@ -169,12 +169,12 @@
     {
       "sourceNames": ["method of transf."],
       "description": { "visibility": "YES", "template": "Transfer method: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual transfer method: ______" }
+      "recording": { "visibility": "NO", "template": "Actual transfer method: ______" }
     },
     {
       "sourceNames": ["cooling/heating grad."],
       "description": { "visibility": "YES", "template": "Heating/cooling profile: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual heating/cooling profile: ______" }
+      "recording": { "visibility": "NO", "template": "Actual heating/cooling profile: ______" }
     },
     {
       "sourceNames": ["Pressure set"],
@@ -184,7 +184,7 @@
     {
       "sourceNames": ["Pressure set in reactor"],
       "description": { "visibility": "YES", "template": "Specified reactor pressure: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual reactor pressure: ______" }
+      "recording": { "visibility": "YES", "template": "Reactor pressure: ______" }
     },
     {
       "sourceNames": ["Pressure set range"],
@@ -201,7 +201,7 @@
     {
       "sourceNames": ["H2 pressure"],
       "description": { "visibility": "YES", "template": "Specified hydrogen pressure: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual hydrogen pressure: ______" }
+      "recording": { "visibility": "YES", "template": "Hydrogen pressure: ______" }
     },
     {
       "sourceNames": ["MAX Jacket Temp."],
@@ -251,12 +251,12 @@
     {
       "sourceNames": ["Estim. Time of analysis"],
       "description": { "visibility": "YES", "template": "Estimated analysis time: {value}" },
-      "recording": { "visibility": "NO", "template": "Actual analysis time: ______" }
+      "recording": { "visibility": "NO", "template": "Analysis time: ______" }
     },
     {
       "sourceNames": ["Exp. time"],
       "description": { "visibility": "YES", "template": "Expected separation time: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual separation time: ______" }
+      "recording": { "visibility": "YES", "template": "Separation time: ______" }
     },
     {
       "sourceNames": ["Use filter cloth <specify>", "Use filter cloth"],
@@ -271,7 +271,7 @@
     {
       "sourceNames": ["Flow rate"],
       "description": { "visibility": "YES", "template": "Specified flow rate: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual flow rate: ______" }
+      "recording": { "visibility": "YES", "template": "Flow rate: ______" }
     },
     {
       "sourceNames": ["Filter media / centrifuge bag"],
@@ -291,12 +291,12 @@
     {
       "sourceNames": ["overheating prot."],
       "description": { "visibility": "YES", "template": "Overheating-protection setting: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual protection setting/status: ______" }
+      "recording": { "visibility": "YES", "template": "Protection setting/status: ______" }
     },
     {
       "sourceNames": ["layer thickness"],
       "description": { "visibility": "YES", "template": "Maximum layer thickness: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual layer thickness: ______" }
+      "recording": { "visibility": "YES", "template": "Layer thickness: ______" }
     },
     {
       "sourceNames": ["mixing/delumping"],
@@ -306,27 +306,27 @@
     {
       "sourceNames": ["fan set."],
       "description": { "visibility": "YES", "template": "Fan setting: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual fan setting: ______" }
+      "recording": { "visibility": "YES", "template": "Fan setting: ______" }
     },
     {
       "sourceNames": ["flap set."],
       "description": { "visibility": "YES", "template": "Flap setting: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual flap setting: ______" }
+      "recording": { "visibility": "YES", "template": "Flap setting: ______" }
     },
     {
       "sourceNames": ["loading spin"],
       "description": { "visibility": "YES", "template": "Centrifuge loading speed: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual loading speed/setting: ______" }
+      "recording": { "visibility": "YES", "template": "Loading speed/setting: ______" }
     },
     {
       "sourceNames": ["process spin"],
       "description": { "visibility": "YES", "template": "Centrifuge process speed: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual process speed/setting: ______" }
+      "recording": { "visibility": "YES", "template": "Process speed/setting: ______" }
     },
     {
       "sourceNames": ["portion size"],
       "description": { "visibility": "YES", "template": "Specified portion size: {value}" },
-      "recording": { "visibility": "YES", "template": "Actual portion size: ______" }
+      "recording": { "visibility": "YES", "template": "Portion size: ______" }
     },
     {
       "sourceNames": ["Sieve size"],
